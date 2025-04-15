@@ -12,10 +12,6 @@ Properties {
 		{
 			Blend SrcAlpha OneMinusSrcAlpha
 			ZWrite Off
-			Material
-			{
-				Diffuse [_Color]
-			}
 			Lighting Off
 			SetTexture [_MainTex]
 			{
