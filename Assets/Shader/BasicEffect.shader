@@ -4,24 +4,23 @@ Properties {
  _Color ("Tint", Color) = (1.000000,1.000000,1.000000,1.000000)
 [MaterialToggle]  PixelSnap ("Pixel snap", Float) = 0.000000
 }
-	//DummyShaderTextExporter
-	
-	SubShader{
-		Tags { "RenderType" = "Opaque" }
-		LOD 200
-		CGPROGRAM
-#pragma surface surf Standard fullforwardshadows
-#pragma target 3.0
-		sampler2D _MainTex;
-		struct Input
+	SubShader
+	{
+		Tags { "Queue"="Transparent" }
+
+		Pass
 		{
-			float2 uv_MainTex;
-		};
-		void surf(Input IN, inout SurfaceOutputStandard o)
-		{
-			fixed4 c = tex2D(_MainTex, IN.uv_MainTex);
-			o.Albedo = c.rgb;
+			Blend SrcAlpha OneMinusSrcAlpha
+			ZWrite Off
+			Material
+			{
+				Diffuse [_Color]
+			}
+			Lighting Off
+			SetTexture [_MainTex]
+			{
+				constantColor [_Color]
+			}
 		}
-		ENDCG
 	}
 }
