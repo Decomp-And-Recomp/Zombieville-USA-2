@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!30 &1
+GraphicsSettings:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_Deferred:
+    m_Mode: 1
+    m_Shader: {fileID: 69, guid: 0000000000000000e000000000000000, type: 0}
+  m_DeferredReflections:
+    m_Mode: 1
+    m_Shader: {fileID: 74, guid: 0000000000000000e000000000000000, type: 0}
+  m_ScreenSpaceShadows:
+    m_Mode: 1
+    m_Shader: {fileID: 4800000, guid: 10921e1781ba4894c8e7a91d92d9edd8, type: 3}
+  m_LegacyDeferred:
+    m_Mode: 1
+    m_Shader: {fileID: 63, guid: 0000000000000000e000000000000000, type: 0}
+  m_DepthNormals:
+    m_Mode: 1
+    m_Shader: {fileID: 4800000, guid: ac39dba37c1b6cc47a121dd2a8116e56, type: 3}
+  m_MotionVectors:
+    m_Mode: 1
+    m_Shader: {fileID: 4800000, guid: 41de384511d3a0242a0e760ec6b0f07f, type: 3}
+  m_LightHalo:
+    m_Mode: 1
+    m_Shader: {fileID: 105, guid: 0000000000000000f000000000000000, type: 0}
+  m_LensFlare:
+    m_Mode: 1
+    m_Shader: {fileID: 102, guid: 0000000000000000f000000000000000, type: 0}
+  m_AlwaysIncludedShaders:
+  - {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 15104, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 15105, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 15106, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10782, guid: 0000000000000000f000000000000000, type: 0}
+  m_PreloadedShaders: []
+  m_ShaderSettings_Tier1:
+    useCascadedShadowMaps: 1
+    standardShaderQuality: 2
+    useReflectionProbeBoxProjection: 1
+    useReflectionProbeBlending: 1
+  m_ShaderSettings_Tier2:
+    useCascadedShadowMaps: 1
+    standardShaderQuality: 2
+    useReflectionProbeBoxProjection: 1
+    useReflectionProbeBlending: 1
+  m_ShaderSettings_Tier3:
+    useCascadedShadowMaps: 0
+    standardShaderQuality: 0
+    useReflectionProbeBoxProjection: 0
+    useReflectionProbeBlending: 0
+  m_BuildTargetShaderSettings:
+  - m_BuildTarget: Android
+    m_Tier: 0
+    m_ShaderSettings:
+      useCascadedShadowMaps: 1
+      standardShaderQuality: 2
+      useReflectionProbeBoxProjection: 1
+      useReflectionProbeBlending: 1
+    m_Automatic: 0
+  - m_BuildTarget: Android
+    m_Tier: 1
+    m_ShaderSettings:
+      useCascadedShadowMaps: 1
+      standardShaderQuality: 2
+      useReflectionProbeBoxProjection: 1
+      useReflectionProbeBlending: 1
+    m_Automatic: 0
+  - m_BuildTarget: Android
+    m_Tier: 2
+    m_ShaderSettings:
+      useCascadedShadowMaps: 0
+      standardShaderQuality: 0
+      useReflectionProbeBoxProjection: 0
+      useReflectionProbeBlending: 0
+    m_Automatic: 0
+  m_LightmapStripping: 0
+  m_FogStripping: 0
+  m_LightmapKeepPlain: 1
+  m_LightmapKeepDirCombined: 1
+  m_LightmapKeepDirSeparate: 1
+  m_LightmapKeepDynamicPlain: 1
+  m_LightmapKeepDynamicDirCombined: 1
+  m_LightmapKeepDynamicDirSeparate: 1
+  m_FogKeepLinear: 1
+  m_FogKeepExp: 1
+  m_FogKeepExp2: 1
