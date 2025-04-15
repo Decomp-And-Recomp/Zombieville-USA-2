@@ -1,81 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!104 &12
-RenderSettings:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
-  m_FogDensity: 0.01
-  m_LinearFogStart: 0
-  m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-  m_AmbientEquatorColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-  m_AmbientGroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
-  m_AmbientIntensity: 1
-  m_AmbientMode: 3
-  m_SkyboxMaterial: {fileID: 0}
-  m_HaloStrength: 0.5
-  m_FlareStrength: 1
-  m_FlareFadeSpeed: 3
-  m_HaloTexture: {fileID: 0}
-  m_SpotCookie: {fileID: 2800000, guid: 59076a0115d5b3140888700a3f209492, type: 3}
-  m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
-  m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
-  m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
---- !u!157 &14
-LightmapSettings:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_GIWorkflowMode: 1
-  m_GISettings:
-    serializedVersion: 2
-    m_BounceScale: 1
-    m_IndirectOutputScale: 1
-    m_AlbedoBoost: 1
-    m_TemporalCoherenceThreshold: 1
-    m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 0
-  m_LightmapEditorSettings:
-    serializedVersion: 4
-    m_Resolution: 2
-    m_BakeResolution: 40
-    m_TextureWidth: 1024
-    m_TextureHeight: 1024
-    m_AO: 0
-    m_AOMaxDistance: 1
-    m_CompAOExponent: 1
-    m_CompAOExponentDirect: 0
-    m_Padding: 2
-    m_LightmapParameters: {fileID: 0}
-    m_LightmapsBakeMode: 1
-    m_TextureCompression: 1
-    m_DirectLightInLightProbes: 0
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
-    m_ReflectionCompression: 2
-  m_LightingDataAsset: {fileID: 0}
-  m_RuntimeCPUUsage: 25
 --- !u!1 &1
 GameObject:
-  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4}
-  - 20: {fileID: 7}
-  - 92: {fileID: 10}
-  - 124: {fileID: 13}
-  - 81: {fileID: 9}
-  - 114: {fileID: 15}
+  - component: {fileID: 4}
+  - component: {fileID: 7}
+  - component: {fileID: 10}
+  - component: {fileID: 13}
+  - component: {fileID: 9}
+  - component: {fileID: 15}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -83,79 +20,88 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &15
-MonoBehaviour:
+--- !u!1 &2
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 5}
+  - component: {fileID: 17}
+  - component: {fileID: 16}
+  m_Layer: 0
+  m_Name: '**DATABASE'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &3
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 6}
+  - component: {fileID: 8}
+  - component: {fileID: 11}
+  m_Layer: 0
+  m_Name: GPGAchievementText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4
+Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c42144f385b0d5cdc283e0a711bdc4c, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
---- !u!124 &13
-FlareLayer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1}
-  m_Enabled: 1
---- !u!102 &11
-TextMesh:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 3}
-  m_Text:
-  m_OffsetZ: 0
-  m_CharacterSize: 1
-  m_LineSpacing: 1
-  m_Anchor: 0
-  m_Alignment: 0
-  m_TabSize: 4
-  m_FontSize: 0
-  m_FontStyle: 0
-  m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Color:
-    serializedVersion: 2
-    rgba: 4294967295
---- !u!92 &10
-GUILayer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1}
-  m_Enabled: 1
---- !u!114 &16
-MonoBehaviour:
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!4 &5
+Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab727d673c176cf32c5a6bcb70e2488c, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  GPGachievement: {fileID: 11}
---- !u!81 &9
-AudioListener:
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!4 &6
+Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1}
-  m_Enabled: 1
+  m_GameObject: {fileID: 3}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 100, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &7
 Camera:
-  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1}
   m_Enabled: 1
+  serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0.019607844}
   m_NormalizedViewPortRect:
@@ -178,84 +124,12 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
---- !u!4 &6
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 3}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 100, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &5
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 6}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
---- !u!4 &4
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
---- !u!1 &3
-GameObject:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Component:
-  - 4: {fileID: 6}
-  - 23: {fileID: 8}
-  - 102: {fileID: 11}
-  m_Layer: 0
-  m_Name: GPGAchievementText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!1 &2
-GameObject:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Component:
-  - 4: {fileID: 5}
-  - 114: {fileID: 17}
-  - 114: {fileID: 16}
-  m_Layer: 0
-  m_Name: '**DATABASE'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!23 &8
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -265,12 +139,15 @@ MeshRenderer:
   m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: []
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -278,13 +155,161 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!81 &9
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1}
+  m_Enabled: 1
+--- !u!92 &10
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1}
+  m_Enabled: 1
+--- !u!102 &11
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 3}
+  m_Text: 
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!104 &12
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 8
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  m_AmbientEquatorColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  m_AmbientGroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 2800000, guid: 59076a0115d5b3140888700a3f209492, type: 3}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!124 &13
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1}
+  m_Enabled: 1
+--- !u!157 &14
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 11
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_TemporalCoherenceThreshold: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 9
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 1
+    m_BakeBackend: 0
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVRFilteringMode: 0
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ShowResolutionOverlay: 1
+  m_LightingDataAsset: {fileID: 0}
+  m_UseShadowmask: 0
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c42144f385b0d5cdc283e0a711bdc4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab727d673c176cf32c5a6bcb70e2488c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GPGachievement: {fileID: 11}
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,8 +319,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d20af47ca819a7606830b05079c1446, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   GPGachievement: {fileID: 11}
   myPC: 0
   money: 0
@@ -322,7 +347,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 1
     displayName: The Survivor
-    description: "Everyone thought he was crazy... they were kinda right.\nBut who's laughing now?  He's got a helicopter, and\na bomb shelter full of baked beans."
+    description: 'Everyone thought he was crazy... they were kinda right.
+
+      But who''s laughing now?  He''s got a helicopter, and
+
+      a bomb shelter full of baked beans.'
   - characterName: SWAT
     characterModel: Characters/Cop
     iconName: Cop
@@ -332,7 +361,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: S.W.A.T.
-    description: "He still refuses to take off those sunglasses.  Because\nhe's a badass?  Or maybe he has an embarassing lazy\neye?  We may never know."
+    description: 'He still refuses to take off those sunglasses.  Because
+
+      he''s a badass?  Or maybe he has an embarassing lazy
+
+      eye?  We may never know.'
   - characterName: Doctor
     characterModel: Characters/Doctor
     iconName: Doctor
@@ -342,7 +375,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Doctor
-    description: "No one knows if he's really a doctor... but he claims to\nhave a degree in \"Zombology\".  He minored in \"Video\nGame Design\"."
+    description: 'No one knows if he''s really a doctor... but he claims to
+
+      have a degree in "Zombology".  He minored in "Video
+
+      Game Design".'
   - characterName: Clown
     characterModel: Characters/Clown
     iconName: Clown
@@ -352,7 +389,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Clown
-    description: "What's a clown doing here?  Everyone knows the only\nthing scarier than a horde of zombies is a clown.\nBehold the true face of fear!"
+    description: 'What''s a clown doing here?  Everyone knows the only
+
+      thing scarier than a horde of zombies is a clown.
+
+      Behold the true face of fear!'
   - characterName: Construction
     characterModel: Characters/Construction
     iconName: Construction
@@ -362,7 +403,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Foreman
-    description: "Did you know that zombies are the leading cause of\npotholes in Zombieville?  Though to be honest... they're\nthe leading cause of everything."
+    description: 'Did you know that zombies are the leading cause of
+
+      potholes in Zombieville?  Though to be honest... they''re
+
+      the leading cause of everything.'
   - characterName: Chef
     characterModel: Characters/Chef
     iconName: Chef
@@ -372,7 +417,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Chef
-    description: "Zombies raided his bakery and ate all of his croissants.\nThey didn't leave a tip in the little jar.  He now seeks\nrevenge for this injustice."
+    description: 'Zombies raided his bakery and ate all of his croissants.
+
+      They didn''t leave a tip in the little jar.  He now seeks
+
+      revenge for this injustice.'
   - characterName: Convict
     characterModel: Characters/Convict
     iconName: Convict
@@ -382,7 +431,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Convict
-    description: "Recent escapee from Zombieville State Penitentiary.\nHis crime?  Not killing enough zombies.  They'll lock\nyou up for that around here."
+    description: 'Recent escapee from Zombieville State Penitentiary.
+
+      His crime?  Not killing enough zombies.  They''ll lock
+
+      you up for that around here.'
   - characterName: Cheerleader
     characterModel: Characters/Cheerleader
     iconName: Cheerleader
@@ -392,7 +445,9 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Cheerleader
-    description: "Ever since the varsity foosball team was eaten by\nzombies, she just hasn't been the same."
+    description: 'Ever since the varsity foosball team was eaten by
+
+      zombies, she just hasn''t been the same.'
   - characterName: Princess
     characterModel: Characters/Princess
     iconName: Princess
@@ -402,7 +457,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Li'l Princess
-    description: "Behind her peaceful demeanor brews a tempest of\nunbridled rage.  Even zombies cower in terror when\nshe takes to the battlefield."
+    description: 'Behind her peaceful demeanor brews a tempest of
+
+      unbridled rage.  Even zombies cower in terror when
+
+      she takes to the battlefield.'
   - characterName: Gothgirl
     characterModel: Characters/Gothgirl
     iconName: Gothgirl
@@ -412,7 +471,9 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Goth
-    description: "She may dress strangely, act tough, and have a bit of\nan attitude... but secretly she loves to knit."
+    description: 'She may dress strangely, act tough, and have a bit of
+
+      an attitude... but secretly she loves to knit.'
   - characterName: Barrel
     characterModel: Characters/Barrel
     iconName: Barrel
@@ -422,7 +483,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Poor Guy
-    description: "He lost it all on the stock market, and now penniless,\nmust wear a barrel for some reason.  Unfortunately,\nno one sells clothing in Zombieville, only guns."
+    description: 'He lost it all on the stock market, and now penniless,
+
+      must wear a barrel for some reason.  Unfortunately,
+
+      no one sells clothing in Zombieville, only guns.'
   - characterName: Karate
     characterModel: Characters/Karate
     iconName: Karate
@@ -432,7 +497,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Karate Girl
-    description: "Few things in life can't be solved with a well placed\nkarate chop.  For example - zombie attacks.  Social\ninjustice.  That loud guy in the movie theater."
+    description: 'Few things in life can''t be solved with a well placed
+
+      karate chop.  For example - zombie attacks.  Social
+
+      injustice.  That loud guy in the movie theater.'
   - characterName: Disco
     characterModel: Characters/Disco
     iconName: Disco
@@ -442,7 +511,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Mr. Disco
-    description: "He hopes to one day unite mankind and zombiekind\nthrough the power of music.  If that doesn't work...\nthere's always violence!"
+    description: 'He hopes to one day unite mankind and zombiekind
+
+      through the power of music.  If that doesn''t work...
+
+      there''s always violence!'
   - characterName: Ninja
     characterModel: Characters/Ninja
     iconName: Ninja
@@ -452,7 +525,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Ninja
-    description: "The ninja has returned to dispense unbridled justice.\nHe also got a fresh new haircut, and has been hitting\nthe gym to lose those love handles."
+    description: 'The ninja has returned to dispense unbridled justice.
+
+      He also got a fresh new haircut, and has been hitting
+
+      the gym to lose those love handles.'
   - characterName: Hazmat
     characterModel: Characters/Hazmat
     iconName: Hazmat
@@ -462,7 +539,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Hazmat
-    description: "A hazmat suit seems like a smart choice when dealing\nwith highly infectious zombies.  Unfortunately, zombies\nare attracted to bright yellow objects.  You can't win."
+    description: 'A hazmat suit seems like a smart choice when dealing
+
+      with highly infectious zombies.  Unfortunately, zombies
+
+      are attracted to bright yellow objects.  You can''t win.'
   - characterName: Tycoon
     characterModel: Characters/Tycoon
     iconName: Tycoon
@@ -472,7 +553,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Tycoon
-    description: "He's come to Zombieville to build a railroad, drill for\noil, and maybe open a bank.  He's just got to clear out\nthese pesky zombies out first, and then... riches!"
+    description: 'He''s come to Zombieville to build a railroad, drill for
+
+      oil, and maybe open a bank.  He''s just got to clear out
+
+      these pesky zombies out first, and then... riches!'
   - characterName: Granny
     characterModel: Characters/Granny
     iconName: Granny
@@ -482,7 +567,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Granny
-    description: "She was busy watching her favorite game show, Wheel\nof Jeopardy, when zombies broke into her house and\nstole her TV.  It's payback time."
+    description: 'She was busy watching her favorite game show, Wheel
+
+      of Jeopardy, when zombies broke into her house and
+
+      stole her TV.  It''s payback time.'
   - characterName: Santa
     characterModel: Characters/Santa
     iconName: Santa
@@ -492,7 +581,9 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Santa
-    description: "It turns out that being a zombie automatically puts you\non the \"naughty\" list.  You don't want to be on that list."
+    description: 'It turns out that being a zombie automatically puts you
+
+      on the "naughty" list.  You don''t want to be on that list.'
   - characterName: Panda
     characterModel: Characters/Panda
     iconName: Panda
@@ -502,7 +593,8 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Panda
-    description: "An escapee from the Zombieville Zoo, this big fella \nnow stalks the streets in search of bamboo and \nammunition."
+    description: "An escapee from the Zombieville Zoo, this big fella \nnow stalks
+      the streets in search of bamboo and \nammunition."
   - characterName: Swimmer
     characterModel: Characters/Swimmer
     iconName: Swimmer
@@ -512,7 +604,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Swimmer
-    description: "Who vacations in Zombieville?  This guy!  But it's\nhard to relax with all these zombies around.  Perhaps\na little killing spree before a relaxing dip in the pool?"
+    description: 'Who vacations in Zombieville?  This guy!  But it''s
+
+      hard to relax with all these zombies around.  Perhaps
+
+      a little killing spree before a relaxing dip in the pool?'
   - characterName: Soldier
     characterModel: Characters/Soldier
     iconName: Soldier
@@ -522,7 +618,11 @@ MonoBehaviour:
     moveSpeed: 2.5
     purchased: 0
     displayName: Soldier
-    description: "Just back from a tour of duty, he was looking forward\nto a relaxing retirement in Zombieville.  In hindsight,\nthis city was a poor choice."
+    description: 'Just back from a tour of duty, he was looking forward
+
+      to a relaxing retirement in Zombieville.  In hindsight,
+
+      this city was a poor choice.'
   achievements:
   - achievementName: Zombie Novice
     ID: ach_1
@@ -737,9 +837,11 @@ MonoBehaviour:
   weapons:
   - weaponName: Pistol
     displayName: Pistol
-    description: "An efficient, versatile weapon which makes up for its\nrelatively low power with plenty of spare ammo."
+    description: 'An efficient, versatile weapon which makes up for its
+
+      relatively low power with plenty of spare ammo.'
     weaponModel: Weapons/Pistol
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -772,27 +874,37 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Extended Magazine
-      upgradeDescription: "Next upgrade: Extended Magazine\nIncreases ammo capacity +50"
+      upgradeDescription: 'Next upgrade: Extended Magazine
+
+        Increases ammo capacity +50'
       upgrades:
       - upgradeType: 3
         upgradeValue: 50
     - upgradeName: Armor Piercing Rounds
-      upgradeDescription: "Next upgrade: AP Rounds\nImproves damage by 20%"
+      upgradeDescription: 'Next upgrade: AP Rounds
+
+        Improves damage by 20%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 3
     - upgradeName: Custom Grip
-      upgradeDescription: "Next upgrade: Custom Grip\nImproves shot accuracy"
+      upgradeDescription: 'Next upgrade: Custom Grip
+
+        Improves shot accuracy'
       upgrades:
       - upgradeType: 5
         upgradeValue: -4
     - upgradeName: Precision Tune-up
-      upgradeDescription: "Next upgrade: Precision Tune-up\nIncreases crit chance by 10%"
+      upgradeDescription: 'Next upgrade: Precision Tune-up
+
+        Increases crit chance by 10%'
       upgrades:
       - upgradeType: 6
         upgradeValue: 10
     - upgradeName: Dual Wield
-      upgradeDescription: "Next upgrade: Dual Wield\nIncreases rate of fire"
+      upgradeDescription: 'Next upgrade: Dual Wield
+
+        Increases rate of fire'
       upgrades:
       - upgradeType: 13
         upgradeValue: DualPistol
@@ -808,9 +920,13 @@ MonoBehaviour:
     purchased: 1
   - weaponName: Shotgun
     displayName: Shotgun
-    description: "The trusty shotgun - a staple of any zombie massacre!\nEffective at short range, and can hit multiple zombies\nwith one blast."
+    description: 'The trusty shotgun - a staple of any zombie massacre!
+
+      Effective at short range, and can hit multiple zombies
+
+      with one blast.'
     weaponModel: Weapons/Shotgun
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -843,31 +959,41 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Improved Shells\nIncreases damage by 20%"
+      upgradeDescription: 'Next upgrade: Improved Shells
+
+        Increases damage by 20%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 21
       - upgradeType: 2
         upgradeValue: 2
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Bandolier\nIncreases ammo capacity +10"
+      upgradeDescription: 'Next upgrade: Bandolier
+
+        Increases ammo capacity +10'
       upgrades:
       - upgradeType: 3
         upgradeValue: 10
     - upgradeName: Knockback
-      upgradeDescription: "Next upgrade: Heavy Shot\nIncreases knockback force"
+      upgradeDescription: 'Next upgrade: Heavy Shot
+
+        Increases knockback force'
       upgrades:
       - upgradeType: 8
         upgradeValue: 10
     - upgradeName: Reduced Falloff and More Piercing
-      upgradeDescription: "Next upgrade: Custom Powder\nIncreases effective range"
+      upgradeDescription: 'Next upgrade: Custom Powder
+
+        Increases effective range'
       upgrades:
       - upgradeType: 26
         upgradeValue: 1.0
       - upgradeType: 2
         upgradeValue: -4
     - upgradeName: New model, auto fire?
-      upgradeDescription: "Next upgrade: Modern Tune-up\nDamage +5%, Ammo +10"
+      upgradeDescription: 'Next upgrade: Modern Tune-up
+
+        Damage +5%, Ammo +10'
       upgrades:
       - upgradeType: 12
         upgradeValue: Weapons/Shotgun2
@@ -881,9 +1007,13 @@ MonoBehaviour:
     purchased: 1
   - weaponName: BaseballBat
     displayName: Baseball Bat
-    description: "A simple melee weapon - slow to swing and does little\ndamage, but can be useful for knocking enemies away,\nor simply saving on ammunition."
+    description: 'A simple melee weapon - slow to swing and does little
+
+      damage, but can be useful for knocking enemies away,
+
+      or simply saving on ammunition.'
     weaponModel: Weapons/BaseballBat
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -916,29 +1046,39 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Knockback
-      upgradeDescription: "Next upgrade: Batting Practice\nIncreases knockback force"
+      upgradeDescription: 'Next upgrade: Batting Practice
+
+        Increases knockback force'
       upgrades:
       - upgradeType: 8
         upgradeValue: 10
       - upgradeType: 9
         upgradeValue: -2
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Sweet Spot\nIncreases damage by 25%"
+      upgradeDescription: 'Next upgrade: Sweet Spot
+
+        Increases damage by 25%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 4.5
     - upgradeName: Movement Lockout
-      upgradeDescription: "Next upgrade: Hit and Run\nImproved swing speed"
+      upgradeDescription: 'Next upgrade: Hit and Run
+
+        Improved swing speed'
       upgrades:
       - upgradeType: 10
         upgradeValue: -.1
       - upgradeType: 19
         upgradeValue: -.1
     - upgradeName: More knockback
-      upgradeDescription: "Next upgrade: Composite Bat\nImproved knockback force"
+      upgradeDescription: 'Next upgrade: Composite Bat
+
+        Improved knockback force'
       upgrades: []
     - upgradeName: Sledge
-      upgradeDescription: "Next upgrade: Sledgehammer\nIncreases damage and knockback"
+      upgradeDescription: 'Next upgrade: Sledgehammer
+
+        Increases damage and knockback'
       upgrades:
       - upgradeType: 13
         upgradeValue: Sledgehammer
@@ -956,9 +1096,13 @@ MonoBehaviour:
     purchased: 1
   - weaponName: Uzi
     displayName: Uzi
-    description: "Sprays a clumsy barrage of bullets - can be powerful\nat short range, but tends to have a lower chance of\nhitting foes at greater distance."
+    description: 'Sprays a clumsy barrage of bullets - can be powerful
+
+      at short range, but tends to have a lower chance of
+
+      hitting foes at greater distance.'
     weaponModel: Weapons/Uzi
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -991,27 +1135,37 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Spare Clip\nIncreases ammo capacity +50"
+      upgradeDescription: 'Next upgrade: Spare Clip
+
+        Increases ammo capacity +50'
       upgrades:
       - upgradeType: 3
         upgradeValue: 50
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: AP Rounds\nIncreases damage by 20%"
+      upgradeDescription: 'Next upgrade: AP Rounds
+
+        Increases damage by 20%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 4
     - upgradeName: More Ammo
-      upgradeDescription: "Next upgrade: Extended Magazine\nIncreases ammo capacity +50"
+      upgradeDescription: 'Next upgrade: Extended Magazine
+
+        Increases ammo capacity +50'
       upgrades:
       - upgradeType: 3
         upgradeValue: 50
     - upgradeName: Accuracy
-      upgradeDescription: "Next upgrade: Recoil Reduction\nIncreases accuracy"
+      upgradeDescription: 'Next upgrade: Recoil Reduction
+
+        Increases accuracy'
       upgrades:
       - upgradeType: 5
         upgradeValue: -4
     - upgradeName: Dual Wield
-      upgradeDescription: "Next upgrade: Dual Wield\nIncreases rate of fire"
+      upgradeDescription: 'Next upgrade: Dual Wield
+
+        Increases rate of fire'
       upgrades:
       - upgradeType: 13
         upgradeValue: DualUzis
@@ -1026,10 +1180,10 @@ MonoBehaviour:
     price: 90010000e8030000d0070000b80b0000a00f000088130000
     purchased: 0
   - weaponName: NULL
-    displayName:
-    description:
+    displayName: 
+    description: 
     weaponModel: Weapons/Pistol
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -1061,28 +1215,28 @@ MonoBehaviour:
     backpack: 0
     rank: 0
     rankInfo:
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
     price: 000000000000000000000000000000000000000000000000
     purchased: 0
   - weaponName: NULL
-    displayName:
-    description:
+    displayName: 
+    description: 
     weaponModel: Weapons/Sniper
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -1114,28 +1268,28 @@ MonoBehaviour:
     backpack: 0
     rank: 0
     rankInfo:
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
     price: 000000000000000000000000000000000000000000000000
     purchased: 0
   - weaponName: NULL
-    displayName:
-    description:
+    displayName: 
+    description: 
     weaponModel: Weapons/Uzi
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -1167,28 +1321,28 @@ MonoBehaviour:
     backpack: 0
     rank: 0
     rankInfo:
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
     price: 000000000000000000000000000000000000000000000000
     purchased: 0
   - weaponName: NULL
-    displayName:
-    description:
+    displayName: 
+    description: 
     weaponModel: Weapons/Katana
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -1220,28 +1374,32 @@ MonoBehaviour:
     backpack: 0
     rank: 0
     rankInfo:
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
     price: 000000000000000000000000000000000000000000000000
     purchased: 0
   - weaponName: FireAxe
     displayName: Fire Axe
-    description: "Bladed melee weapons deal more damage than blunt\nweapons such as the baseball bat, but lack the force\nto knock enemies away."
+    description: 'Bladed melee weapons deal more damage than blunt
+
+      weapons such as the baseball bat, but lack the force
+
+      to knock enemies away.'
     weaponModel: Weapons/Fireaxe
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -1274,29 +1432,39 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Honed Edge\nIncreases peak damage by 30%"
+      upgradeDescription: 'Next upgrade: Honed Edge
+
+        Increases peak damage by 30%'
       upgrades:
       - upgradeType: 2
         upgradeValue: -5.4
     - upgradeName: Movement Lockout
-      upgradeDescription: "Next upgrade: Chop Chop\nIncreases swing speed"
+      upgradeDescription: 'Next upgrade: Chop Chop
+
+        Increases swing speed'
       upgrades:
       - upgradeType: 19
         upgradeValue: -0.08
       - upgradeType: 10
         upgradeValue: -.08
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Razor Edge\nIncreases peak damage by 30%"
+      upgradeDescription: 'Next upgrade: Razor Edge
+
+        Increases peak damage by 30%'
       upgrades:
       - upgradeType: 2
         upgradeValue: -5.4
     - upgradeName: Crit Chance
-      upgradeDescription: "Next upgrade: Way of the Blade\nIncreases crit chance by 10%"
+      upgradeDescription: 'Next upgrade: Way of the Blade
+
+        Increases crit chance by 10%'
       upgrades:
       - upgradeType: 6
         upgradeValue: 10
     - upgradeName: Katana
-      upgradeDescription: "Next upgrade: Katana\nIncreases swing speed and crit chance"
+      upgradeDescription: 'Next upgrade: Katana
+
+        Increases swing speed and crit chance'
       upgrades:
       - upgradeType: 13
         upgradeValue: Katana
@@ -1313,10 +1481,10 @@ MonoBehaviour:
     price: f4010000200300004006000060090000800c000094110000
     purchased: 0
   - weaponName: NULL
-    displayName:
-    description:
+    displayName: 
+    description: 
     weaponModel: Weapons/Sledgehammer
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -1348,28 +1516,32 @@ MonoBehaviour:
     backpack: 0
     rank: 0
     rankInfo:
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
-    - upgradeName:
-      upgradeDescription:
+    - upgradeName: 
+      upgradeDescription: 
       upgrades: []
     price: 000000000000000000000000000000000000000000000000
     purchased: 0
   - weaponName: M4Rifle
     displayName: Assault Rifle
-    description: "A fully automatic, well rounded rifle.  It's design lends\nitself to engaging targets at longer range, and therefore\nhas diminished damage and accuracy at point-blank."
+    description: 'A fully automatic, well rounded rifle.  It''s design lends
+
+      itself to engaging targets at longer range, and therefore
+
+      has diminished damage and accuracy at point-blank.'
     weaponModel: Weapons/M4Rifle
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -1402,31 +1574,41 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Extended Magazine\nIncreases ammo capacity +50"
+      upgradeDescription: 'Next upgrade: Extended Magazine
+
+        Increases ammo capacity +50'
       upgrades:
       - upgradeType: 3
         upgradeValue: 50
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Custom Rounds\nIncreases damage by 20%"
+      upgradeDescription: 'Next upgrade: Custom Rounds
+
+        Increases damage by 20%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 1.8
       - upgradeType: 2
         upgradeValue: -.78
     - upgradeName: Rate of Fire
-      upgradeDescription: "Next upgrade: Cooling System\nIncreases rate of fire"
+      upgradeDescription: 'Next upgrade: Cooling System
+
+        Increases rate of fire'
       upgrades:
       - upgradeType: 10
         upgradeValue: -0.02
     - upgradeName: Accuracy
-      upgradeDescription: "Next upgrade: Improved Stock\nIncreases hit chance"
+      upgradeDescription: 'Next upgrade: Improved Stock
+
+        Increases hit chance'
       upgrades:
       - upgradeType: 4
         upgradeValue: 5
       - upgradeType: 5
         upgradeValue: -4
     - upgradeName: more damage/crit/ammo
-      upgradeDescription: "Next upgrade: Overhaul\nIncreases damage, crit and ammo capacity"
+      upgradeDescription: 'Next upgrade: Overhaul
+
+        Increases damage, crit and ammo capacity'
       upgrades:
       - upgradeType: 1
         upgradeValue: 5
@@ -1442,9 +1624,13 @@ MonoBehaviour:
     purchased: 0
   - weaponName: M21Rifle
     displayName: Sniper Rifle
-    description: "Requires you to hold the fire button to ready your shot,\nthus limiting your mobility.  However, it deals heavy\ndamage and pierces through multiple zombies."
+    description: 'Requires you to hold the fire button to ready your shot,
+
+      thus limiting your mobility.  However, it deals heavy
+
+      damage and pierces through multiple zombies.'
     weaponModel: Weapons/M21Rifle
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -1477,27 +1663,37 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Bandolier\nIncreases ammo capacity +10"
+      upgradeDescription: 'Next upgrade: Bandolier
+
+        Increases ammo capacity +10'
       upgrades:
       - upgradeType: 3
         upgradeValue: 10
     - upgradeName: Aim delay
-      upgradeDescription: "Next upgrade: Weight Reduction\nIncreases aiming speed"
+      upgradeDescription: 'Next upgrade: Weight Reduction
+
+        Increases aiming speed'
       upgrades:
       - upgradeType: 16
         upgradeValue: -.1
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Improved Optics\nIncreases damage by 25%"
+      upgradeDescription: 'Next upgrade: Improved Optics
+
+        Increases damage by 25%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 38
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Spare Clip\nIncreases ammo capacity +10"
+      upgradeDescription: 'Next upgrade: Spare Clip
+
+        Increases ammo capacity +10'
       upgrades:
       - upgradeType: 3
         upgradeValue: 10
     - upgradeName: .50 Cal
-      upgradeDescription: "Next upgrade: .50 Cal\nIncreases damage and aim speed"
+      upgradeDescription: 'Next upgrade: .50 Cal
+
+        Increases damage and aim speed'
       upgrades:
       - upgradeType: 12
         upgradeValue: Weapons/Sniper
@@ -1511,9 +1707,13 @@ MonoBehaviour:
     purchased: 0
   - weaponName: Flamethrower
     displayName: Flamethrower
-    description: "Engulfs all zombies caught in its firing range, rendering\nthem helpless and crispy.  The extreme weight of this\nweapon makes it hard to move."
+    description: 'Engulfs all zombies caught in its firing range, rendering
+
+      them helpless and crispy.  The extreme weight of this
+
+      weapon makes it hard to move.'
     weaponModel: Weapons/Flamethrower
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -1546,27 +1746,37 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Nozzle Dilation\nIncreases damage by 20%"
+      upgradeDescription: 'Next upgrade: Nozzle Dilation
+
+        Increases damage by 20%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 4
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Auxiliary Tank\nIncreases fuel capacity +20"
+      upgradeDescription: 'Next upgrade: Auxiliary Tank
+
+        Increases fuel capacity +20'
       upgrades:
       - upgradeType: 3
         upgradeValue: 20
     - upgradeName: Movement penalty
-      upgradeDescription: "Next upgrade: Weight Reduction\nReduces movement penalty"
+      upgradeDescription: 'Next upgrade: Weight Reduction
+
+        Reduces movement penalty'
       upgrades:
       - upgradeType: 24
         upgradeValue: 0.1
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Accelerant Jet\nIncreases damage by 20%"
+      upgradeDescription: 'Next upgrade: Accelerant Jet
+
+        Increases damage by 20%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 4
     - upgradeName: Ammo+Damage
-      upgradeDescription: "Next upgrade: Mark 2\nImproves damage and max ammo"
+      upgradeDescription: 'Next upgrade: Mark 2
+
+        Improves damage and max ammo'
       upgrades:
       - upgradeType: 1
         upgradeValue: 4
@@ -1578,7 +1788,11 @@ MonoBehaviour:
     purchased: 0
   - weaponName: Grenade
     displayName: Grenades
-    description: "Pull the pin and give them a toss!  These little guys\ncause a powerful, zombie-mulching blast, but have a\nbrief delay before detonating."
+    description: 'Pull the pin and give them a toss!  These little guys
+
+      cause a powerful, zombie-mulching blast, but have a
+
+      brief delay before detonating.'
     weaponModel: Weapons/Grenade
     explosiveModel: Effects/Grenade_Projectile
     explosiveFuse: 1.5
@@ -1613,29 +1827,39 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Extra Shipment\nIncreases ammo capacity +5"
+      upgradeDescription: 'Next upgrade: Extra Shipment
+
+        Increases ammo capacity +5'
       upgrades:
       - upgradeType: 3
         upgradeValue: 5
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Fragmentation\nIncreases damage by 20%"
+      upgradeDescription: 'Next upgrade: Fragmentation
+
+        Increases damage by 20%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 28
     - upgradeName: Radius
-      upgradeDescription: "Next upgrade: Blast Radius\nIncreases effective blast range"
+      upgradeDescription: 'Next upgrade: Blast Radius
+
+        Increases effective blast range'
       upgrades:
       - upgradeType: 2
         upgradeValue: -4
       - upgradeType: 7
         upgradeValue: .4
     - upgradeName: Fuse Length
-      upgradeDescription: "Next upgrade: Fuse Assembly\nIncreases detonation speed"
+      upgradeDescription: 'Next upgrade: Fuse Assembly
+
+        Increases detonation speed'
       upgrades:
       - upgradeType: 15
         upgradeValue: -.5
     - upgradeName: Ammo+ Damage
-      upgradeDescription: "Next upgrade: Classified Ordinance\nIncreases damage and ammo capacity"
+      upgradeDescription: 'Next upgrade: Classified Ordinance
+
+        Increases damage and ammo capacity'
       upgrades:
       - upgradeType: 3
         upgradeValue: 5
@@ -1645,7 +1869,11 @@ MonoBehaviour:
     purchased: 0
   - weaponName: Landmine
     displayName: Landmines
-    description: "Drop these on the ground and watch your zombie foes\nblunder into them.  You can have as many as 3 placed\nsimultaneously."
+    description: 'Drop these on the ground and watch your zombie foes
+
+      blunder into them.  You can have as many as 3 placed
+
+      simultaneously.'
     weaponModel: Weapons/Landmine
     explosiveModel: Effects/Landmine_Projectile
     explosiveFuse: 101.2
@@ -1680,29 +1908,39 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Blast Force\nIncreases damage by 20%"
+      upgradeDescription: 'Next upgrade: Blast Force
+
+        Increases damage by 20%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 28
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Backpack\nIncreases ammo capacity +5"
+      upgradeDescription: 'Next upgrade: Backpack
+
+        Increases ammo capacity +5'
       upgrades:
       - upgradeType: 3
         upgradeValue: 5
     - upgradeName: Radius
-      upgradeDescription: "Next upgrade: Blast Radius\nIncreases effective blast radius"
+      upgradeDescription: 'Next upgrade: Blast Radius
+
+        Increases effective blast radius'
       upgrades:
       - upgradeType: 7
         upgradeValue: 0.4
       - upgradeType: 2
         upgradeValue: -4
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Dufflebag\nIncreases ammo capacity +10"
+      upgradeDescription: 'Next upgrade: Dufflebag
+
+        Increases ammo capacity +10'
       upgrades:
       - upgradeType: 3
         upgradeValue: 10
     - upgradeName: Radius/Falloff
-      upgradeDescription: "Next upgrade: Anti-Tank Mines\nIncreases damage and effective radius"
+      upgradeDescription: 'Next upgrade: Anti-Tank Mines
+
+        Increases damage and effective radius'
       upgrades:
       - upgradeType: 1
         upgradeValue: 28
@@ -1714,7 +1952,11 @@ MonoBehaviour:
     purchased: 0
   - weaponName: Flashbang
     displayName: Flashbangs
-    description: "These grenades emit a disorienting blast of light and\nsound, rendering all nearby zombies helpless for a\nshort time."
+    description: 'These grenades emit a disorienting blast of light and
+
+      sound, rendering all nearby zombies helpless for a
+
+      short time.'
     weaponModel: Weapons/Flashbang
     explosiveModel: Effects/Flashbang_Projectile
     explosiveFuse: 1.8
@@ -1749,27 +1991,37 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Fuse Length
-      upgradeDescription: "Next upgrade: Shorter Fuse\nReduces fuse length by 1/2 sec."
+      upgradeDescription: 'Next upgrade: Shorter Fuse
+
+        Reduces fuse length by 1/2 sec.'
       upgrades:
       - upgradeType: 15
         upgradeValue: -0.5
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Grenade Pack\nIncreases ammo capacity +5"
+      upgradeDescription: 'Next upgrade: Grenade Pack
+
+        Increases ammo capacity +5'
       upgrades:
       - upgradeType: 3
         upgradeValue: 5
     - upgradeName: Stun Duration
-      upgradeDescription: "Next upgrade: Extra Magnesium\nIncreases stun duration by 1 sec."
+      upgradeDescription: 'Next upgrade: Extra Magnesium
+
+        Increases stun duration by 1 sec.'
       upgrades:
       - upgradeType: 1
         upgradeValue: 1
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Grenade Pouch\nIncreases ammo capacity +5"
+      upgradeDescription: 'Next upgrade: Grenade Pouch
+
+        Increases ammo capacity +5'
       upgrades:
       - upgradeType: 3
         upgradeValue: 5
     - upgradeName: Stun Duration + Fuse length
-      upgradeDescription: "Next upgrade: Military Grade\nFlash duration increased, fuse length reduced"
+      upgradeDescription: 'Next upgrade: Military Grade
+
+        Flash duration increased, fuse length reduced'
       upgrades:
       - upgradeType: 1
         upgradeValue: 1
@@ -1779,7 +2031,11 @@ MonoBehaviour:
     purchased: 0
   - weaponName: RPG
     displayName: RPG
-    description: "Unleashes a rocket propelled grenade which liquifies\nzombies caught in its area of effect.  The rate of fire is\nsomewhat slow and ammo is sparse however."
+    description: 'Unleashes a rocket propelled grenade which liquifies
+
+      zombies caught in its area of effect.  The rate of fire is
+
+      somewhat slow and ammo is sparse however.'
     weaponModel: Weapons/RPG
     explosiveModel: Effects/RPG_Projectile
     explosiveFuse: 0.4
@@ -1814,24 +2070,32 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Ammo Crate\nIncreases ammo capacity +5"
+      upgradeDescription: 'Next upgrade: Ammo Crate
+
+        Increases ammo capacity +5'
       upgrades:
       - upgradeType: 3
         upgradeValue: 5
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Anti-Tank Rockets\nIncreases damage by 20%"
+      upgradeDescription: 'Next upgrade: Anti-Tank Rockets
+
+        Increases damage by 20%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 35
     - upgradeName: Movement Lockout
-      upgradeDescription: "Next upgrade: Stability Management\nIncreases rate of fire/mobility"
+      upgradeDescription: 'Next upgrade: Stability Management
+
+        Increases rate of fire/mobility'
       upgrades:
       - upgradeType: 19
         upgradeValue: -.15
       - upgradeType: 10
         upgradeValue: -.1
     - upgradeName: Radius
-      upgradeDescription: "Next upgrade: Blast Force\nIncreases blast radius and damage"
+      upgradeDescription: 'Next upgrade: Blast Force
+
+        Increases blast radius and damage'
       upgrades:
       - upgradeType: 7
         upgradeValue: 0.4
@@ -1840,7 +2104,9 @@ MonoBehaviour:
       - upgradeType: 1
         upgradeValue: 30
     - upgradeName: Damage/Ammo/New Model?
-      upgradeDescription: "Next upgrade: Mark 2\nIncreases damage and ammo capacity"
+      upgradeDescription: 'Next upgrade: Mark 2
+
+        Increases damage and ammo capacity'
       upgrades:
       - upgradeType: 3
         upgradeValue: 5
@@ -1850,9 +2116,13 @@ MonoBehaviour:
     purchased: 0
   - weaponName: Minigun
     displayName: Minigun
-    description: "There's nothing mini about it - this monstrous gattling\ngun does heavy damage while it's ammo lasts.  It's also\nquite heavy and makes movement difficult."
+    description: 'There''s nothing mini about it - this monstrous gattling
+
+      gun does heavy damage while it''s ammo lasts.  It''s also
+
+      quite heavy and makes movement difficult.'
     weaponModel: Weapons/Minigun
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -1885,17 +2155,23 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Hit Chance
-      upgradeDescription: "Next upgrade: Stabilizer\nIncreases accuracy"
+      upgradeDescription: 'Next upgrade: Stabilizer
+
+        Increases accuracy'
       upgrades:
       - upgradeType: 5
         upgradeValue: -4
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Ammo Belt\nIncreases ammo capacity +100"
+      upgradeDescription: 'Next upgrade: Ammo Belt
+
+        Increases ammo capacity +100'
       upgrades:
       - upgradeType: 3
         upgradeValue: 100
     - upgradeName: Damage/Knockback force
-      upgradeDescription: "Next upgrade: Impact Rounds\nIncreases damage and knockback by 20%"
+      upgradeDescription: 'Next upgrade: Impact Rounds
+
+        Increases damage and knockback by 20%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 4
@@ -1904,12 +2180,16 @@ MonoBehaviour:
       - upgradeType: 9
         upgradeValue: -0.03
     - upgradeName: Movement Penalty
-      upgradeDescription: "Next upgrade: Weight Reduction\nReduces movement penalty"
+      upgradeDescription: 'Next upgrade: Weight Reduction
+
+        Reduces movement penalty'
       upgrades:
       - upgradeType: 24
         upgradeValue: .1
     - upgradeName: Crit Chance+ Damage
-      upgradeDescription: "Next upgrade: Targeting System\nIncreases damage/crit chance"
+      upgradeDescription: 'Next upgrade: Targeting System
+
+        Increases damage/crit chance'
       upgrades:
       - upgradeType: 1
         upgradeValue: 4
@@ -1921,7 +2201,9 @@ MonoBehaviour:
     purchased: 0
   - weaponName: Cryogun
     displayName: Cryo-gun
-    description: "An experimental weapon which does mild damage, but\nleaves its victims frozen solid for a few moments."
+    description: 'An experimental weapon which does mild damage, but
+
+      leaves its victims frozen solid for a few moments.'
     weaponModel: Weapons/Cryogun
     explosiveModel: Effects/Cryogun_Projectile
     explosiveFuse: 0.4
@@ -1956,25 +2238,35 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Refrigeration System\nIncreases damage by 20%"
+      upgradeDescription: 'Next upgrade: Refrigeration System
+
+        Increases damage by 20%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 5
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Energy Reserves\nIncreases energy capacity +10"
+      upgradeDescription: 'Next upgrade: Energy Reserves
+
+        Increases energy capacity +10'
       upgrades:
       - upgradeType: 3
         upgradeValue: 10
     - upgradeName: Radius
-      upgradeDescription: "Next upgrade: Overcharge\nIncreases freezing blast radius"
+      upgradeDescription: 'Next upgrade: Overcharge
+
+        Increases freezing blast radius'
       upgrades:
       - upgradeType: 7
         upgradeValue: .5
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Energy Surplus\nIncreases energy capacity +10"
+      upgradeDescription: 'Next upgrade: Energy Surplus
+
+        Increases energy capacity +10'
       upgrades: []
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Experimental Upgrade\nIncreases damage, engages auto-fire"
+      upgradeDescription: 'Next upgrade: Experimental Upgrade
+
+        Increases damage, engages auto-fire'
       upgrades:
       - upgradeType: 1
         upgradeValue: 5
@@ -1988,9 +2280,11 @@ MonoBehaviour:
     purchased: 0
   - weaponName: Chainsaw
     displayName: Chainsaw
-    description: "A gruesome (but effective) weapon.  Just try not to get\nyour brains eaten while attempting to use it."
+    description: 'A gruesome (but effective) weapon.  Just try not to get
+
+      your brains eaten while attempting to use it.'
     weaponModel: Weapons/Chainsaw
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -2023,29 +2317,39 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Fuel Reserves\nIncreases fuel capacity +25"
+      upgradeDescription: 'Next upgrade: Fuel Reserves
+
+        Increases fuel capacity +25'
       upgrades:
       - upgradeType: 3
         upgradeValue: 25
     - upgradeName: Knockback behavior
-      upgradeDescription: "Next upgrade: Improved Torque\nIncreased knockback force"
+      upgradeDescription: 'Next upgrade: Improved Torque
+
+        Increased knockback force'
       upgrades:
       - upgradeType: 8
         upgradeValue: 6.5
       - upgradeType: 9
         upgradeValue: 2.8
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Gnarled Chain\nIncreases damage by 20%"
+      upgradeDescription: 'Next upgrade: Gnarled Chain
+
+        Increases damage by 20%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 6
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Fuel Efficiency\nIncreases ammo capacity +25"
+      upgradeDescription: 'Next upgrade: Fuel Efficiency
+
+        Increases ammo capacity +25'
       upgrades:
       - upgradeType: 3
         upgradeValue: 25
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Tungsten Chain\nIncreases damage by 20%"
+      upgradeDescription: 'Next upgrade: Tungsten Chain
+
+        Increases damage by 20%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 6
@@ -2053,7 +2357,11 @@ MonoBehaviour:
     purchased: 0
   - weaponName: Medkit
     displayName: Med-kit
-    description: "These first-aid kits can be tossed on the ground, and\nused by either yourself or your co-op partner.  Handy\nif you or your ally have a tendency to get eaten alive."
+    description: 'These first-aid kits can be tossed on the ground, and
+
+      used by either yourself or your co-op partner.  Handy
+
+      if you or your ally have a tendency to get eaten alive.'
     weaponModel: Weapons/Medkit
     explosiveModel: Effects/Medkit_Projectile
     explosiveFuse: 201
@@ -2088,25 +2396,35 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Extra Kits\nIncreases ammo capacity +2"
+      upgradeDescription: 'Next upgrade: Extra Kits
+
+        Increases ammo capacity +2'
       upgrades:
       - upgradeType: 3
         upgradeValue: 2
     - upgradeName: Healing
-      upgradeDescription: "Next upgrade: Sanitized Materials\nIncreases healing done by 100%"
+      upgradeDescription: 'Next upgrade: Sanitized Materials
+
+        Increases healing done by 100%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 30
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Extra Kits\nIncreases ammo capacity +2"
+      upgradeDescription: 'Next upgrade: Extra Kits
+
+        Increases ammo capacity +2'
       upgrades:
       - upgradeType: 3
         upgradeValue: 2
     - upgradeName: Healing
-      upgradeDescription: "Next upgrade: Duct Tape\nIncreases healing by another 50%"
+      upgradeDescription: 'Next upgrade: Duct Tape
+
+        Increases healing by another 50%'
       upgrades: []
     - upgradeName: Ammo/Healing
-      upgradeDescription: "Next upgrade: Deluxe Medkit\nIncreases ammo capacity and healing"
+      upgradeDescription: 'Next upgrade: Deluxe Medkit
+
+        Increases ammo capacity and healing'
       upgrades:
       - upgradeType: 1
         upgradeValue: 30
@@ -2116,9 +2434,11 @@ MonoBehaviour:
     purchased: 0
   - weaponName: Magnum
     displayName: Magnum
-    description: "This massive handgun unleashes bullets the size of\nsmall dogs, dealing heavy damage.  However, its ammo \nsupply and rate of fire are both limited."
+    description: "This massive handgun unleashes bullets the size of\nsmall dogs,
+      dealing heavy damage.  However, its ammo \nsupply and rate of fire are both
+      limited."
     weaponModel: Weapons/Magnum
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -2151,31 +2471,41 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Speed Loader\nIncreases ammo capacity +5"
+      upgradeDescription: 'Next upgrade: Speed Loader
+
+        Increases ammo capacity +5'
       upgrades:
       - upgradeType: 3
         upgradeValue: 5
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: AP Rounds\nIncreases damage by 20%"
+      upgradeDescription: 'Next upgrade: AP Rounds
+
+        Increases damage by 20%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 20
     - upgradeName: Accuracy/Crit
-      upgradeDescription: "Next upgrade: Custom Grip\nIncreases crit chance and accuracy"
+      upgradeDescription: 'Next upgrade: Custom Grip
+
+        Increases crit chance and accuracy'
       upgrades:
       - upgradeType: 6
         upgradeValue: 5
       - upgradeType: 5
         upgradeValue: -6
     - upgradeName: Rate of Fire/Knockback
-      upgradeDescription: "Next upgrade: Stability Enhance\nIncreases knockback and rate of fire"
+      upgradeDescription: 'Next upgrade: Stability Enhance
+
+        Increases knockback and rate of fire'
       upgrades:
       - upgradeType: 10
         upgradeValue: -.14
       - upgradeType: 8
         upgradeValue: 10
     - upgradeName: Model Swap, ammo and damage
-      upgradeDescription: "Next upgrade: Elite Magnum\nIncreases ammo capacity and damage"
+      upgradeDescription: 'Next upgrade: Elite Magnum
+
+        Increases ammo capacity and damage'
       upgrades:
       - upgradeType: 3
         upgradeValue: 10
@@ -2189,9 +2519,13 @@ MonoBehaviour:
     purchased: 0
   - weaponName: SlugShotgun
     displayName: Slug Shotgun
-    description: "Armed with saboted slugs, this shotgun trades short-\nrange devastation for rifle-like range and power.  It\nprovides significant knockback and piercing power."
+    description: 'Armed with saboted slugs, this shotgun trades short-
+
+      range devastation for rifle-like range and power.  It
+
+      provides significant knockback and piercing power.'
     weaponModel: Weapons/Shotgun_Slug
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -2224,27 +2558,37 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Knockback
-      upgradeDescription: "Next upgrade: Heavy Slugs\nIncreases knockback force"
+      upgradeDescription: 'Next upgrade: Heavy Slugs
+
+        Increases knockback force'
       upgrades:
       - upgradeType: 8
         upgradeValue: 15
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Bandolier\nIncreases ammo capacity +20"
+      upgradeDescription: 'Next upgrade: Bandolier
+
+        Increases ammo capacity +20'
       upgrades:
       - upgradeType: 3
         upgradeValue: 20
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Improved Rifling\nIncreases damage by 20%"
+      upgradeDescription: 'Next upgrade: Improved Rifling
+
+        Increases damage by 20%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 12
     - upgradeName: Crit Chance
-      upgradeDescription: "Next upgrade: Rebalance\nIncreases crit chance by 5%"
+      upgradeDescription: 'Next upgrade: Rebalance
+
+        Increases crit chance by 5%'
       upgrades:
       - upgradeType: 6
         upgradeValue: 5
     - upgradeName: Damage/Piercing Range
-      upgradeDescription: "Next upgrade: Elephant Slugs\nIncreases damage and piercing power"
+      upgradeDescription: 'Next upgrade: Elephant Slugs
+
+        Increases damage and piercing power'
       upgrades:
       - upgradeType: 1
         upgradeValue: 12
@@ -2262,9 +2606,13 @@ MonoBehaviour:
     purchased: 0
   - weaponName: TeslaGun
     displayName: Tesla Gun
-    description: "This unstable-looking weapon unleashes an arc of\nelectricity which does enormous damage.  However, it\nrequires the user to charge up their shot first."
+    description: 'This unstable-looking weapon unleashes an arc of
+
+      electricity which does enormous damage.  However, it
+
+      requires the user to charge up their shot first.'
     weaponModel: Weapons/Teslagun
-    explosiveModel:
+    explosiveModel: 
     explosiveFuse: 0
     explosiveRange: 0
     explosiveRadius: 0
@@ -2297,27 +2645,37 @@ MonoBehaviour:
     rank: 0
     rankInfo:
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Battery Tech\nIncreases energy capacity +5"
+      upgradeDescription: 'Next upgrade: Battery Tech
+
+        Increases energy capacity +5'
       upgrades:
       - upgradeType: 3
         upgradeValue: 5
     - upgradeName: Aim Delay
-      upgradeDescription: "Next upgrade: Quick-charge Boosters\nIncreases charge-up speed"
+      upgradeDescription: 'Next upgrade: Quick-charge Boosters
+
+        Increases charge-up speed'
       upgrades:
       - upgradeType: 16
         upgradeValue: -.25
     - upgradeName: Ammo
-      upgradeDescription: "Next upgrade: Auxiliary Battery\nIncreases energy capacity +5"
+      upgradeDescription: 'Next upgrade: Auxiliary Battery
+
+        Increases energy capacity +5'
       upgrades:
       - upgradeType: 3
         upgradeValue: 5
     - upgradeName: Damage
-      upgradeDescription: "Next upgrade: Overcharged Coils\nIncreases damage by 30%"
+      upgradeDescription: 'Next upgrade: Overcharged Coils
+
+        Increases damage by 30%'
       upgrades:
       - upgradeType: 1
         upgradeValue: 105
     - upgradeName: Ammo/Charge Time
-      upgradeDescription: "Next upgrade: Ion System\nIncreases energy reserves and charge speed"
+      upgradeDescription: 'Next upgrade: Ion System
+
+        Increases energy reserves and charge speed'
       upgrades:
       - upgradeType: 3
         upgradeValue: 5
@@ -2330,7 +2688,9 @@ MonoBehaviour:
     topDisplaySize: 0
     perkDisplayName: Peacemaker
     perkFontSize: 0.063
-    perkDescription: "Bestows upon the player mad gunslingin' skills.  Gives\nimproved damage for all handguns."
+    perkDescription: 'Bestows upon the player mad gunslingin'' skills.  Gives
+
+      improved damage for all handguns.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2342,16 +2702,25 @@ MonoBehaviour:
     - 75
     rankDescriptions:
     - 
-    - "Current Rank: +15% damage\nNext Rank: +30% damage"
-    - "Current Rank: +30% damage\nNext Rank: +45% damage"
-    - "Current Rank: +45% damage\nNext Rank: +60% damage"
-    - "Current Rank: +60% damage\nNext Rank: +75% damage"
+    - 'Current Rank: +15% damage
+
+      Next Rank: +30% damage'
+    - 'Current Rank: +30% damage
+
+      Next Rank: +45% damage'
+    - 'Current Rank: +45% damage
+
+      Next Rank: +60% damage'
+    - 'Current Rank: +60% damage
+
+      Next Rank: +75% damage'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Full Auto
     topDisplaySize: 0
     perkDisplayName: Full Auto
     perkFontSize: 0.073
-    perkDescription: "Improves your ability to handle automatic weapons, \nsuch as uzis, assault rifles and the dreaded minigun,\nincreasing their damage."
+    perkDescription: "Improves your ability to handle automatic weapons, \nsuch as
+      uzis, assault rifles and the dreaded minigun,\nincreasing their damage."
     purchased: 0
     implemented: 1
     rank: 0
@@ -2363,16 +2732,26 @@ MonoBehaviour:
     - 75
     rankDescriptions:
     - 
-    - "Current Rank: +15% damage\nNext Rank: +30% damage"
-    - "Current Rank: +30% damage\nNext Rank: +45% damage"
-    - "Current Rank: +45% damage\nNext Rank: +60% damage"
-    - "Current Rank: +60% damage\nNext Rank: +75% damage"
+    - 'Current Rank: +15% damage
+
+      Next Rank: +30% damage'
+    - 'Current Rank: +30% damage
+
+      Next Rank: +45% damage'
+    - 'Current Rank: +45% damage
+
+      Next Rank: +60% damage'
+    - 'Current Rank: +60% damage
+
+      Next Rank: +75% damage'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Dead-eye
     topDisplaySize: 0
     perkDisplayName: Dead-eye
     perkFontSize: 0.073
-    perkDescription: "Rigorous training has made you an expert marksman,\nimproving your damage with sniper rifles."
+    perkDescription: 'Rigorous training has made you an expert marksman,
+
+      improving your damage with sniper rifles.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2384,16 +2763,28 @@ MonoBehaviour:
     - 75
     rankDescriptions:
     - 
-    - "Current Rank: +15% damage\nNext Rank: +30% damage"
-    - "Current Rank: +30% damage\nNext Rank: +45% damage"
-    - "Current Rank: +45% damage\nNext Rank: +60% damage"
-    - "Current Rank: +60% damage\nNext Rank: +75% damage"
+    - 'Current Rank: +15% damage
+
+      Next Rank: +30% damage'
+    - 'Current Rank: +30% damage
+
+      Next Rank: +45% damage'
+    - 'Current Rank: +45% damage
+
+      Next Rank: +60% damage'
+    - 'Current Rank: +60% damage
+
+      Next Rank: +75% damage'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Huntsman
     topDisplaySize: 0
     perkDisplayName: Huntsman
     perkFontSize: 0.073
-    perkDescription: "Shotguns are a girl's best friend... or was it diamonds?\nYou can't remember because you have shotguns on the\nbrain!  Improves all shotgun damage."
+    perkDescription: 'Shotguns are a girl''s best friend... or was it diamonds?
+
+      You can''t remember because you have shotguns on the
+
+      brain!  Improves all shotgun damage.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2405,16 +2796,30 @@ MonoBehaviour:
     - 75
     rankDescriptions:
     - 
-    - "Current Rank: +15% damage\nNext Rank: +30% damage"
-    - "Current Rank: +30% damage\nNext Rank: +45% damage"
-    - "Current Rank: +45% damage\nNext Rank: +60% damage"
-    - "Current Rank: +60% damage\nNext Rank: +75% damage"
+    - 'Current Rank: +15% damage
+
+      Next Rank: +30% damage'
+    - 'Current Rank: +30% damage
+
+      Next Rank: +45% damage'
+    - 'Current Rank: +45% damage
+
+      Next Rank: +60% damage'
+    - 'Current Rank: +60% damage
+
+      Next Rank: +75% damage'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Mad Scientist
     topDisplaySize: 0
-    perkDisplayName: "Mad\nScientist"
+    perkDisplayName: 'Mad
+
+      Scientist'
     perkFontSize: 0.073
-    perkDescription: "Too much time in the lab has given you a bad case of\nB.O., and a knack for experimental weapons like the\ncryo-gun and tesla rifle, improving their damage."
+    perkDescription: 'Too much time in the lab has given you a bad case of
+
+      B.O., and a knack for experimental weapons like the
+
+      cryo-gun and tesla rifle, improving their damage.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2426,16 +2831,26 @@ MonoBehaviour:
     - 75
     rankDescriptions:
     - 
-    - "Current Rank: +15% damage\nNext Rank: +30% damage"
-    - "Current Rank: +30% damage\nNext Rank: +45% damage"
-    - "Current Rank: +45% damage\nNext Rank: +60% damage"
-    - "Current Rank: +60% damage\nNext Rank: +75% damage"
+    - 'Current Rank: +15% damage
+
+      Next Rank: +30% damage'
+    - 'Current Rank: +30% damage
+
+      Next Rank: +45% damage'
+    - 'Current Rank: +45% damage
+
+      Next Rank: +60% damage'
+    - 'Current Rank: +60% damage
+
+      Next Rank: +75% damage'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Pyromaniac
     topDisplaySize: 0
     perkDisplayName: Pyromaniac
     perkFontSize: 0.067
-    perkDescription: "Improves flamethrower damage... at least that's what\nthe voices tell you."
+    perkDescription: 'Improves flamethrower damage... at least that''s what
+
+      the voices tell you.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2447,16 +2862,28 @@ MonoBehaviour:
     - 75
     rankDescriptions:
     - 
-    - "Current Rank: +15% damage\nNext Rank: +30% damage"
-    - "Current Rank: +30% damage\nNext Rank: +45% damage"
-    - "Current Rank: +45% damage\nNext Rank: +60% damage"
-    - "Current Rank: +60% damage\nNext Rank: +75% damage"
+    - 'Current Rank: +15% damage
+
+      Next Rank: +30% damage'
+    - 'Current Rank: +30% damage
+
+      Next Rank: +45% damage'
+    - 'Current Rank: +45% damage
+
+      Next Rank: +60% damage'
+    - 'Current Rank: +60% damage
+
+      Next Rank: +75% damage'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Ninja
     topDisplaySize: 0
     perkDisplayName: Ninja
     perkFontSize: 0.084
-    perkDescription: "Ninjas... masters of melee combat.  This skill grants\nthe user improved damage with all melee weapons,\neven chainsaws!"
+    perkDescription: 'Ninjas... masters of melee combat.  This skill grants
+
+      the user improved damage with all melee weapons,
+
+      even chainsaws!'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2468,16 +2895,26 @@ MonoBehaviour:
     - 75
     rankDescriptions:
     - 
-    - "Current Rank: +15% damage\nNext Rank: +30% damage"
-    - "Current Rank: +30% damage\nNext Rank: +45% damage"
-    - "Current Rank: +45% damage\nNext Rank: +60% damage"
-    - "Current Rank: +60% damage\nNext Rank: +75% damage"
+    - 'Current Rank: +15% damage
+
+      Next Rank: +30% damage'
+    - 'Current Rank: +30% damage
+
+      Next Rank: +45% damage'
+    - 'Current Rank: +45% damage
+
+      Next Rank: +60% damage'
+    - 'Current Rank: +60% damage
+
+      Next Rank: +75% damage'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Demolitionist
     topDisplaySize: 0
     perkDisplayName: Demolitionist
     perkFontSize: 0.061
-    perkDescription: "You are the master of blowing things up: the Picasso of\nplastique.  This skill improves all explosives damage."
+    perkDescription: 'You are the master of blowing things up: the Picasso of
+
+      plastique.  This skill improves all explosives damage.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2489,16 +2926,28 @@ MonoBehaviour:
     - 75
     rankDescriptions:
     - 
-    - "Current Rank: +15% damage\nNext Rank: +30% damage"
-    - "Current Rank: +30% damage\nNext Rank: +45% damage"
-    - "Current Rank: +45% damage\nNext Rank: +60% damage"
-    - "Current Rank: +60% damage\nNext Rank: +75% damage"
+    - 'Current Rank: +15% damage
+
+      Next Rank: +30% damage'
+    - 'Current Rank: +30% damage
+
+      Next Rank: +45% damage'
+    - 'Current Rank: +45% damage
+
+      Next Rank: +60% damage'
+    - 'Current Rank: +60% damage
+
+      Next Rank: +75% damage'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Steady Aim
     topDisplaySize: 0
     perkDisplayName: Steady Aim
     perkFontSize: 0.071
-    perkDescription: "Improves the accuracy of all weapons, increasing the\neffectiveness of those which suffer from a random\nchance to miss."
+    perkDescription: 'Improves the accuracy of all weapons, increasing the
+
+      effectiveness of those which suffer from a random
+
+      chance to miss.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2510,16 +2959,26 @@ MonoBehaviour:
     - 30
     rankDescriptions:
     - 
-    - "Current Rank: +10% hit chance\nNext Rank: +15% hit chance"
-    - "Current Rank: +15% hit chance\nNext Rank: +20% hit chance"
-    - "Current Rank: +20% hit chance\nNext Rank: +25% hit chance"
-    - "Current Rank: +25% hit chance\nNext Rank: +30% hit chance"
+    - 'Current Rank: +10% hit chance
+
+      Next Rank: +15% hit chance'
+    - 'Current Rank: +15% hit chance
+
+      Next Rank: +20% hit chance'
+    - 'Current Rank: +20% hit chance
+
+      Next Rank: +25% hit chance'
+    - 'Current Rank: +25% hit chance
+
+      Next Rank: +30% hit chance'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Sprint
     topDisplaySize: 0
     perkDisplayName: Sprint
     perkFontSize: 0.084
-    perkDescription: "Improves your movement speed, helping you to\npreserve your grey matter a bit longer."
+    perkDescription: 'Improves your movement speed, helping you to
+
+      preserve your grey matter a bit longer.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2531,16 +2990,28 @@ MonoBehaviour:
     - 1
     rankDescriptions:
     - 
-    - "Current Rank: +8% speed\nNext Rank: +16% speed"
-    - "Current Rank: +16% speed\nNext Rank: +24% speed"
-    - "Current Rank: +24% speed\nNext Rank: +32% speed"
-    - "Current Rank: +32% speed\nNext Rank: +40% speed"
+    - 'Current Rank: +8% speed
+
+      Next Rank: +16% speed'
+    - 'Current Rank: +16% speed
+
+      Next Rank: +24% speed'
+    - 'Current Rank: +24% speed
+
+      Next Rank: +32% speed'
+    - 'Current Rank: +32% speed
+
+      Next Rank: +40% speed'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Tough Guy
     topDisplaySize: 0
     perkDisplayName: Tough Guy
     perkFontSize: 0.073
-    perkDescription: "Heavy weapons?  No problem.  Having your brains\neaten?  Who cares!  You're a tough dude, and nothing\nslows you down."
+    perkDescription: 'Heavy weapons?  No problem.  Having your brains
+
+      eaten?  Who cares!  You''re a tough dude, and nothing
+
+      slows you down.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2552,16 +3023,28 @@ MonoBehaviour:
     - 0.75
     rankDescriptions:
     - 
-    - "Current Rank: -20% move penalties\nNext Rank: -40% move penalties"
-    - "Current Rank: -40% move penalties\nNext Rank: -60% move penalties"
-    - "Current Rank: -60% move penalties\nNext Rank: -80% move penalties"
-    - "Current Rank: -80% move penalties\nNext Rank: -100% move penalties"
+    - 'Current Rank: -20% move penalties
+
+      Next Rank: -40% move penalties'
+    - 'Current Rank: -40% move penalties
+
+      Next Rank: -60% move penalties'
+    - 'Current Rank: -60% move penalties
+
+      Next Rank: -80% move penalties'
+    - 'Current Rank: -80% move penalties
+
+      Next Rank: -100% move penalties'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Body Armor
     topDisplaySize: 0
     perkDisplayName: Body Armor
     perkFontSize: 0.067
-    perkDescription: "Zombie-proof body armor, which helps to keep you\nalive a little longer.  (note: may not actually be zombie-\nproof)"
+    perkDescription: 'Zombie-proof body armor, which helps to keep you
+
+      alive a little longer.  (note: may not actually be zombie-
+
+      proof)'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2573,16 +3056,26 @@ MonoBehaviour:
     - 125
     rankDescriptions:
     - 
-    - "Current Rank: +25% health\nNext Rank: +50% health"
-    - "Current Rank: +50% health\nNext Rank: +75% health"
-    - "Current Rank: +75% health\nNext Rank: +100% health"
-    - "Current Rank: +100% health\nNext Rank: +125% health"
+    - 'Current Rank: +25% health
+
+      Next Rank: +50% health'
+    - 'Current Rank: +50% health
+
+      Next Rank: +75% health'
+    - 'Current Rank: +75% health
+
+      Next Rank: +100% health'
+    - 'Current Rank: +100% health
+
+      Next Rank: +125% health'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Quartermaster
     topDisplaySize: 0.069
     perkDisplayName: Quartermaster
     perkFontSize: 0.055
-    perkDescription: "Ever dreamed of having more ammo for all weapons?\nDream no longer, for you are the quartermaster."
+    perkDescription: 'Ever dreamed of having more ammo for all weapons?
+
+      Dream no longer, for you are the quartermaster.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2594,16 +3087,26 @@ MonoBehaviour:
     - 50
     rankDescriptions:
     - 
-    - "Current Rank: +10% max ammo\nNext Rank: +20% max ammo"
-    - "Current Rank: +20% max ammo\nNext Rank: +30% max ammo"
-    - "Current Rank: +30% max ammo\nNext Rank: +40% max ammo"
-    - "Current Rank: +40% max ammo\nNext Rank: +50% max ammo"
+    - 'Current Rank: +10% max ammo
+
+      Next Rank: +20% max ammo'
+    - 'Current Rank: +20% max ammo
+
+      Next Rank: +30% max ammo'
+    - 'Current Rank: +30% max ammo
+
+      Next Rank: +40% max ammo'
+    - 'Current Rank: +40% max ammo
+
+      Next Rank: +50% max ammo'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Finesse
     topDisplaySize: 0
     perkDisplayName: Finesse
     perkFontSize: 0.08
-    perkDescription: "Gives a bonus critical hit chance for all weapons.  A\ncritical hit deals double damage!"
+    perkDescription: 'Gives a bonus critical hit chance for all weapons.  A
+
+      critical hit deals double damage!'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2615,16 +3118,28 @@ MonoBehaviour:
     - 25
     rankDescriptions:
     - 
-    - "Current Rank: +5% crit chance\nNext Rank: +10% crit chance"
-    - "Current Rank: +10% crit chance\nNext Rank: +15% crit chance"
-    - "Current Rank: +15% crit chance\nNext Rank: +20% crit chance"
-    - "Current Rank: +20% crit chance\nNext Rank: +25% crit chance"
+    - 'Current Rank: +5% crit chance
+
+      Next Rank: +10% crit chance'
+    - 'Current Rank: +10% crit chance
+
+      Next Rank: +15% crit chance'
+    - 'Current Rank: +15% crit chance
+
+      Next Rank: +20% crit chance'
+    - 'Current Rank: +20% crit chance
+
+      Next Rank: +25% crit chance'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Heavy Hitter
     topDisplaySize: 0
-    perkDisplayName: "Heavy\nHitter"
+    perkDisplayName: 'Heavy
+
+      Hitter'
     perkFontSize: 0.073
-    perkDescription: "Improves the knockback force of all weapons, sending\npesky zombies flying away!"
+    perkDescription: 'Improves the knockback force of all weapons, sending
+
+      pesky zombies flying away!'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2636,16 +3151,28 @@ MonoBehaviour:
     - 2
     rankDescriptions:
     - 
-    - "Current Rank: +20% knockback\nNext Rank: +40% knockback"
-    - "Current Rank: +40% knockback\nNext Rank: +60% knockback"
-    - "Current Rank: +60% knockback\nNext Rank: +80% knockback"
-    - "Current Rank: +80% knockback\nNext Rank: +100% knockback"
+    - 'Current Rank: +20% knockback
+
+      Next Rank: +40% knockback'
+    - 'Current Rank: +40% knockback
+
+      Next Rank: +60% knockback'
+    - 'Current Rank: +60% knockback
+
+      Next Rank: +80% knockback'
+    - 'Current Rank: +80% knockback
+
+      Next Rank: +100% knockback'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Controller
     topDisplaySize: 0
     perkDisplayName: Controller
     perkFontSize: 0.074
-    perkDescription: "You're a control freak!  All weapons that disable your\nfoes, such as flashbangs or the Cryo-gun, have their\neffective duration increased."
+    perkDescription: 'You''re a control freak!  All weapons that disable your
+
+      foes, such as flashbangs or the Cryo-gun, have their
+
+      effective duration increased.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2657,16 +3184,28 @@ MonoBehaviour:
     - 3.6
     rankDescriptions:
     - 
-    - "Current Rank: +1.2 sec\nNext Rank: +1.8 sec"
-    - "Current Rank: +1.8 sec\nNext Rank: +2.4 sec"
-    - "Current Rank: +2.4 sec\nNext Rank: +3 sec"
-    - "Current Rank: +3 sec\nNext Rank: +3.6 sec"
+    - 'Current Rank: +1.2 sec
+
+      Next Rank: +1.8 sec'
+    - 'Current Rank: +1.8 sec
+
+      Next Rank: +2.4 sec'
+    - 'Current Rank: +2.4 sec
+
+      Next Rank: +3 sec'
+    - 'Current Rank: +3 sec
+
+      Next Rank: +3.6 sec'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Radioactive
     topDisplaySize: 0
     perkDisplayName: Radioactive
     perkFontSize: 0.066
-    perkDescription: "Too much time hanging out with zombies has rendered\nyou slightly radioactive... but that's okay, because it\nmakes you regenerate health at all times! "
+    perkDescription: 'Too much time hanging out with zombies has rendered
+
+      you slightly radioactive... but that''s okay, because it
+
+      makes you regenerate health at all times! '
     purchased: 0
     implemented: 1
     rank: 0
@@ -2678,16 +3217,28 @@ MonoBehaviour:
     - 2.5
     rankDescriptions:
     - 
-    - "Current Rank: +0.5 health/sec\nNext Rank: +1 health/sec"
-    - "Current Rank: +1 health/sec\nNext Rank: +1.5 health/sec"
-    - "Current Rank: +1.5 health/sec\nNext Rank: +2 health/sec"
-    - "Current Rank: +2 health/sec\nNext Rank: +2.5 health/sec"
+    - 'Current Rank: +0.5 health/sec
+
+      Next Rank: +1 health/sec'
+    - 'Current Rank: +1 health/sec
+
+      Next Rank: +1.5 health/sec'
+    - 'Current Rank: +1.5 health/sec
+
+      Next Rank: +2 health/sec'
+    - 'Current Rank: +2 health/sec
+
+      Next Rank: +2.5 health/sec'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Daddy Warbucks
     topDisplaySize: 0.062
-    perkDisplayName: "Daddy\nWarbucks"
+    perkDisplayName: 'Daddy
+
+      Warbucks'
     perkFontSize: 0.071
-    perkDescription: "Equipping this skill will make you filthy rich.  Increases\nall money gains."
+    perkDescription: 'Equipping this skill will make you filthy rich.  Increases
+
+      all money gains.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2699,16 +3250,28 @@ MonoBehaviour:
     - 25
     rankDescriptions:
     - 
-    - "Current Rank: +5% money\nNext Rank: +10% money"
-    - "Current Rank: +10% money\nNext Rank: +15% money"
-    - "Current Rank: +15% money\nNext Rank: +20% money"
-    - "Current Rank: +20% money\nNext Rank: +25% money"
+    - 'Current Rank: +5% money
+
+      Next Rank: +10% money'
+    - 'Current Rank: +10% money
+
+      Next Rank: +15% money'
+    - 'Current Rank: +15% money
+
+      Next Rank: +20% money'
+    - 'Current Rank: +20% money
+
+      Next Rank: +25% money'
     price: e8030000e8030000e8030000e8030000e8030000
   - perkName: Revenge
     topDisplaySize: 0
     perkDisplayName: Revenge
     perkFontSize: 0.075
-    perkDescription: "When your back is against the wall, the fangs come out.\nWhen your health is less than 20%, your crit chance is\nimproved drastically."
+    perkDescription: 'When your back is against the wall, the fangs come out.
+
+      When your health is less than 20%, your crit chance is
+
+      improved drastically.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2720,16 +3283,28 @@ MonoBehaviour:
     - 25
     rankDescriptions:
     - 
-    - "Current Rank: +5% crit chance\nNext Rank: +10% crit chance"
-    - "Current Rank: +10% crit chance\nNext Rank: +15% crit chance"
-    - "Current Rank: +15% crit chance\nNext Rank: +20% crit chance"
-    - "Current Rank: +20% crit chance\nNext Rank: +25% crit chance"
+    - 'Current Rank: +5% crit chance
+
+      Next Rank: +10% crit chance'
+    - 'Current Rank: +10% crit chance
+
+      Next Rank: +15% crit chance'
+    - 'Current Rank: +15% crit chance
+
+      Next Rank: +20% crit chance'
+    - 'Current Rank: +20% crit chance
+
+      Next Rank: +25% crit chance'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: BFF
     topDisplaySize: 0
     perkDisplayName: BFF
     perkFontSize: 0.084
-    perkDescription: "Whenever you pick up an item on the field of battle,\nyour ally gets a copy as well!  The higher the rank of\nthis skill, the more they get."
+    perkDescription: 'Whenever you pick up an item on the field of battle,
+
+      your ally gets a copy as well!  The higher the rank of
+
+      this skill, the more they get.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2741,16 +3316,26 @@ MonoBehaviour:
     - 1
     rankDescriptions:
     - 
-    - "Current Rank: +20% ally gains\nNext Rank: +40% ally gains"
-    - "Current Rank: +40% ally gains\nNext Rank: +60% ally gains"
-    - "Current Rank: +60% ally gains\nNext Rank: +80% ally gains"
-    - "Current Rank: +80% ally gains\nNext Rank: +100% ally gains"
+    - 'Current Rank: +20% ally gains
+
+      Next Rank: +40% ally gains'
+    - 'Current Rank: +40% ally gains
+
+      Next Rank: +60% ally gains'
+    - 'Current Rank: +60% ally gains
+
+      Next Rank: +80% ally gains'
+    - 'Current Rank: +80% ally gains
+
+      Next Rank: +100% ally gains'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Berzerker
     topDisplaySize: 0
     perkDisplayName: Berzerker
     perkFontSize: 0.073
-    perkDescription: "Destroying a zombie in melee fills you with berzerker\nrage, boosting your speed and health briefly."
+    perkDescription: 'Destroying a zombie in melee fills you with berzerker
+
+      rage, boosting your speed and health briefly.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2762,16 +3347,28 @@ MonoBehaviour:
     - 13
     rankDescriptions:
     - 
-    - "Current Rank: 5% heal, 30% speed boost\nNext Rank: 7% heal, 40% speed boost"
-    - "Current Rank: 7% heal, 40% speed boost\nNext Rank: 9% heal, 50% speed boost"
-    - "Current Rank: 9% heal, 50% speed boost\nNext Rank: 11% heal, 60% speed boost"
-    - "Current Rank: 11% heal, 60% speed boost\nNext Rank: 13% heal, 70% speed boost"
+    - 'Current Rank: 5% heal, 30% speed boost
+
+      Next Rank: 7% heal, 40% speed boost'
+    - 'Current Rank: 7% heal, 40% speed boost
+
+      Next Rank: 9% heal, 50% speed boost'
+    - 'Current Rank: 9% heal, 50% speed boost
+
+      Next Rank: 11% heal, 60% speed boost'
+    - 'Current Rank: 11% heal, 60% speed boost
+
+      Next Rank: 13% heal, 70% speed boost'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Innocent
     topDisplaySize: 0
     perkDisplayName: Innocent
     perkFontSize: 0.074
-    perkDescription: "In co-op games, you are less likely to be targeted by\nthe enemy.  Your friend can handle themselves though,\nright?"
+    perkDescription: 'In co-op games, you are less likely to be targeted by
+
+      the enemy.  Your friend can handle themselves though,
+
+      right?'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2783,16 +3380,28 @@ MonoBehaviour:
     - 75
     rankDescriptions:
     - 
-    - "Current Rank: -15% chance\nNext Rank: -30% chance"
-    - "Current Rank: -30% chance\nNext Rank: -45% chance"
-    - "Current Rank: -45% chance\nNext Rank: -60% chance"
-    - "Current Rank: -60% chance\nNext Rank: -75% chance"
+    - 'Current Rank: -15% chance
+
+      Next Rank: -30% chance'
+    - 'Current Rank: -30% chance
+
+      Next Rank: -45% chance'
+    - 'Current Rank: -45% chance
+
+      Next Rank: -60% chance'
+    - 'Current Rank: -60% chance
+
+      Next Rank: -75% chance'
     price: e8030000d0070000b80b0000a00f000088130000
   - perkName: Victimizer
     topDisplaySize: 0
     perkDisplayName: Victimizer
     perkFontSize: 0.073
-    perkDescription: "You like to pick on poor innocent zombies that can't\ndefend themselves.  Improves all damage against foes\nwho are stunned in some fashion."
+    perkDescription: 'You like to pick on poor innocent zombies that can''t
+
+      defend themselves.  Improves all damage against foes
+
+      who are stunned in some fashion.'
     purchased: 0
     implemented: 1
     rank: 0
@@ -2804,10 +3413,18 @@ MonoBehaviour:
     - 75
     rankDescriptions:
     - 
-    - "Current Rank: +15% damage\nNext Rank: +30% damage"
-    - "Current Rank: +30% damage\nNext Rank: +45% damage"
-    - "Current Rank: +45% damage\nNext Rank: +60% damage"
-    - "Current Rank: +60% damage\nNext Rank: +75% damage"
+    - 'Current Rank: +15% damage
+
+      Next Rank: +30% damage'
+    - 'Current Rank: +30% damage
+
+      Next Rank: +45% damage'
+    - 'Current Rank: +45% damage
+
+      Next Rank: +60% damage'
+    - 'Current Rank: +60% damage
+
+      Next Rank: +75% damage'
     price: e8030000d0070000b80b0000a00f000088130000
   environments:
   - cameraVerticalBounds: {x: 2.5, y: 0.2}
@@ -3020,7 +3637,7 @@ MonoBehaviour:
     FGSize: 10.14
     SkylinePiece: Environments/MallSkyline
     SkylineSize: 11
-    cloudPiece:
+    cloudPiece: 
     cloudSize: 8
     backdrop: Environments/MallBG
     parts:
@@ -3124,12 +3741,44 @@ MonoBehaviour:
   maxEnemyCount: 4
   musicTrack: Music/z2_theme1
   levelClock: 180
-  levelToLoad:
+  levelToLoad: 
   motherBrain_Menu: {fileID: 0}
   motherBrain: {fileID: 0}
   highscore: 50
-  megaString:
+  megaString: 
   security: 0
   motherBrain_Title: {fileID: 0}
   tutorial: 1
   moneyStamp: 0
+--- !u!29 &18
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!196 &19
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
