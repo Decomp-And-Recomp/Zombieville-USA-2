@@ -20,6 +20,7 @@ Properties {
 			SetTexture [_MainTex]
 			{
 				constantColor [_Color]
+				Combine texture * constant
 			}
 		}
 	}
