@@ -11,7 +11,7 @@ public class PrefabPreserver : MonoBehaviour
 
 	public virtual void Awake()
 	{
-		for (int i = 0; i < Extensions.get_length((Array)targetArray); i++)
+		for (int i = 0; i < Extensions.get_length(targetArray); i++)
 		{
 			if ((bool)targetArray[i].GO)
 			{
@@ -21,7 +21,7 @@ public class PrefabPreserver : MonoBehaviour
 				boxCollider.center = targetArray[i].centerpoint;
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)parentArray); i++)
+		for (int i = 0; i < Extensions.get_length(parentArray); i++)
 		{
 			parentArray[i].child.parent = parentArray[i].newParent;
 		}

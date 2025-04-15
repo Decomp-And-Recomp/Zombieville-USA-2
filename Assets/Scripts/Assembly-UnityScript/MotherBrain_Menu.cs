@@ -162,7 +162,7 @@ public class MotherBrain_Menu : MonoBehaviour
 				case 2:
 					if (_0024self__00241782.whichButton.name == "MainMenuButton")
 					{
-						_0024self__00241782.StartCoroutine_Auto(_0024self__00241782.disconnect());
+						_0024self__00241782.StartCoroutine(_0024self__00241782.disconnect());
 					}
 					else
 					{
@@ -188,7 +188,7 @@ public class MotherBrain_Menu : MonoBehaviour
 								result = (Yield(6, new WaitForSeconds(0.15f)) ? 1 : 0);
 								break;
 							}
-							_0024self__00241782.StartCoroutine_Auto(_0024self__00241782.startGame());
+							_0024self__00241782.StartCoroutine(_0024self__00241782.startGame());
 						}
 						else if (_0024self__00241782.whichButton.name == "NextLevelButton")
 						{
@@ -444,11 +444,11 @@ public class MotherBrain_Menu : MonoBehaviour
 									_0024self__00241782.identifyPanel();
 									if (_0024self__00241782.panelMode == "weapon")
 									{
-										_0024self__00241782.StartCoroutine_Auto(_0024self__00241782.equip((int)_0024self__00241782.scrollingListSlots[_0024self__00241782.panelID].weapon));
+										_0024self__00241782.StartCoroutine(_0024self__00241782.equip((int)_0024self__00241782.scrollingListSlots[_0024self__00241782.panelID].weapon));
 									}
 									else if (_0024self__00241782.panelMode == "perk")
 									{
-										_0024self__00241782.StartCoroutine_Auto(_0024self__00241782.equipPerk((int)_0024self__00241782.scrollingListSlots[_0024self__00241782.panelID].perk));
+										_0024self__00241782.StartCoroutine(_0024self__00241782.equipPerk((int)_0024self__00241782.scrollingListSlots[_0024self__00241782.panelID].perk));
 									}
 									else if (_0024self__00241782.panelMode == "player")
 									{
@@ -1913,7 +1913,7 @@ public class MotherBrain_Menu : MonoBehaviour
 		}
 		else if (DB.tutorial)
 		{
-			StartCoroutine_Auto(tutorialSequence());
+			StartCoroutine(tutorialSequence());
 		}
 		else
 		{
@@ -1929,7 +1929,7 @@ public class MotherBrain_Menu : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
-			StartCoroutine_Auto(disconnect());
+			StartCoroutine(disconnect());
 		}
 		if (DB.moneyInfo < DB.money)
 		{
@@ -1977,7 +1977,7 @@ public class MotherBrain_Menu : MonoBehaviour
 		}
 		if (pleaseWaitForPlayer2.position.y == 0f && player2Ready)
 		{
-			StartCoroutine_Auto(startGame());
+			StartCoroutine(startGame());
 		}
 		if (DB.multiplayer)
 		{
@@ -1991,11 +1991,11 @@ public class MotherBrain_Menu : MonoBehaviour
 			}
 			if (!(readyMarker1.position.x <= 0f) && !fade)
 			{
-				StartCoroutine_Auto(forceGameStart((int)readyMarker1.position.x));
+				StartCoroutine(forceGameStart((int)readyMarker1.position.x));
 			}
 			if (disconnectMarker.position.x == 1f)
 			{
-				StartCoroutine_Auto(onPeerDisconnect());
+				StartCoroutine(onPeerDisconnect());
 			}
 		}
 	}
@@ -2141,7 +2141,7 @@ public class MotherBrain_Menu : MonoBehaviour
 		{
 			if (!draggingMode && (bool)whichButton && whichButton.name == "MainConsoleShade1")
 			{
-				StartCoroutine_Auto(closeSubMenu());
+				StartCoroutine(closeSubMenu());
 			}
 			fingerDown = false;
 			draggingMode = false;
@@ -2150,7 +2150,7 @@ public class MotherBrain_Menu : MonoBehaviour
 			{
 				blinkTimer = 0.5f;
 				blinkyActive = true;
-				StartCoroutine_Auto(activateButton());
+				StartCoroutine(activateButton());
 			}
 		}
 		if (fingerDown)
@@ -3103,7 +3103,7 @@ public class MotherBrain_Menu : MonoBehaviour
 
 	public virtual void updateScrollingWeaponList()
 	{
-		for (int i = 0; i < Extensions.get_length((Array)scrollingListSlots); i++)
+		for (int i = 0; i < Extensions.get_length(scrollingListSlots); i++)
 		{
 			if ((bool)scrollingListSlots[i].perkTextGO)
 			{
@@ -3175,7 +3175,7 @@ public class MotherBrain_Menu : MonoBehaviour
 
 	public virtual void updateScrollingPerkList()
 	{
-		for (int i = 0; i < Extensions.get_length((Array)scrollingListSlots); i++)
+		for (int i = 0; i < Extensions.get_length(scrollingListSlots); i++)
 		{
 			if ((bool)scrollingListSlots[i].iconInstance)
 			{
@@ -3243,7 +3243,7 @@ public class MotherBrain_Menu : MonoBehaviour
 
 	public virtual void updateScrollingPlayerList()
 	{
-		for (int i = 0; i < Extensions.get_length((Array)scrollingListSlots); i++)
+		for (int i = 0; i < Extensions.get_length(scrollingListSlots); i++)
 		{
 			if ((bool)scrollingListSlots[i].perkTextGO)
 			{
@@ -3310,12 +3310,12 @@ public class MotherBrain_Menu : MonoBehaviour
 
 	public virtual void identifyPanel()
 	{
-		for (int i = 0; i < Extensions.get_length((Array)scrollingListSlots); i++)
+		for (int i = 0; i < Extensions.get_length(scrollingListSlots); i++)
 		{
 			if (editPanel == scrollingListSlots[i].slot)
 			{
 				panelID = i;
-				i = Extensions.get_length((Array)scrollingListSlots);
+				i = Extensions.get_length(scrollingListSlots);
 			}
 		}
 	}
@@ -3339,7 +3339,7 @@ public class MotherBrain_Menu : MonoBehaviour
 
 	public virtual void updateDifficultyStars()
 	{
-		for (int i = 0; i < Extensions.get_length((Array)difficultyStars); i++)
+		for (int i = 0; i < Extensions.get_length(difficultyStars); i++)
 		{
 			difficultyStars[i].enabled = true;
 			difficultyStarsLit[i].enabled = false;
@@ -3496,7 +3496,7 @@ public class MotherBrain_Menu : MonoBehaviour
 	{
 		DB.location = zones[DB.difficulty - 1].location;
 		DB.musicTrack = zones[DB.difficulty - 1].music;
-		for (int i = 0; i < Extensions.get_length((Array)DB.enemyChance); i++)
+		for (int i = 0; i < Extensions.get_length(DB.enemyChance); i++)
 		{
 			DB.enemyChance[i] = zones[DB.difficulty - 1].enemyChance[i];
 		}
@@ -3506,7 +3506,7 @@ public class MotherBrain_Menu : MonoBehaviour
 		DB.rearSpawnDelayRange.x = zones[DB.difficulty - 1].rearSpawnDelayRange.x;
 		DB.rearSpawnDelayRange.y = zones[DB.difficulty - 1].rearSpawnDelayRange.y;
 		DB.levelClock = zones[DB.difficulty - 1].levelClock;
-		for (int i = 0; i < Extensions.get_length((Array)DB.enemyChance); i++)
+		for (int i = 0; i < Extensions.get_length(DB.enemyChance); i++)
 		{
 			DB.waveSize[i] = zones[DB.difficulty - 1].waveSize[i];
 		}
@@ -3521,7 +3521,7 @@ public class MotherBrain_Menu : MonoBehaviour
 	{
 		if (!DB.soundEnabled)
 		{
-			for (int i = 0; i < Extensions.get_length((Array)sounds); i++)
+			for (int i = 0; i < Extensions.get_length(sounds); i++)
 			{
 				sounds[i].volume = 0f;
 			}

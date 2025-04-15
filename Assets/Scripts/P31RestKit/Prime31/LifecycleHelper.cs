@@ -34,12 +34,12 @@ namespace Prime31
 			}
 		}
 
-		private void OnApplicationPause(bool paused)
-		{
-			if (this.onApplicationPausedEvent != null)
-			{
-				this.onApplicationPausedEvent(paused);
-			}
-		}
-	}
+        private void OnApplicationPause(bool paused)
+        {
+            if (this.m_onApplicationPausedEvent != null)
+            {
+                this.m_onApplicationPausedEvent(paused);
+            }
+        }
+    }
 }

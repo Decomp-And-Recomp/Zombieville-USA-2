@@ -99,10 +99,10 @@ public class PlayerScript : MonoBehaviour
 					if (_0024self__00241926.DB.weapons[_0024self__00241926.weapons[_0024self__00241926.equippedSlot]].hitStyle == "melee")
 					{
 						_0024self__00241926.hitList = Physics.RaycastAll(_0024self__00241926.myTransform.position - new Vector3(0.8f * _0024self__00241926.myTransform.localScale.x, 0f, 0f), new Vector3(_0024self__00241926.myTransform.localScale.x, 0f, 0f), 3f, _0024self__00241926.motherBrain.zombieMask);
-						if (Extensions.get_length((Array)_0024self__00241926.hitList) != 0)
+						if (Extensions.get_length(_0024self__00241926.hitList) != 0)
 						{
 							_0024self__00241926.motherBrain.hits = _0024self__00241926.motherBrain.hits + 1;
-							for (_0024i_00241923 = 0; _0024i_00241923 < Extensions.get_length((Array)_0024self__00241926.hitList); _0024i_00241923++)
+							for (_0024i_00241923 = 0; _0024i_00241923 < Extensions.get_length(_0024self__00241926.hitList); _0024i_00241923++)
 							{
 								_0024self__00241926.tempTransform = _0024self__00241926.hitList[_0024i_00241923].transform;
 								_0024self__00241926.tempFloat = _0024self__00241926.weaponDamage(_0024self__00241926.tempTransform);
@@ -123,7 +123,7 @@ public class PlayerScript : MonoBehaviour
 										if (_0024self__00241926.perks[_0024i2_00241924] == 20)
 										{
 											_0024self__00241926.health += _0024self__00241926.DB.perks[20].rankBonuses[_0024self__00241926.perkRanks[_0024i2_00241924]];
-											for (_0024f_00241925 = 0; _0024f_00241925 < Extensions.get_length((Array)_0024self__00241926.myRenderers); _0024f_00241925++)
+											for (_0024f_00241925 = 0; _0024f_00241925 < Extensions.get_length(_0024self__00241926.myRenderers); _0024f_00241925++)
 											{
 												_0024self__00241926.myRenderers[_0024f_00241925].material.color = new Color(1f, 1f, 1f);
 											}
@@ -294,7 +294,7 @@ public class PlayerScript : MonoBehaviour
 							_0024self__00241935.DB.announceAchievement(29);
 						}
 					}
-					for (_0024f_00241932 = 0; _0024f_00241932 < Extensions.get_length((Array)_0024self__00241935.myRenderers); _0024f_00241932++)
+					for (_0024f_00241932 = 0; _0024f_00241932 < Extensions.get_length(_0024self__00241935.myRenderers); _0024f_00241932++)
 					{
 						_0024self__00241935.myRenderers[_0024f_00241932].material.color = new Color(0.7f, 0.7f, 0.5f);
 					}
@@ -354,7 +354,7 @@ public class PlayerScript : MonoBehaviour
 					result = (Yield(2, new WaitForSeconds(0.13f)) ? 1 : 0);
 					break;
 				case 2:
-					for (_0024f_00241932 = 0; _0024f_00241932 < Extensions.get_length((Array)_0024self__00241935.myRenderers); _0024f_00241932++)
+					for (_0024f_00241932 = 0; _0024f_00241932 < Extensions.get_length(_0024self__00241935.myRenderers); _0024f_00241932++)
 					{
 						_0024self__00241935.myRenderers[_0024f_00241932].material.color = new Color(0.7f, 0.7f, 0.5f);
 					}
@@ -417,7 +417,7 @@ public class PlayerScript : MonoBehaviour
 					}
 					_0024self__00241939.lerpTowardsLadder = true;
 					_0024self__00241939.mySounds[_0024self__00241939.equippedSlot].endLoop();
-					_0024self__00241939.StartCoroutine_Auto(_0024self__00241939.myEffects[_0024self__00241939.equippedSlot].endLoop());
+					_0024self__00241939.StartCoroutine(_0024self__00241939.myEffects[_0024self__00241939.equippedSlot].endLoop());
 					_0024self__00241939.myEffects[_0024self__00241939.equippedSlot].laserSight(false);
 					_0024self__00241939.mySounds[_0024self__00241939.equippedSlot].idleLoop(false);
 					_0024self__00241939.invincible = true;
@@ -959,7 +959,7 @@ public class PlayerScript : MonoBehaviour
 				}
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)weapons); i++)
+		for (int i = 0; i < Extensions.get_length(weapons); i++)
 		{
 			if (weapons[i] == 99)
 			{
@@ -1016,7 +1016,7 @@ public class PlayerScript : MonoBehaviour
 			myEffects[i].myOwner = myTransform;
 			if (explosiveModels[i] != string.Empty)
 			{
-				for (int j = 0; j < Extensions.get_length((Array)myExplosives[i].tran); j++)
+				for (int j = 0; j < Extensions.get_length(myExplosives[i].tran); j++)
 				{
 					tempGO = (GameObject)UnityEngine.Object.Instantiate(Resources.Load(explosiveModels[i]));
 					myExplosives[i].tran[j] = tempGO.transform;
@@ -1109,7 +1109,7 @@ public class PlayerScript : MonoBehaviour
 				else if (tempTransform.name == "quit")
 				{
 					motherBrain.sounds[5].Play();
-					StartCoroutine_Auto(quitToMenu());
+					StartCoroutine(quitToMenu());
 				}
 			}
 		}
@@ -1129,7 +1129,7 @@ public class PlayerScript : MonoBehaviour
 		else if (Input.GetButtonDown("Fire3") && pauseScreenReleased && !motherBrain.fade)
 		{
 			motherBrain.sounds[5].Play();
-			StartCoroutine_Auto(quitToMenu());
+			StartCoroutine(quitToMenu());
 		}
 	}
 
@@ -1495,9 +1495,9 @@ public class PlayerScript : MonoBehaviour
 		{
 			proximityPulse -= Time.deltaTime;
 		}
-		for (int i = 0; i < Extensions.get_length((Array)myExplosives); i++)
+		for (int i = 0; i < Extensions.get_length(myExplosives); i++)
 		{
-			for (int j = 0; j < Extensions.get_length((Array)myExplosives[i].life); j++)
+			for (int j = 0; j < Extensions.get_length(myExplosives[i].life); j++)
 			{
 				if (weapons[i] < 0 || myExplosives[i].life[j] <= 0f)
 				{
@@ -1541,7 +1541,7 @@ public class PlayerScript : MonoBehaviour
 					num11 = 0;
 					int num16 = 0;
 					int num17 = 0;
-					for (num12 = 0; num12 < Extensions.get_length((Array)motherBrain.zombies); num12++)
+					for (num12 = 0; num12 < Extensions.get_length(motherBrain.zombies); num12++)
 					{
 						if (!motherBrain.zombies[num12] || motherBrain.zombies[num12].health <= 0 || Vector3.Distance(motherBrain.zombies[num12].myTransform.position, myExplosives[i].tran[j].position) >= DB.weapons[weapons[i]].explosiveRadius)
 						{
@@ -1602,7 +1602,7 @@ public class PlayerScript : MonoBehaviour
 				else if (myExplosives[i].life[j] == 100f && !(proximityPulse > 0f))
 				{
 					bool flag2 = false;
-					for (int k = 0; k < Extensions.get_length((Array)motherBrain.zombies); k++)
+					for (int k = 0; k < Extensions.get_length(motherBrain.zombies); k++)
 					{
 						if ((bool)motherBrain.zombies[k] && !(Vector3.Distance(motherBrain.zombies[k].myTransform.position, myExplosives[i].tran[j].position) >= 1.2f) && motherBrain.zombies[k].health > 0)
 						{
@@ -1632,7 +1632,7 @@ public class PlayerScript : MonoBehaviour
 					}
 					num10 = 0f;
 					num11 = 0;
-					for (num12 = 0; num12 < Extensions.get_length((Array)motherBrain.zombies); num12++)
+					for (num12 = 0; num12 < Extensions.get_length(motherBrain.zombies); num12++)
 					{
 						if (!motherBrain.zombies[num12] || motherBrain.zombies[num12].health <= 0 || Vector3.Distance(motherBrain.zombies[num12].myTransform.position, myExplosives[i].tran[j].position) >= DB.weapons[weapons[i]].explosiveRadius)
 						{
@@ -1697,7 +1697,7 @@ public class PlayerScript : MonoBehaviour
 						mySounds[i].hit();
 						myExplosives[i].life[j] = 0f;
 						health += DB.weapons[weapons[i]].damage;
-						for (num13 = 0; num13 < Extensions.get_length((Array)myRenderers); num13++)
+						for (num13 = 0; num13 < Extensions.get_length(myRenderers); num13++)
 						{
 							myRenderers[num13].material.color = new Color(1f, 1f, 1f);
 						}
@@ -1725,7 +1725,7 @@ public class PlayerScript : MonoBehaviour
 						mySounds[i].hit();
 						myExplosives[i].life[j] = 0f;
 						motherBrain.allyScript.health = motherBrain.allyScript.health + DB.weapons[weapons[i]].damage;
-						for (num13 = 0; num13 < Extensions.get_length((Array)motherBrain.allyScript.myRenderers); num13++)
+						for (num13 = 0; num13 < Extensions.get_length(motherBrain.allyScript.myRenderers); num13++)
 						{
 							motherBrain.allyScript.myRenderers[num13].material.color = new Color(1f, 1f, 1f);
 						}
@@ -1752,7 +1752,7 @@ public class PlayerScript : MonoBehaviour
 		textMessage = string.Empty;
 		if (inVehicle && !(movementLockout > 0f))
 		{
-			for (num12 = 0; num12 < Extensions.get_length((Array)motherBrain.zombies); num12++)
+			for (num12 = 0; num12 < Extensions.get_length(motherBrain.zombies); num12++)
 			{
 				if (!motherBrain.zombies[num12] || motherBrain.zombies[num12].health <= 0 || Vector3.Distance(motherBrain.zombies[num12].myTransform.position, myTransform.position) >= 2f)
 				{
@@ -1801,7 +1801,7 @@ public class PlayerScript : MonoBehaviour
 		if (array[4] == "self")
 		{
 			health += DB.weapons[weapons[num]].damage;
-			for (num5 = 0; num5 < Extensions.get_length((Array)myRenderers); num5++)
+			for (num5 = 0; num5 < Extensions.get_length(myRenderers); num5++)
 			{
 				myRenderers[num5].material.color = new Color(1f, 1f, 1f);
 			}
@@ -1811,7 +1811,7 @@ public class PlayerScript : MonoBehaviour
 		else if (array[4] == "ally")
 		{
 			motherBrain.playerScript.health = motherBrain.playerScript.health + DB.weapons[weapons[num]].damage;
-			for (num5 = 0; num5 < Extensions.get_length((Array)motherBrain.playerScript.myRenderers); num5++)
+			for (num5 = 0; num5 < Extensions.get_length(motherBrain.playerScript.myRenderers); num5++)
 			{
 				motherBrain.playerScript.myRenderers[num5].material.color = new Color(1f, 1f, 1f);
 			}
@@ -1842,10 +1842,10 @@ public class PlayerScript : MonoBehaviour
 			Vector3 vector3 = (myExplosives[num].tran[num2].position = position);
 			myExplosives[num].life[num2] = 0f;
 		}
-		if (Extensions.get_length((Array)array) > 4)
+		if (Extensions.get_length(array) > 4)
 		{
 			int num5 = 0;
-			for (int i = 4; i < Extensions.get_length((Array)array); i += 2)
+			for (int i = 4; i < Extensions.get_length(array); i += 2)
 			{
 				num5 = ((DB.weapons[weapons[num]].damageType != 4) ? ((DB.weapons[weapons[num]].damageType != 5) ? ((!(Vector3.Distance(motherBrain.zombies[UnityBuiltins.parseInt(array[i + 1])].myTransform.position, vector) >= DB.weapons[weapons[num]].explosiveRadius * 0.5f)) ? 3 : 0) : 5) : 4);
 				motherBrain.zombies[UnityBuiltins.parseInt(array[i + 1])].takeDamage(UnityBuiltins.parseFloat(array[i]), num5, (motherBrain.zombies[UnityBuiltins.parseInt(array[i + 1])].myTransform.position - vector).normalized * weaponForce(num, vector, motherBrain.zombies[UnityBuiltins.parseInt(array[i + 1])].myTransform), motherBrain.allyScript);
@@ -1856,9 +1856,9 @@ public class PlayerScript : MonoBehaviour
 	public virtual void syncVehicularManslaughter(string incomingData)
 	{
 		string[] array = incomingData.Split(" "[0]);
-		if (Extensions.get_length((Array)array) != 0)
+		if (Extensions.get_length(array) != 0)
 		{
-			for (int i = 0; i < Extensions.get_length((Array)array); i++)
+			for (int i = 0; i < Extensions.get_length(array); i++)
 			{
 				motherBrain.zombies[UnityBuiltins.parseInt(array[i])].takeDamage(100000f, 3, (motherBrain.zombies[UnityBuiltins.parseInt(array[i])].myTransform.position - motherBrain.allyScript.myTransform.position).normalized * 40f, motherBrain.allyScript);
 			}
@@ -2073,9 +2073,9 @@ public class PlayerScript : MonoBehaviour
 			{
 				myTransform.position = Vector3.Lerp(myTransform.position, positionMagnet + movementVector * moveSpeed * timeSinceLastSync, Time.deltaTime * 5f);
 			}
-			for (num = 0; num < Extensions.get_length((Array)myExplosives); num++)
+			for (num = 0; num < Extensions.get_length(myExplosives); num++)
 			{
-				for (num2 = 0; num2 < Extensions.get_length((Array)myExplosives[num].life); num2++)
+				for (num2 = 0; num2 < Extensions.get_length(myExplosives[num].life); num2++)
 				{
 					if (weapons[num] >= 0 && !(myExplosives[num].life[num2] <= 0f) && DB.weapons[weapons[num]].explosiveMotion != 0f)
 					{
@@ -2196,7 +2196,7 @@ public class PlayerScript : MonoBehaviour
 		mySounds[equippedSlot].idleLoop(false);
 		equipDelay = 0.24f;
 		equippedSlot = whichSlot;
-		for (int i = 0; i < Extensions.get_length((Array)weaponRenderers); i++)
+		for (int i = 0; i < Extensions.get_length(weaponRenderers); i++)
 		{
 			if ((bool)weaponRenderers[i])
 			{
@@ -2537,11 +2537,11 @@ public class PlayerScript : MonoBehaviour
 		}
 		attack(false);
 		tempZombieScript = null;
-		if (Extensions.get_length((Array)array) <= 6)
+		if (Extensions.get_length(array) <= 6)
 		{
 			return;
 		}
-		for (int i = 6; i < Extensions.get_length((Array)array); i += 2)
+		for (int i = 6; i < Extensions.get_length(array); i += 2)
 		{
 			tempFloat = UnityBuiltins.parseFloat(array[i]);
 			tempZombieScript = motherBrain.zombies[UnityBuiltins.parseInt(array[i + 1])];
@@ -2570,14 +2570,14 @@ public class PlayerScript : MonoBehaviour
 		{
 			return;
 		}
-		for (int i = 0; i < Extensions.get_length((Array)motherBrain.messageSlots); i++)
+		for (int i = 0; i < Extensions.get_length(motherBrain.messageSlots); i++)
 		{
 			if (motherBrain.messageSlots[i].whichObject.text == string.Empty)
 			{
 				motherBrain.messageSlots[i].whichObject.text = whichObject;
 				motherBrain.messageSlots[i].whichFunction.text = whichFunction;
 				motherBrain.messageSlots[i].message.text = message;
-				i = Extensions.get_length((Array)motherBrain.messageSlots);
+				i = Extensions.get_length(motherBrain.messageSlots);
 			}
 		}
 	}
@@ -2733,7 +2733,7 @@ public class PlayerScript : MonoBehaviour
 				else if (DB.weapons[weapons[equippedSlot]].hitStyle == "flamer")
 				{
 					myEffects[equippedSlot].muzzleParent = myTransform;
-					StartCoroutine_Auto(myEffects[equippedSlot].loopActivate(myTransform.position + new Vector3(0f, 0f, 0.3f), (int)myTransform.localScale.x));
+					StartCoroutine(myEffects[equippedSlot].loopActivate(myTransform.position + new Vector3(0f, 0f, 0.3f), (int)myTransform.localScale.x));
 				}
 				else if (DWstatus[equippedSlot])
 				{
@@ -2904,7 +2904,7 @@ public class PlayerScript : MonoBehaviour
 							hitMessage = " " + tempFloat + " " + tempTransform.name;
 						}
 						hitList = Physics.RaycastAll(tempTransform.position, vector3, DB.weapons[weapons[equippedSlot]].piercingRange, motherBrain.zombieMask);
-						for (num = 0; num < Extensions.get_length((Array)hitList); num++)
+						for (num = 0; num < Extensions.get_length(hitList); num++)
 						{
 							tempTransform = hitList[num].transform;
 							tempZombieScript = (ZombieScript)tempTransform.GetComponent(typeof(ZombieScript));
@@ -2935,7 +2935,7 @@ public class PlayerScript : MonoBehaviour
 				{
 					vector3 = new Vector3(myTransform.localScale.x, 0f, UnityEngine.Random.Range(0f - DB.weapons[weapons[equippedSlot]].spray, DB.weapons[weapons[equippedSlot]].spray));
 					hitList = Physics.RaycastAll(myTransform.position - new Vector3(0.8f * myTransform.localScale.x, 0f, 0f), vector3, 4.4f, motherBrain.zombieMask);
-					for (num = 0; num < Extensions.get_length((Array)hitList); num++)
+					for (num = 0; num < Extensions.get_length(hitList); num++)
 					{
 						tempTransform = hitList[num].transform;
 						tempZombieScript = (ZombieScript)tempTransform.GetComponent(typeof(ZombieScript));
@@ -2953,7 +2953,7 @@ public class PlayerScript : MonoBehaviour
 				{
 					vector3 = new Vector3(myTransform.localScale.x, 0f, UnityEngine.Random.Range(0f - DB.weapons[weapons[equippedSlot]].spray, DB.weapons[weapons[equippedSlot]].spray));
 					hitList = Physics.RaycastAll(myTransform.position - new Vector3(0.8f * myTransform.localScale.x, 0f, 0f), vector3, 2.6f, motherBrain.zombieMask);
-					for (num = 0; num < Extensions.get_length((Array)hitList); num++)
+					for (num = 0; num < Extensions.get_length(hitList); num++)
 					{
 						tempTransform = hitList[num].transform;
 						tempZombieScript = (ZombieScript)tempTransform.GetComponent(typeof(ZombieScript));
@@ -3013,7 +3013,7 @@ public class PlayerScript : MonoBehaviour
 			}
 			if (!(hitDelay <= 0f) && local)
 			{
-				StartCoroutine_Auto(delayedDamage());
+				StartCoroutine(delayedDamage());
 			}
 		}
 		else if (!(shotCooldown > 0f) && ammo[equippedSlot] == 0 && !ally)
@@ -3032,7 +3032,7 @@ public class PlayerScript : MonoBehaviour
 	{
 		string[] array = incomingData.Split(" "[0]);
 		tempZombieScript = null;
-		for (int i = 0; i < Extensions.get_length((Array)array); i += 2)
+		for (int i = 0; i < Extensions.get_length(array); i += 2)
 		{
 			tempFloat = UnityBuiltins.parseFloat(array[i]);
 			tempZombieScript = motherBrain.zombies[UnityBuiltins.parseInt(array[i + 1])];
@@ -3047,7 +3047,7 @@ public class PlayerScript : MonoBehaviour
 					{
 						if (perks[j] == 20)
 						{
-							for (int k = 0; k < Extensions.get_length((Array)myRenderers); k++)
+							for (int k = 0; k < Extensions.get_length(myRenderers); k++)
 							{
 								myRenderers[k].material.color = new Color(1f, 1f, 1f);
 							}
@@ -3149,11 +3149,11 @@ public class PlayerScript : MonoBehaviour
 			}
 			if (!(health > 0f) && alive && !ally)
 			{
-				StartCoroutine_Auto(die(string.Empty));
+				StartCoroutine(die(string.Empty));
 			}
 			colorSpeed = 5f;
 			activateColors();
-			for (int i = 0; i < Extensions.get_length((Array)myRenderers); i++)
+			for (int i = 0; i < Extensions.get_length(myRenderers); i++)
 			{
 				myRenderers[i].material.color = new Color(0.8f, 0f, 0f);
 			}
@@ -3382,9 +3382,9 @@ public class PlayerScript : MonoBehaviour
 			{
 				hitList = Physics.RaycastAll(myTransform.position - new Vector3(0.8f * myTransform.localScale.x, 0f, 0f), new Vector3(myTransform.localScale.x, 0f, 0f), 11f, motherBrain.zombieMask);
 				int num = 0;
-				if (Extensions.get_length((Array)hitList) != 0)
+				if (Extensions.get_length(hitList) != 0)
 				{
-					for (int i = 0; i < Extensions.get_length((Array)hitList); i++)
+					for (int i = 0; i < Extensions.get_length(hitList); i++)
 					{
 						tempTransform = hitList[i].transform;
 						tempZombieScript = (ZombieScript)tempTransform.GetComponent(typeof(ZombieScript));
@@ -3442,7 +3442,7 @@ public class PlayerScript : MonoBehaviour
 						textMessage = textMessage + " " + tempFloat + " " + tempTransform.name;
 					}
 					Vector3 position = tempTransform.position;
-					for (int j = 0; j < Extensions.get_length((Array)motherBrain.zombies); j++)
+					for (int j = 0; j < Extensions.get_length(motherBrain.zombies); j++)
 					{
 						if ((bool)motherBrain.zombies[j] && motherBrain.zombies[j].health > 0 && !(Vector3.Distance(motherBrain.zombies[j].myTransform.position, position) >= 2.2f))
 						{
@@ -3523,11 +3523,11 @@ public class PlayerScript : MonoBehaviour
 		{
 			aimRelease(false);
 		}
-		if (Extensions.get_length((Array)array) <= 7)
+		if (Extensions.get_length(array) <= 7)
 		{
 			return;
 		}
-		for (int i = 7; i < Extensions.get_length((Array)array); i += 2)
+		for (int i = 7; i < Extensions.get_length(array); i += 2)
 		{
 			tempFloat = UnityBuiltins.parseFloat(array[i]);
 			tempZombieScript = motherBrain.zombies[UnityBuiltins.parseInt(array[i + 1])];
@@ -3549,7 +3549,7 @@ public class PlayerScript : MonoBehaviour
 	public virtual void killWeaponLoop(string noArgument)
 	{
 		mySounds[equippedSlot].endLoop();
-		StartCoroutine_Auto(myEffects[equippedSlot].endLoop());
+		StartCoroutine(myEffects[equippedSlot].endLoop());
 		if (DB.weapons[weapons[equippedSlot]].hitStyle == "chainsaw" && (fireState.weight > 0f || !(runningFireState.weight <= 0f)))
 		{
 			myAnimation.Stop("chainsaw_fire");
@@ -3579,7 +3579,7 @@ public class PlayerScript : MonoBehaviour
 		if (DB.weapons[weapons[equippedSlot]].hitStyle == "grenade")
 		{
 			bool flag = false;
-			for (int i = 0; i < Extensions.get_length((Array)myExplosives[equippedSlot].life); i++)
+			for (int i = 0; i < Extensions.get_length(myExplosives[equippedSlot].life); i++)
 			{
 				if (!(myExplosives[equippedSlot].life[i] > 0f))
 				{
@@ -3733,7 +3733,7 @@ public class PlayerScript : MonoBehaviour
 				}
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)weapons); i++)
+		for (int i = 0; i < Extensions.get_length(weapons); i++)
 		{
 			if (weapons[i] != 99)
 			{
@@ -3799,7 +3799,7 @@ public class PlayerScript : MonoBehaviour
 		}
 		equipDelay = 0.24f;
 		equippedSlot = whichSlot;
-		for (int i = 0; i < Extensions.get_length((Array)weaponRenderers); i++)
+		for (int i = 0; i < Extensions.get_length(weaponRenderers); i++)
 		{
 			if ((bool)weaponRenderers[i])
 			{
@@ -3842,14 +3842,14 @@ public class PlayerScript : MonoBehaviour
 
 	public virtual void changeLayer(int whichLayer)
 	{
-		for (int i = 0; i < Extensions.get_length((Array)weaponRenderers); i++)
+		for (int i = 0; i < Extensions.get_length(weaponRenderers); i++)
 		{
 			if ((bool)weaponRenderers[i])
 			{
 				weaponRenderers[i].gameObject.layer = whichLayer;
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)myRenderers); i++)
+		for (int i = 0; i < Extensions.get_length(myRenderers); i++)
 		{
 			if ((bool)myRenderers[i])
 			{
@@ -3882,14 +3882,14 @@ public class PlayerScript : MonoBehaviour
 		motherBrain.vehicles[num].myParent = myTransform;
 		motherBrain.vehicles[num].occupied = true;
 		invincible = true;
-		for (int i = 0; i < Extensions.get_length((Array)myRenderers); i++)
+		for (int i = 0; i < Extensions.get_length(myRenderers); i++)
 		{
 			if ((bool)myRenderers[i])
 			{
 				myRenderers[i].enabled = false;
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)weaponRenderers); i++)
+		for (int i = 0; i < Extensions.get_length(weaponRenderers); i++)
 		{
 			if ((bool)weaponRenderers[i])
 			{
@@ -3915,7 +3915,7 @@ public class PlayerScript : MonoBehaviour
 		Vector3 position = motherBrain.vehicles[num].myTransform.position;
 		float num2 = (position.y = y);
 		Vector3 vector2 = (motherBrain.vehicles[num].myTransform.position = position);
-		for (int i = 0; i < Extensions.get_length((Array)myRenderers); i++)
+		for (int i = 0; i < Extensions.get_length(myRenderers); i++)
 		{
 			if ((bool)myRenderers[i])
 			{
@@ -3941,7 +3941,7 @@ public class PlayerScript : MonoBehaviour
 		motherBrain.vehicles[myVehicle].myParent = theScriptWhoGetsTheVehicle.myTransform;
 		myVehicle = -1;
 		invincible = false;
-		for (int i = 0; i < Extensions.get_length((Array)myRenderers); i++)
+		for (int i = 0; i < Extensions.get_length(myRenderers); i++)
 		{
 			if ((bool)myRenderers[i])
 			{

@@ -133,7 +133,7 @@ public class MotherBrain_Title : MonoBehaviour
 					{
 						_0024self__00241900.menuBacker.SetActive(false);
 						_0024self__00241900.connecting.SetActive(false);
-						_0024self__00241900.StartCoroutine_Auto(_0024self__00241900.menuTransition(_0024self__00241900.back2Light, _0024self__00241900.back2Renderer, "back2", "reveal2ndPage"));
+						_0024self__00241900.StartCoroutine(_0024self__00241900.menuTransition(_0024self__00241900.back2Light, _0024self__00241900.back2Renderer, "back2", "reveal2ndPage"));
 					}
 					_0024tempVector_00241851 = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
 					_0024self__00241900.cursor.position = _0024self__00241900.cursor.position + _0024tempVector_00241851 * Time.deltaTime * 2f;
@@ -261,15 +261,15 @@ public class MotherBrain_Title : MonoBehaviour
 									result = (Yield(2, new WaitForSeconds(1.6f)) ? 1 : 0);
 									break;
 								}
-								_0024self__00241900.StartCoroutine_Auto(_0024self__00241900.menuTransition(_0024self__00241900.playLight, _0024self__00241900.playRenderer, "hitPlay", "reveal2ndPage"));
+								_0024self__00241900.StartCoroutine(_0024self__00241900.menuTransition(_0024self__00241900.playLight, _0024self__00241900.playRenderer, "hitPlay", "reveal2ndPage"));
 							}
 							else if (_0024self__00241900.tempTransform.name == "tellmemore")
 							{
-								for (_0024i_00241856 = 0; _0024i_00241856 < Extensions.get_length((Array)_0024self__00241900.adRenderers); _0024i_00241856++)
+								for (_0024i_00241856 = 0; _0024i_00241856 < Extensions.get_length(_0024self__00241900.adRenderers); _0024i_00241856++)
 								{
 									_0024self__00241900.adRenderers[_0024i_00241856].enabled = false;
 								}
-								for (_0024i_00241856 = 0; _0024i_00241856 < Extensions.get_length((Array)_0024self__00241900.adColliders); _0024i_00241856++)
+								for (_0024i_00241856 = 0; _0024i_00241856 < Extensions.get_length(_0024self__00241900.adColliders); _0024i_00241856++)
 								{
 									_0024self__00241900.adColliders[_0024i_00241856].enabled = false;
 								}
@@ -278,11 +278,11 @@ public class MotherBrain_Title : MonoBehaviour
 							else if (_0024self__00241900.tempTransform.name == "notinterested")
 							{
 								_0024self__00241900.menuSound.Play();
-								for (_0024i_00241856 = 0; _0024i_00241856 < Extensions.get_length((Array)_0024self__00241900.adRenderers); _0024i_00241856++)
+								for (_0024i_00241856 = 0; _0024i_00241856 < Extensions.get_length(_0024self__00241900.adRenderers); _0024i_00241856++)
 								{
 									_0024self__00241900.adRenderers[_0024i_00241856].enabled = false;
 								}
-								for (_0024i_00241856 = 0; _0024i_00241856 < Extensions.get_length((Array)_0024self__00241900.adColliders); _0024i_00241856++)
+								for (_0024i_00241856 = 0; _0024i_00241856 < Extensions.get_length(_0024self__00241900.adColliders); _0024i_00241856++)
 								{
 									_0024self__00241900.adColliders[_0024i_00241856].enabled = false;
 								}
@@ -290,24 +290,24 @@ public class MotherBrain_Title : MonoBehaviour
 							else if (_0024self__00241900.tempTransform.name == "newgamebutton")
 							{
 								_0024self__00241900.menuSound.Play();
-								for (_0024i_00241856 = 0; _0024i_00241856 < Extensions.get_length((Array)_0024self__00241900.adRenderers); _0024i_00241856++)
+								for (_0024i_00241856 = 0; _0024i_00241856 < Extensions.get_length(_0024self__00241900.adRenderers); _0024i_00241856++)
 								{
 									_0024self__00241900.adRenderers[_0024i_00241856].enabled = true;
 								}
-								for (_0024i_00241856 = 0; _0024i_00241856 < Extensions.get_length((Array)_0024self__00241900.adColliders); _0024i_00241856++)
+								for (_0024i_00241856 = 0; _0024i_00241856 < Extensions.get_length(_0024self__00241900.adColliders); _0024i_00241856++)
 								{
 									_0024self__00241900.adColliders[_0024i_00241856].enabled = true;
 								}
 							}
 							else if (_0024self__00241900.tempTransform.name == "Button_Options")
 							{
-								_0024self__00241900.StartCoroutine_Auto(_0024self__00241900.menuTransition(_0024self__00241900.optionLight, _0024self__00241900.optionRenderer, "hitOptions", "revealOptions"));
+								_0024self__00241900.StartCoroutine(_0024self__00241900.menuTransition(_0024self__00241900.optionLight, _0024self__00241900.optionRenderer, "hitOptions", "revealOptions"));
 								_0024self__00241900.DB.save();
 								_0024self__00241900.cloudString.text = _0024self__00241900.DB.megaString;
 							}
 							else if (_0024self__00241900.tempTransform.name == "Button_GC")
 							{
-								_0024self__00241900.StartCoroutine_Auto(_0024self__00241900.menuTransition(_0024self__00241900.GCpageLight, _0024self__00241900.GCpageRenderer, "hitGC", "revealGCPage"));
+								_0024self__00241900.StartCoroutine(_0024self__00241900.menuTransition(_0024self__00241900.GCpageLight, _0024self__00241900.GCpageRenderer, "hitGC", "revealGCPage"));
 							}
 							else if (_0024self__00241900.tempTransform.name == "Button_SFX" && !_0024self__00241900.holdingFingerDown)
 							{
@@ -330,7 +330,7 @@ public class MotherBrain_Title : MonoBehaviour
 								_0024self__00241900.menuSound.Play();
 								_0024self__00241900.cloudUpload.enabled = false;
 								_0024self__00241900.cloudUploadLight.enabled = true;
-								_0024self__00241900.StartCoroutine_Auto(_0024self__00241900.turnOffLights());
+								_0024self__00241900.StartCoroutine(_0024self__00241900.turnOffLights());
 							}
 							else if (_0024self__00241900.tempTransform.name == "Button_Download" && !_0024self__00241900.holdingFingerDown && _0024self__00241900.cloudDownload.enabled)
 							{
@@ -338,7 +338,7 @@ public class MotherBrain_Title : MonoBehaviour
 								_0024self__00241900.menuSound.Play();
 								_0024self__00241900.cloudDownload.enabled = false;
 								_0024self__00241900.cloudDownloadLight.enabled = true;
-								_0024self__00241900.StartCoroutine_Auto(_0024self__00241900.turnOffLights());
+								_0024self__00241900.StartCoroutine(_0024self__00241900.turnOffLights());
 							}
 							else if (_0024self__00241900.tempTransform.name == "Button_Music" && !_0024self__00241900.holdingFingerDown)
 							{
@@ -390,7 +390,7 @@ public class MotherBrain_Title : MonoBehaviour
 								}
 								if (_0024self__00241900.tempTransform.name == "Button_Achievements")
 								{
-									_0024self__00241900.StartCoroutine_Auto(_0024self__00241900.DB.forceUploadAchievementData());
+									_0024self__00241900.StartCoroutine(_0024self__00241900.DB.forceUploadAchievementData());
 									_0024self__00241900.achieveLight.enabled = true;
 									_0024self__00241900.achieveRenderer.enabled = false;
 									_0024self__00241900.lockInput = true;
@@ -400,7 +400,7 @@ public class MotherBrain_Title : MonoBehaviour
 								}
 								if (_0024self__00241900.tempTransform.name == "Button_Back")
 								{
-									_0024self__00241900.StartCoroutine_Auto(_0024self__00241900.menuTransition(_0024self__00241900.backLight, _0024self__00241900.backRenderer, "back1", "revealButtons"));
+									_0024self__00241900.StartCoroutine(_0024self__00241900.menuTransition(_0024self__00241900.backLight, _0024self__00241900.backRenderer, "back1", "revealButtons"));
 								}
 								else if (_0024self__00241900.tempTransform.name == "Button_Back2")
 								{
@@ -413,15 +413,15 @@ public class MotherBrain_Title : MonoBehaviour
 									Color color34 = (_0024_00241289_00241891 = _0024self__00241900.publicText.material.color);
 									float num34 = (_0024_00241289_00241891.a = _0024_00241288_00241890);
 									Color color36 = (_0024self__00241900.publicText.material.color = _0024_00241289_00241891);
-									_0024self__00241900.StartCoroutine_Auto(_0024self__00241900.menuTransition(_0024self__00241900.back2Light, _0024self__00241900.back2Renderer, "back2", "reveal2ndPage"));
+									_0024self__00241900.StartCoroutine(_0024self__00241900.menuTransition(_0024self__00241900.back2Light, _0024self__00241900.back2Renderer, "back2", "reveal2ndPage"));
 								}
 								else if (_0024self__00241900.tempTransform.name == "Button_Back3")
 								{
-									_0024self__00241900.StartCoroutine_Auto(_0024self__00241900.menuTransition(_0024self__00241900.back3Light, _0024self__00241900.back3Renderer, "back3", "revealButtons"));
+									_0024self__00241900.StartCoroutine(_0024self__00241900.menuTransition(_0024self__00241900.back3Light, _0024self__00241900.back3Renderer, "back3", "revealButtons"));
 								}
 								else if (_0024self__00241900.tempTransform.name == "Button_Back4")
 								{
-									_0024self__00241900.StartCoroutine_Auto(_0024self__00241900.menuTransition(_0024self__00241900.back4Light, _0024self__00241900.back4Renderer, "back4", "revealButtons"));
+									_0024self__00241900.StartCoroutine(_0024self__00241900.menuTransition(_0024self__00241900.back4Light, _0024self__00241900.back4Renderer, "back4", "revealButtons"));
 								}
 								else
 								{
@@ -437,7 +437,7 @@ public class MotherBrain_Title : MonoBehaviour
 									}
 									if (_0024self__00241900.tempTransform.name == "Button_Coop")
 									{
-										_0024self__00241900.StartCoroutine_Auto(_0024self__00241900.menuTransition(_0024self__00241900.coopLight, _0024self__00241900.coopRenderer, "hitCoop", "reveal3rdPage"));
+										_0024self__00241900.StartCoroutine(_0024self__00241900.menuTransition(_0024self__00241900.coopLight, _0024self__00241900.coopRenderer, "hitCoop", "reveal3rdPage"));
 										_0024self__00241900.connecting.SetActive(true);
 									}
 									else
@@ -963,15 +963,15 @@ public class MotherBrain_Title : MonoBehaviour
 		cloudDownloadText.enabled = true;
 		cloudUpload.enabled = true;
 		cloudDownload.enabled = true;
-		for (int i = 0; i < Extensions.get_length((Array)androidHUDon); i++)
+		for (int i = 0; i < Extensions.get_length(androidHUDon); i++)
 		{
 			androidHUDon[i].layer = 10;
 		}
-		for (int i = 0; i < Extensions.get_length((Array)androidHUDoff); i++)
+		for (int i = 0; i < Extensions.get_length(androidHUDoff); i++)
 		{
 			androidHUDoff[i].layer = 0;
 		}
-		for (int i = 0; i < Extensions.get_length((Array)moreAndroidStuffToHide); i++)
+		for (int i = 0; i < Extensions.get_length(moreAndroidStuffToHide); i++)
 		{
 			moreAndroidStuffToHide[i].enabled = false;
 		}
@@ -1014,9 +1014,9 @@ public class MotherBrain_Title : MonoBehaviour
 		{
 			if (whichPlayer.position.x != 0f)
 			{
-				StartCoroutine_Auto(ConnectionMade());
+				StartCoroutine(ConnectionMade());
 			}
-			StartCoroutine_Auto(titleInput());
+			StartCoroutine(titleInput());
 			titleAnimation();
 			fadeAnimation();
 			scrollingAnimation();
@@ -1056,7 +1056,7 @@ public class MotherBrain_Title : MonoBehaviour
 		Vector3 position = cameraTransform.position;
 		float num = (position.y = y);
 		Vector3 vector2 = (cameraTransform.position = position);
-		for (int i = 0; i < Extensions.get_length((Array)fadeArray); i++)
+		for (int i = 0; i < Extensions.get_length(fadeArray); i++)
 		{
 			if (!(fadeArray[i].timeBeforeReveal <= 0f))
 			{

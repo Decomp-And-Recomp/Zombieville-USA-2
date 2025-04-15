@@ -84,7 +84,7 @@ public class DeleteData : MonoBehaviour
 					Application.LoadLevel("title");
 					goto IL_0203;
 				case 3:
-					_0024self__00241639.StartCoroutine_Auto(_0024self__00241639.DeleteAllData());
+					_0024self__00241639.StartCoroutine(_0024self__00241639.DeleteAllData());
 					goto IL_0203;
 				case 1:
 					{
@@ -180,7 +180,7 @@ public class DeleteData : MonoBehaviour
 	{
 		if (!lockInput)
 		{
-			StartCoroutine_Auto(playerInput());
+			StartCoroutine(playerInput());
 		}
 		fadeAnimation();
 	}

@@ -412,7 +412,7 @@ public class EffectMachine : MonoBehaviour
 
 	public virtual void hitEffect(ZombieScript theVictim)
 	{
-		if (Extensions.get_length((Array)hitEffects) == 0 || theVictim.noHitEffects)
+		if (Extensions.get_length(hitEffects) == 0 || theVictim.noHitEffects)
 		{
 			return;
 		}
@@ -454,7 +454,7 @@ public class EffectMachine : MonoBehaviour
 		hitEffects[nextHitEffect].Anim.Play();
 		hitEffects[nextHitEffect].life = hitEffectDuration;
 		nextHitEffect++;
-		if (nextHitEffect >= Extensions.get_length((Array)hitEffects))
+		if (nextHitEffect >= Extensions.get_length(hitEffects))
 		{
 			nextHitEffect = 0;
 		}
@@ -541,7 +541,7 @@ public class EffectMachine : MonoBehaviour
 			Vector3 vector8 = (fireTransform.position = position3);
 		}
 		bool flag = false;
-		for (int i = 0; i < Extensions.get_length((Array)hitEffects); i++)
+		for (int i = 0; i < Extensions.get_length(hitEffects); i++)
 		{
 			if (!(hitEffects[i].life <= 0f))
 			{
@@ -581,7 +581,7 @@ public class EffectMachine : MonoBehaviour
 				Vector3 vector12 = (laserTransform.localScale = localScale2);
 			}
 		}
-		if (Extensions.get_length((Array)explosionTransforms) == 0)
+		if (Extensions.get_length(explosionTransforms) == 0)
 		{
 			return;
 		}

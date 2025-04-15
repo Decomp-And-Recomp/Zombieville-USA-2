@@ -4,7 +4,7 @@ using UnityEngine.SocialPlatforms;
 
 namespace GooglePlayGames
 {
-	public class PlayGamesLocalUser : PlayGamesUserProfile, IUserProfile, ILocalUser
+    public class PlayGamesLocalUser : PlayGamesUserProfile, IUserProfile, ILocalUser
 	{
 		internal PlayGamesPlatform mPlatform;
 
@@ -176,5 +176,10 @@ namespace GooglePlayGames
 				callback(CommonStatusCodes.Success, mStats);
 			}
 		}
-	}
+
+        public void Authenticate(Action<bool, string> callback)
+        {
+
+        }
+    }
 }

@@ -287,18 +287,18 @@ public class MotherBrain : MonoBehaviour
 						}
 						_0024spawnTable_00241671 = 0;
 						_0024waveSize_00241672 = 0;
-						for (_0024i_00241673 = 0; _0024i_00241673 < Extensions.get_length((Array)_0024self__00241683.DB.waveSize); _0024i_00241673++)
+						for (_0024i_00241673 = 0; _0024i_00241673 < Extensions.get_length(_0024self__00241683.DB.waveSize); _0024i_00241673++)
 						{
 							_0024spawnTable_00241671 = (int)((float)_0024spawnTable_00241671 + _0024self__00241683.DB.waveSize[_0024i_00241673]);
 						}
 						_0024self__00241683.randomRoll = UnityEngine.Random.Range(0, _0024spawnTable_00241671);
 						_0024cummulativeInt_00241674 = 0;
-						for (_0024i_00241673 = 0; _0024i_00241673 < Extensions.get_length((Array)_0024self__00241683.DB.waveSize); _0024i_00241673++)
+						for (_0024i_00241673 = 0; _0024i_00241673 < Extensions.get_length(_0024self__00241683.DB.waveSize); _0024i_00241673++)
 						{
 							if (!((float)_0024self__00241683.randomRoll >= _0024self__00241683.DB.waveSize[_0024i_00241673] + (float)_0024cummulativeInt_00241674) && !(_0024self__00241683.DB.waveSize[_0024i_00241673] <= 0f))
 							{
 								_0024waveSize_00241672 = _0024i_00241673;
-								_0024i_00241673 = Extensions.get_length((Array)_0024self__00241683.DB.waveSize);
+								_0024i_00241673 = Extensions.get_length(_0024self__00241683.DB.waveSize);
 							}
 							else
 							{
@@ -327,18 +327,18 @@ public class MotherBrain : MonoBehaviour
 						{
 							_0024spawnTable_00241671 = 0;
 							_0024enemyType_00241675 = 0;
-							for (_0024i2_00241676 = 0; _0024i2_00241676 < Extensions.get_length((Array)_0024self__00241683.DB.enemyChance); _0024i2_00241676++)
+							for (_0024i2_00241676 = 0; _0024i2_00241676 < Extensions.get_length(_0024self__00241683.DB.enemyChance); _0024i2_00241676++)
 							{
 								_0024spawnTable_00241671 = (int)((float)_0024spawnTable_00241671 + _0024self__00241683.DB.enemyChance[_0024i2_00241676]);
 							}
 							_0024self__00241683.randomRoll = UnityEngine.Random.Range(0, _0024spawnTable_00241671);
 							_0024cummulativeInt_00241674 = 0;
-							for (_0024i2_00241676 = 0; _0024i2_00241676 < Extensions.get_length((Array)_0024self__00241683.DB.enemyChance); _0024i2_00241676++)
+							for (_0024i2_00241676 = 0; _0024i2_00241676 < Extensions.get_length(_0024self__00241683.DB.enemyChance); _0024i2_00241676++)
 							{
 								if (!((float)_0024self__00241683.randomRoll >= _0024self__00241683.DB.enemyChance[_0024i2_00241676] + (float)_0024cummulativeInt_00241674))
 								{
 									_0024enemyType_00241675 = _0024i2_00241676;
-									_0024i2_00241676 = Extensions.get_length((Array)_0024self__00241683.DB.enemyChance);
+									_0024i2_00241676 = Extensions.get_length(_0024self__00241683.DB.enemyChance);
 								}
 								else
 								{
@@ -346,12 +346,12 @@ public class MotherBrain : MonoBehaviour
 								}
 							}
 							_0024availableZombie_00241677 = -1;
-							for (_0024i2_00241676 = 0; _0024i2_00241676 < Extensions.get_length((Array)_0024self__00241683.zombies); _0024i2_00241676++)
+							for (_0024i2_00241676 = 0; _0024i2_00241676 < Extensions.get_length(_0024self__00241683.zombies); _0024i2_00241676++)
 							{
 								if ((bool)_0024self__00241683.zombies[_0024i2_00241676] && _0024self__00241683.zombies[_0024i2_00241676].availableForSpawning && _0024self__00241683.zombies[_0024i2_00241676].zombieType == (EnemyType)_0024enemyType_00241675)
 								{
 									_0024availableZombie_00241677 = _0024i2_00241676;
-									_0024i2_00241676 = Extensions.get_length((Array)_0024self__00241683.zombies);
+									_0024i2_00241676 = Extensions.get_length(_0024self__00241683.zombies);
 								}
 							}
 							if (_0024availableZombie_00241677 != -1)
@@ -417,7 +417,7 @@ public class MotherBrain : MonoBehaviour
 								if (_0024spawnStyle_00241681 == 1)
 								{
 									_0024self__00241683.groundEruption(_0024self__00241683.zombies[_0024availableZombie_00241677].myTransform.position, _0024self__00241683.zombies[_0024availableZombie_00241677].myTransform.localScale.x);
-									_0024self__00241683.StartCoroutine_Auto(_0024self__00241683.zombies[_0024availableZombie_00241677].emerge());
+									_0024self__00241683.StartCoroutine(_0024self__00241683.zombies[_0024availableZombie_00241677].emerge());
 								}
 								if (_0024self__00241683.DB.multiplayer)
 								{
@@ -488,7 +488,7 @@ public class MotherBrain : MonoBehaviour
 				{
 				default:
 					_0024availablePickup_00241686 = -1;
-					for (_0024i_00241687 = 0; _0024i_00241687 < Extensions.get_length((Array)_0024self__00241690.pickups); _0024i_00241687++)
+					for (_0024i_00241687 = 0; _0024i_00241687 < Extensions.get_length(_0024self__00241690.pickups); _0024i_00241687++)
 					{
 						if (_0024self__00241690.pickups[_0024i_00241687].pickupValue == (PickupValue)_0024whichValue_00241688 && !_0024self__00241690.pickups[_0024i_00241687].inUse)
 						{
@@ -1178,7 +1178,7 @@ public class MotherBrain : MonoBehaviour
 					_0024self__00241735.zombies[0].reset();
 					_0024self__00241735.zombies[0].targetNearest();
 					_0024self__00241735.groundEruption(_0024self__00241735.zombies[0].myTransform.position, _0024self__00241735.zombies[0].myTransform.localScale.x);
-					_0024self__00241735.StartCoroutine_Auto(_0024self__00241735.zombies[0].emerge());
+					_0024self__00241735.StartCoroutine(_0024self__00241735.zombies[0].emerge());
 					goto IL_0535;
 				case 9:
 					_0024self__00241735.currentBubble++;
@@ -2015,7 +2015,7 @@ public class MotherBrain : MonoBehaviour
 			characterHorizontalBounds.x = cameraHorizontalBounds.x - screenEdge + 0.4f;
 			worldEnd = cameraHorizontalBounds.y + screenEdge - 0.4f;
 		}
-		StartCoroutine_Auto(triggerZombieLoad());
+		StartCoroutine(triggerZombieLoad());
 	}
 
 	public virtual IEnumerator triggerZombieLoad()
@@ -2043,7 +2043,7 @@ public class MotherBrain : MonoBehaviour
 		{
 			num = playerScript.myTransform.position.x - screenEdge * 2f;
 		}
-		for (int i = 0; i < Extensions.get_length((Array)zombies); i++)
+		for (int i = 0; i < Extensions.get_length(zombies); i++)
 		{
 			if ((bool)zombies[i] && zombies[i].enabled && zombies[i].health > 0 && !zombies[i].availableForSpawning && !(zombies[i].myTransform.position.x >= num))
 			{
@@ -2087,7 +2087,7 @@ public class MotherBrain : MonoBehaviour
 				Vector3 position = disconnector.position;
 				float num2 = (position.x = num);
 				Vector3 vector2 = (disconnector.position = position);
-				StartCoroutine_Auto(onPeerDisconnect());
+				StartCoroutine(onPeerDisconnect());
 			}
 		}
 		handleJoysticks();
@@ -2100,7 +2100,7 @@ public class MotherBrain : MonoBehaviour
 		{
 			if (zombiesLoaded && destructiblesLoaded && !initializedZombies)
 			{
-				for (int i = 0; i < Extensions.get_length((Array)zombies); i++)
+				for (int i = 0; i < Extensions.get_length(zombies); i++)
 				{
 					if ((bool)zombies[i])
 					{
@@ -2141,7 +2141,7 @@ public class MotherBrain : MonoBehaviour
 				{
 					if (DB.tutorial)
 					{
-						StartCoroutine_Auto(tutorialSequence());
+						StartCoroutine(tutorialSequence());
 					}
 					if (!freezeGame)
 					{
@@ -2167,7 +2167,7 @@ public class MotherBrain : MonoBehaviour
 					{
 						if (!zombiesOff)
 						{
-							StartCoroutine_Auto(Spawn());
+							StartCoroutine(Spawn());
 						}
 						SpawnNextChunk();
 					}
@@ -2202,7 +2202,7 @@ public class MotherBrain : MonoBehaviour
 			if (((waitingToExit && Input.touchCount > 0) || (waitingToExit && Application.platform == RuntimePlatform.OSXEditor && Input.GetMouseButtonDown(0)) || (waitingToExit && Input.GetButtonDown("Fire1")) || (waitingToExit && Input.GetButtonDown("Fire2")) || (waitingToExit && Input.GetButtonDown("Fire3"))) && !fade)
 			{
 				fade = true;
-				StartCoroutine_Auto(goBackToMainMenu());
+				StartCoroutine(goBackToMainMenu());
 			}
 		}
 		else
@@ -2231,7 +2231,7 @@ public class MotherBrain : MonoBehaviour
 		{
 			textMessage = string.Empty;
 		}
-		for (int i = 0; i < Extensions.get_length((Array)zombies); i++)
+		for (int i = 0; i < Extensions.get_length(zombies); i++)
 		{
 			if (!zombies[i] || !zombies[i].enabled)
 			{
@@ -2264,7 +2264,7 @@ public class MotherBrain : MonoBehaviour
 	{
 		string[] array = incomingData.Split(" "[0]);
 		int num = default(int);
-		for (int i = 0; i < Extensions.get_length((Array)array); i += 5)
+		for (int i = 0; i < Extensions.get_length(array); i += 5)
 		{
 			num = UnityBuiltins.parseInt(array[i]);
 			if (!(zombies[num].ignoreSync > 0f) && zombies[num].enabled)
@@ -2715,14 +2715,14 @@ public class MotherBrain : MonoBehaviour
 		{
 			return;
 		}
-		for (int i = 0; i < Extensions.get_length((Array)messageSlots); i++)
+		for (int i = 0; i < Extensions.get_length(messageSlots); i++)
 		{
 			if (messageSlots[i].whichObject.text == string.Empty)
 			{
 				messageSlots[i].whichObject.text = whichObject;
 				messageSlots[i].whichFunction.text = whichFunction;
 				messageSlots[i].message.text = message;
-				i = Extensions.get_length((Array)messageSlots);
+				i = Extensions.get_length(messageSlots);
 			}
 		}
 	}
@@ -2751,7 +2751,7 @@ public class MotherBrain : MonoBehaviour
 		basicShells[nextBasicShell].movement = new Vector3(UnityEngine.Random.Range(2.9f, 4.7f) * (float)(-facing), UnityEngine.Random.Range(5.9f, 8.2f), UnityEngine.Random.Range(-0.2f, 0.2f));
 		basicShells[nextBasicShell].spin = UnityEngine.Random.Range(600f, 1250f) * (float)(-facing);
 		nextBasicShell++;
-		if (nextBasicShell >= Extensions.get_length((Array)basicShells))
+		if (nextBasicShell >= Extensions.get_length(basicShells))
 		{
 			nextBasicShell = 0;
 		}
@@ -2776,7 +2776,7 @@ public class MotherBrain : MonoBehaviour
 		sniperShells[nextSniperShell].movement = new Vector3(UnityEngine.Random.Range(2.7f, 3.7f) * (float)(-facing), UnityEngine.Random.Range(8.9f, 13.2f), UnityEngine.Random.Range(-0.2f, 0.2f));
 		sniperShells[nextSniperShell].spin = UnityEngine.Random.Range(1600f, 2250f) * (float)(-facing);
 		nextSniperShell++;
-		if (nextSniperShell >= Extensions.get_length((Array)sniperShells))
+		if (nextSniperShell >= Extensions.get_length(sniperShells))
 		{
 			nextSniperShell = 0;
 		}
@@ -2801,7 +2801,7 @@ public class MotherBrain : MonoBehaviour
 		shottyShells[nextShottyShell].movement = new Vector3(UnityEngine.Random.Range(2.9f, 4.7f) * (float)(-facing), UnityEngine.Random.Range(5.9f, 8.2f), UnityEngine.Random.Range(-0.2f, 0.2f));
 		shottyShells[nextShottyShell].spin = UnityEngine.Random.Range(600f, 1250f) * (float)(-facing);
 		nextShottyShell++;
-		if (nextShottyShell >= Extensions.get_length((Array)shottyShells))
+		if (nextShottyShell >= Extensions.get_length(shottyShells))
 		{
 			nextShottyShell = 0;
 		}
@@ -2826,7 +2826,7 @@ public class MotherBrain : MonoBehaviour
 		pins[nextPin].movement = new Vector3(UnityEngine.Random.Range(-0.9f, 0.9f) * (float)facing, UnityEngine.Random.Range(6.9f, 9.2f), UnityEngine.Random.Range(-0.2f, 0.2f));
 		pins[nextPin].spin = UnityEngine.Random.Range(600f, 1250f) * (float)(-facing);
 		nextPin++;
-		if (nextPin >= Extensions.get_length((Array)pins))
+		if (nextPin >= Extensions.get_length(pins))
 		{
 			nextPin = 0;
 		}
@@ -2840,7 +2840,7 @@ public class MotherBrain : MonoBehaviour
 			blood[nextBlood].myTransform.position = startPos;
 			blood[nextBlood].movement = new Vector3(UnityEngine.Random.Range(-4.5f, 4.5f), UnityEngine.Random.Range(5.4f, 11f), UnityEngine.Random.Range(-1f, 1f)) + damageDirection;
 			nextBlood++;
-			if (nextBlood >= Extensions.get_length((Array)blood))
+			if (nextBlood >= Extensions.get_length(blood))
 			{
 				nextBlood = 0;
 			}
@@ -2856,7 +2856,7 @@ public class MotherBrain : MonoBehaviour
 				meat[nextMeat].spin = meat[nextMeat].spin * -1f;
 			}
 			nextMeat++;
-			if (nextMeat >= Extensions.get_length((Array)meat))
+			if (nextMeat >= Extensions.get_length(meat))
 			{
 				nextMeat = 0;
 			}
@@ -2872,7 +2872,7 @@ public class MotherBrain : MonoBehaviour
 				bone[nextBone].spin = bone[nextBone].spin * -1f;
 			}
 			nextBone++;
-			if (nextBone >= Extensions.get_length((Array)bone))
+			if (nextBone >= Extensions.get_length(bone))
 			{
 				nextBone = 0;
 			}
@@ -2887,7 +2887,7 @@ public class MotherBrain : MonoBehaviour
 			blood[nextBlood].myTransform.position = startPos;
 			blood[nextBlood].movement = new Vector3(UnityEngine.Random.Range(-8.5f, 8.5f), UnityEngine.Random.Range(10f, 25f), UnityEngine.Random.Range(-1f, 1f)) + damageDirection;
 			nextBlood++;
-			if (nextBlood >= Extensions.get_length((Array)blood))
+			if (nextBlood >= Extensions.get_length(blood))
 			{
 				nextBlood = 0;
 			}
@@ -2903,7 +2903,7 @@ public class MotherBrain : MonoBehaviour
 				meat[nextMeat].spin = meat[nextMeat].spin * -1f;
 			}
 			nextMeat++;
-			if (nextMeat >= Extensions.get_length((Array)meat))
+			if (nextMeat >= Extensions.get_length(meat))
 			{
 				nextMeat = 0;
 			}
@@ -2919,7 +2919,7 @@ public class MotherBrain : MonoBehaviour
 				bone[nextBone].spin = bone[nextBone].spin * -1f;
 			}
 			nextBone++;
-			if (nextBone >= Extensions.get_length((Array)bone))
+			if (nextBone >= Extensions.get_length(bone))
 			{
 				nextBone = 0;
 			}
@@ -2934,7 +2934,7 @@ public class MotherBrain : MonoBehaviour
 			blood[nextBlood].myTransform.position = startPos;
 			blood[nextBlood].movement = new Vector3(UnityEngine.Random.Range(-4.5f, 4.5f), UnityEngine.Random.Range(5.4f, 11f), UnityEngine.Random.Range(-1f, 1f)) + damageDirection;
 			nextBlood++;
-			if (nextBlood >= Extensions.get_length((Array)blood))
+			if (nextBlood >= Extensions.get_length(blood))
 			{
 				nextBlood = 0;
 			}
@@ -2950,7 +2950,7 @@ public class MotherBrain : MonoBehaviour
 				meat[nextMeat].spin = meat[nextMeat].spin * -1f;
 			}
 			nextMeat++;
-			if (nextMeat >= Extensions.get_length((Array)meat))
+			if (nextMeat >= Extensions.get_length(meat))
 			{
 				nextMeat = 0;
 			}
@@ -2970,7 +2970,7 @@ public class MotherBrain : MonoBehaviour
 				ashes[nextAsh].spin = ashes[nextAsh].spin * -1f;
 			}
 			nextAsh++;
-			if (nextAsh >= Extensions.get_length((Array)ashes))
+			if (nextAsh >= Extensions.get_length(ashes))
 			{
 				nextAsh = 0;
 			}
@@ -2990,7 +2990,7 @@ public class MotherBrain : MonoBehaviour
 				ashes[nextAsh].spin = ashes[nextAsh].spin * -1f;
 			}
 			nextAsh++;
-			if (nextAsh >= Extensions.get_length((Array)ashes))
+			if (nextAsh >= Extensions.get_length(ashes))
 			{
 				nextAsh = 0;
 			}
@@ -3010,7 +3010,7 @@ public class MotherBrain : MonoBehaviour
 				pebbles[nextPebble].spin = pebbles[nextPebble].spin * -1f;
 			}
 			nextPebble++;
-			if (nextPebble >= Extensions.get_length((Array)pebbles))
+			if (nextPebble >= Extensions.get_length(pebbles))
 			{
 				nextPebble = 0;
 			}
@@ -3024,7 +3024,7 @@ public class MotherBrain : MonoBehaviour
 		Color color3 = (dirt[nextDirt].rend.material.color = color);
 		dirt[nextDirt].life = 3.5f;
 		nextDirt++;
-		if (nextDirt >= Extensions.get_length((Array)dirt))
+		if (nextDirt >= Extensions.get_length(dirt))
 		{
 			nextDirt = 0;
 		}
@@ -3043,7 +3043,7 @@ public class MotherBrain : MonoBehaviour
 				iceSmall[nextIceSmall].spin = iceSmall[nextIceSmall].spin * -1f;
 			}
 			nextIceSmall++;
-			if (nextIceSmall >= Extensions.get_length((Array)iceSmall))
+			if (nextIceSmall >= Extensions.get_length(iceSmall))
 			{
 				nextIceSmall = 0;
 			}
@@ -3063,7 +3063,7 @@ public class MotherBrain : MonoBehaviour
 				iceBig[nextIceBig].spin = iceBig[nextIceBig].spin * -1f;
 			}
 			nextIceBig++;
-			if (nextIceBig >= Extensions.get_length((Array)iceBig))
+			if (nextIceBig >= Extensions.get_length(iceBig))
 			{
 				nextIceBig = 0;
 			}
@@ -3079,7 +3079,7 @@ public class MotherBrain : MonoBehaviour
 				iceSmall[nextIceSmall].spin = iceSmall[nextIceSmall].spin * -1f;
 			}
 			nextIceSmall++;
-			if (nextIceSmall >= Extensions.get_length((Array)iceSmall))
+			if (nextIceSmall >= Extensions.get_length(iceSmall))
 			{
 				nextIceSmall = 0;
 			}
@@ -3090,7 +3090,7 @@ public class MotherBrain : MonoBehaviour
 			blood[nextBlood].myTransform.position = startPos;
 			blood[nextBlood].movement = new Vector3(UnityEngine.Random.Range(-4.5f, 4.5f), UnityEngine.Random.Range(5.4f, 11f), UnityEngine.Random.Range(-1f, 1f)) + damageDirection;
 			nextBlood++;
-			if (nextBlood >= Extensions.get_length((Array)blood))
+			if (nextBlood >= Extensions.get_length(blood))
 			{
 				nextBlood = 0;
 			}
@@ -3106,7 +3106,7 @@ public class MotherBrain : MonoBehaviour
 				meat[nextMeat].spin = meat[nextMeat].spin * -1f;
 			}
 			nextMeat++;
-			if (nextMeat >= Extensions.get_length((Array)meat))
+			if (nextMeat >= Extensions.get_length(meat))
 			{
 				nextMeat = 0;
 			}
@@ -3122,7 +3122,7 @@ public class MotherBrain : MonoBehaviour
 				bone[nextBone].spin = bone[nextBone].spin * -1f;
 			}
 			nextBone++;
-			if (nextBone >= Extensions.get_length((Array)bone))
+			if (nextBone >= Extensions.get_length(bone))
 			{
 				nextBone = 0;
 			}
@@ -3137,7 +3137,7 @@ public class MotherBrain : MonoBehaviour
 			blood[nextBlood].myTransform.position = startPos;
 			blood[nextBlood].movement = new Vector3(UnityEngine.Random.Range(-4.5f, 4.5f), UnityEngine.Random.Range(3.4f, 11f), UnityEngine.Random.Range(-1f, 1f)) + damageDirection;
 			nextBlood++;
-			if (nextBlood >= Extensions.get_length((Array)blood))
+			if (nextBlood >= Extensions.get_length(blood))
 			{
 				nextBlood = 0;
 			}
@@ -3161,7 +3161,7 @@ public class MotherBrain : MonoBehaviour
 			glass[nextGlass].movement = new Vector3(UnityEngine.Random.Range(-4.5f, 4.5f), UnityEngine.Random.Range(1f, -4f), UnityEngine.Random.Range(-1.4f, 1.4f));
 			glass[nextGlass].spin = UnityEngine.Random.Range(650f, 1750f);
 			nextGlass++;
-			if (nextGlass >= Extensions.get_length((Array)glass))
+			if (nextGlass >= Extensions.get_length(glass))
 			{
 				nextGlass = 0;
 			}
@@ -3177,7 +3177,7 @@ public class MotherBrain : MonoBehaviour
 			envParticles[particleType].theParticles[envParticles[particleType].nextMember].movement = new Vector3(UnityEngine.Random.Range(-3.1f, 3.1f), UnityEngine.Random.Range(6.4f, 16f), UnityEngine.Random.Range(-1f, 1f)) + damageDirection;
 			envParticles[particleType].theParticles[envParticles[particleType].nextMember].spin = UnityEngine.Random.Range(350f, 1550f);
 			envParticles[particleType].nextMember = envParticles[particleType].nextMember + 1;
-			if (envParticles[particleType].nextMember >= Extensions.get_length((Array)envParticles[particleType].theParticles))
+			if (envParticles[particleType].nextMember >= Extensions.get_length(envParticles[particleType].theParticles))
 			{
 				envParticles[particleType].nextMember = 0;
 			}
@@ -3186,7 +3186,7 @@ public class MotherBrain : MonoBehaviour
 
 	public virtual void ParticleAnimation()
 	{
-		for (int i = 0; i < Extensions.get_length((Array)basicShells); i++)
+		for (int i = 0; i < Extensions.get_length(basicShells); i++)
 		{
 			if (basicShells[i].life <= 0f)
 			{
@@ -3222,7 +3222,7 @@ public class MotherBrain : MonoBehaviour
 				basicShells[i].movement.y = basicShells[i].movement.y * UnityEngine.Random.Range(-0.7f, -0.5f);
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)pins); i++)
+		for (int i = 0; i < Extensions.get_length(pins); i++)
 		{
 			if (pins[i].life <= 0f)
 			{
@@ -3258,7 +3258,7 @@ public class MotherBrain : MonoBehaviour
 				pins[i].movement.y = pins[i].movement.y * UnityEngine.Random.Range(-0.7f, -0.5f);
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)shottyShells); i++)
+		for (int i = 0; i < Extensions.get_length(shottyShells); i++)
 		{
 			if (shottyShells[i].life <= 0f)
 			{
@@ -3294,7 +3294,7 @@ public class MotherBrain : MonoBehaviour
 				shottyShells[i].movement.y = shottyShells[i].movement.y * UnityEngine.Random.Range(-0.7f, -0.5f);
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)sniperShells); i++)
+		for (int i = 0; i < Extensions.get_length(sniperShells); i++)
 		{
 			if (sniperShells[i].life <= 0f)
 			{
@@ -3330,7 +3330,7 @@ public class MotherBrain : MonoBehaviour
 				sniperShells[i].movement.y = sniperShells[i].movement.y * UnityEngine.Random.Range(-0.7f, -0.5f);
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)blood); i++)
+		for (int i = 0; i < Extensions.get_length(blood); i++)
 		{
 			if (blood[i].life <= 0f)
 			{
@@ -3389,7 +3389,7 @@ public class MotherBrain : MonoBehaviour
 				blood[i].movement = new Vector3(0f, 0f, 0f);
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)meat); i++)
+		for (int i = 0; i < Extensions.get_length(meat); i++)
 		{
 			if (meat[i].life <= 0f)
 			{
@@ -3434,7 +3434,7 @@ public class MotherBrain : MonoBehaviour
 				meat[i].movement = new Vector3(0f, 0f, 0f);
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)bone); i++)
+		for (int i = 0; i < Extensions.get_length(bone); i++)
 		{
 			if (bone[i].life <= 0f)
 			{
@@ -3474,7 +3474,7 @@ public class MotherBrain : MonoBehaviour
 				bone[i].movement.y = bone[i].movement.y * UnityEngine.Random.Range(-0.65f, -0.35f);
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)teeth); i++)
+		for (int i = 0; i < Extensions.get_length(teeth); i++)
 		{
 			if (teeth[i].life <= 0f)
 			{
@@ -3510,7 +3510,7 @@ public class MotherBrain : MonoBehaviour
 				teeth[i].movement.y = teeth[i].movement.y * UnityEngine.Random.Range(-0.8f, -0.35f);
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)ashes); i++)
+		for (int i = 0; i < Extensions.get_length(ashes); i++)
 		{
 			if (ashes[i].life <= 0f)
 			{
@@ -3549,7 +3549,7 @@ public class MotherBrain : MonoBehaviour
 				ashes[i].movement.y = ashes[i].movement.y * UnityEngine.Random.Range(-0.75f, -0.45f);
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)iceBig); i++)
+		for (int i = 0; i < Extensions.get_length(iceBig); i++)
 		{
 			if (iceBig[i].life <= 0f)
 			{
@@ -3588,7 +3588,7 @@ public class MotherBrain : MonoBehaviour
 				iceBig[i].movement.y = iceBig[i].movement.y * UnityEngine.Random.Range(-0.75f, -0.45f);
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)iceSmall); i++)
+		for (int i = 0; i < Extensions.get_length(iceSmall); i++)
 		{
 			if (iceSmall[i].life <= 0f)
 			{
@@ -3627,7 +3627,7 @@ public class MotherBrain : MonoBehaviour
 				iceSmall[i].movement.y = iceSmall[i].movement.y * UnityEngine.Random.Range(-0.75f, -0.45f);
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)pebbles); i++)
+		for (int i = 0; i < Extensions.get_length(pebbles); i++)
 		{
 			if (pebbles[i].life <= 0f)
 			{
@@ -3666,7 +3666,7 @@ public class MotherBrain : MonoBehaviour
 				pebbles[i].movement.y = pebbles[i].movement.y * UnityEngine.Random.Range(-0.75f, -0.45f);
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)dirt); i++)
+		for (int i = 0; i < Extensions.get_length(dirt); i++)
 		{
 			if (!(dirt[i].life <= 0f))
 			{
@@ -3687,7 +3687,7 @@ public class MotherBrain : MonoBehaviour
 				}
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)glass); i++)
+		for (int i = 0; i < Extensions.get_length(glass); i++)
 		{
 			if (glass[i].life <= 0f)
 			{
@@ -3726,7 +3726,7 @@ public class MotherBrain : MonoBehaviour
 				glass[i].movement.y = glass[i].movement.y * UnityEngine.Random.Range(-0.75f, -0.35f);
 			}
 		}
-		for (int i = 0; i < Extensions.get_length((Array)envParticles); i++)
+		for (int i = 0; i < Extensions.get_length(envParticles); i++)
 		{
 			if (envParticles[i].inUse)
 			{
@@ -3772,7 +3772,7 @@ public class MotherBrain : MonoBehaviour
 			}
 			else
 			{
-				i = Extensions.get_length((Array)envParticles);
+				i = Extensions.get_length(envParticles);
 			}
 		}
 	}
@@ -3816,7 +3816,7 @@ public class MotherBrain : MonoBehaviour
 		if (array[4] == "1")
 		{
 			groundEruption(zombies[nextZombie].myTransform.position, zombies[nextZombie].myTransform.localScale.x);
-			StartCoroutine_Auto(zombies[nextZombie].emerge());
+			StartCoroutine(zombies[nextZombie].emerge());
 		}
 	}
 
@@ -3957,7 +3957,7 @@ public class MotherBrain : MonoBehaviour
 				{
 					string[] array = messages[num].text.Split(" "[0]);
 					int num2 = UnityBuiltins.parseInt(array[0]);
-					StartCoroutine_Auto(zombies[num2].syncSpit(messages[num].text.ToString()));
+					StartCoroutine(zombies[num2].syncSpit(messages[num].text.ToString()));
 					messages[num].text = string.Empty;
 				}
 			}
@@ -3982,7 +3982,7 @@ public class MotherBrain : MonoBehaviour
 			}
 			if ((bool)allyScript && messages[45].text != string.Empty)
 			{
-				StartCoroutine_Auto(allyScript.die(string.Empty));
+				StartCoroutine(allyScript.die(string.Empty));
 				messages[45].text = string.Empty;
 			}
 			if (messages[46].text != string.Empty)
@@ -3992,7 +3992,7 @@ public class MotherBrain : MonoBehaviour
 			}
 			if ((bool)allyScript && messages[47].text != string.Empty)
 			{
-				StartCoroutine_Auto(allyScript.grabHelicopter(string.Empty));
+				StartCoroutine(allyScript.grabHelicopter(string.Empty));
 				messages[47].text = string.Empty;
 			}
 			if (messages[48].text != string.Empty)
@@ -4169,7 +4169,7 @@ public class MotherBrain : MonoBehaviour
 			tempGO = (GameObject)UnityEngine.Object.Instantiate(Resources.Load(DB.environments[(int)DB.location].backdrop));
 			backdrop = tempGO.transform;
 		}
-		for (int i = 0; i < Extensions.get_length((Array)DB.environments[(int)DB.location].customParticles); i++)
+		for (int i = 0; i < Extensions.get_length(DB.environments[(int)DB.location].customParticles); i++)
 		{
 			envParticles[i].inUse = true;
 			for (int j = 0; j < 5; j++)
@@ -4179,7 +4179,7 @@ public class MotherBrain : MonoBehaviour
 			}
 		}
 		int num9 = 30;
-		for (int i = 0; i < Extensions.get_length((Array)DB.environments[(int)DB.location].destructibles); i++)
+		for (int i = 0; i < Extensions.get_length(DB.environments[(int)DB.location].destructibles); i++)
 		{
 			for (int j = 0; j < 5; j++)
 			{
@@ -4210,7 +4210,7 @@ public class MotherBrain : MonoBehaviour
 		if (incomingData != string.Empty)
 		{
 			string[] array = incomingData.Split(" "[0]);
-			for (int i = 0; i < Extensions.get_length((Array)array); i += 3)
+			for (int i = 0; i < Extensions.get_length(array); i += 3)
 			{
 				int num = UnityBuiltins.parseInt(array[i]);
 				float num2 = UnityBuiltins.parseFloat(array[i + 1]);
@@ -4315,7 +4315,7 @@ public class MotherBrain : MonoBehaviour
 		destructibleMessage = string.Empty;
 		for (int i = 0; i < 5; i++)
 		{
-			for (randomRoll = UnityEngine.Random.Range(0, Extensions.get_length((Array)DB.environments[(int)DB.location].parts)); randomRoll == previousRoll; randomRoll = UnityEngine.Random.Range(0, Extensions.get_length((Array)DB.environments[(int)DB.location].parts)))
+			for (randomRoll = UnityEngine.Random.Range(0, Extensions.get_length(DB.environments[(int)DB.location].parts)); randomRoll == previousRoll; randomRoll = UnityEngine.Random.Range(0, Extensions.get_length(DB.environments[(int)DB.location].parts)))
 			{
 			}
 			previousRoll = randomRoll;
@@ -4360,7 +4360,7 @@ public class MotherBrain : MonoBehaviour
 			}
 			if (!DB.environments[(int)DB.location].parts[randomRoll].flushBack)
 			{
-				alleyRoll = UnityEngine.Random.Range(0, Extensions.get_length((Array)DB.environments[(int)DB.location].alleys));
+				alleyRoll = UnityEngine.Random.Range(0, Extensions.get_length(DB.environments[(int)DB.location].alleys));
 			}
 			else
 			{
@@ -4374,7 +4374,7 @@ public class MotherBrain : MonoBehaviour
 			while (clutterSpawnPosition < buildingSpawnPosition)
 			{
 				clutterSpawnPosition += UnityEngine.Random.Range(1.3f, 6.3f);
-				for (randomRoll = UnityEngine.Random.Range(0, Extensions.get_length((Array)DB.environments[(int)DB.location].clutter)); randomRoll == previousRoll; randomRoll = UnityEngine.Random.Range(0, Extensions.get_length((Array)DB.environments[(int)DB.location].clutter)))
+				for (randomRoll = UnityEngine.Random.Range(0, Extensions.get_length(DB.environments[(int)DB.location].clutter)); randomRoll == previousRoll; randomRoll = UnityEngine.Random.Range(0, Extensions.get_length(DB.environments[(int)DB.location].clutter)))
 				{
 				}
 				previousRoll = randomRoll;
@@ -4400,7 +4400,7 @@ public class MotherBrain : MonoBehaviour
 		while (!(destructibleSpawnPosition >= buildingSpawnPosition) && !DB.tutorial)
 		{
 			destructibleSpawnPosition += UnityEngine.Random.Range(DB.environments[(int)DB.location].destructiblesSpawnRange.x, DB.environments[(int)DB.location].destructiblesSpawnRange.y);
-			int num4 = UnityEngine.Random.Range(0, Extensions.get_length((Array)DB.environments[(int)DB.location].destructibles));
+			int num4 = UnityEngine.Random.Range(0, Extensions.get_length(DB.environments[(int)DB.location].destructibles));
 			int i = 30 + num4 * 5;
 			for (int num5 = i + 5; i < num5; i++)
 			{
@@ -4469,9 +4469,9 @@ public class MotherBrain : MonoBehaviour
 	{
 		string[] array = incomingData.Split(" "[0]);
 		fade = false;
-		for (int i = 0; i < Extensions.get_length((Array)array); i += 2)
+		for (int i = 0; i < Extensions.get_length(array); i += 2)
 		{
-			if (i == Extensions.get_length((Array)array) - 1)
+			if (i == Extensions.get_length(array) - 1)
 			{
 				characterHorizontalBounds.y = UnityBuiltins.parseFloat(array[i]);
 				buildingSpawnPosition = characterHorizontalBounds.y;
@@ -4493,9 +4493,9 @@ public class MotherBrain : MonoBehaviour
 	public virtual void syncAlleys(string incomingData)
 	{
 		string[] array = incomingData.Split(" "[0]);
-		for (int i = 0; i < Extensions.get_length((Array)array); i += 2)
+		for (int i = 0; i < Extensions.get_length(array); i += 2)
 		{
-			if (i == Extensions.get_length((Array)array) - 1)
+			if (i == Extensions.get_length(array) - 1)
 			{
 				alleyRoll = UnityBuiltins.parseInt(array[i]);
 				continue;
@@ -4511,9 +4511,9 @@ public class MotherBrain : MonoBehaviour
 	public virtual void syncClutter(string incomingData)
 	{
 		string[] array = incomingData.Split(" "[0]);
-		for (int i = 0; i < Extensions.get_length((Array)array); i += 2)
+		for (int i = 0; i < Extensions.get_length(array); i += 2)
 		{
-			if (i == Extensions.get_length((Array)array) - 1)
+			if (i == Extensions.get_length(array) - 1)
 			{
 				clutterSpawnPosition = UnityBuiltins.parseFloat(array[i]);
 				continue;
@@ -4529,9 +4529,9 @@ public class MotherBrain : MonoBehaviour
 	public virtual void syncDestructibles(string incomingData)
 	{
 		string[] array = incomingData.Split(" "[0]);
-		for (int i = 0; i < Extensions.get_length((Array)array); i += 3)
+		for (int i = 0; i < Extensions.get_length(array); i += 3)
 		{
-			if (i == Extensions.get_length((Array)array) - 1)
+			if (i == Extensions.get_length(array) - 1)
 			{
 				destructibleSpawnPosition = UnityBuiltins.parseFloat(array[i]);
 				continue;
@@ -4844,7 +4844,7 @@ public class MotherBrain : MonoBehaviour
 				num38 -= 60 * num39;
 				int num40 = num38 / 10;
 				num38 -= 10 * num40;
-				for (int i = 0; i < Extensions.get_length((Array)clockDigits1); i++)
+				for (int i = 0; i < Extensions.get_length(clockDigits1); i++)
 				{
 					if (clockDigits1[i].localPosition.y != 1f)
 					{
@@ -4884,7 +4884,7 @@ public class MotherBrain : MonoBehaviour
 		}
 		else
 		{
-			for (int i = 0; i < Extensions.get_length((Array)clockDigits1); i++)
+			for (int i = 0; i < Extensions.get_length(clockDigits1); i++)
 			{
 				if (clockDigits1[i].localPosition.y != 1f)
 				{
@@ -5358,7 +5358,7 @@ public class MotherBrain : MonoBehaviour
 
 	public virtual void PickupCollection()
 	{
-		for (int i = 0; i < Extensions.get_length((Array)pickups); i++)
+		for (int i = 0; i < Extensions.get_length(pickups); i++)
 		{
 			if (pickups[i].inUse && !(pickups[i].tran.position.x >= characterHorizontalBounds.x - 3f))
 			{
@@ -5379,7 +5379,7 @@ public class MotherBrain : MonoBehaviour
 			return;
 		}
 		pickupCollectionPulse = 0.15f;
-		for (int i = 0; i < Extensions.get_length((Array)pickups); i++)
+		for (int i = 0; i < Extensions.get_length(pickups); i++)
 		{
 			if (pickups[i].inUse)
 			{
@@ -5407,7 +5407,7 @@ public class MotherBrain : MonoBehaviour
 		float num2 = (position.y = num);
 		Vector3 vector2 = (pickups[UnityBuiltins.parseInt(array[0])].tran.position = position);
 		pickups[UnityBuiltins.parseInt(array[0])].inUse = false;
-		if (Extensions.get_length((Array)array) <= 1)
+		if (Extensions.get_length(array) <= 1)
 		{
 			return;
 		}
@@ -5423,12 +5423,12 @@ public class MotherBrain : MonoBehaviour
 		{
 			if (DB.whichPlayerAmI == 1)
 			{
-				StartCoroutine_Auto(playerScript.gainPickup(UnityBuiltins.parseInt(array[0]), 1f));
+				StartCoroutine(playerScript.gainPickup(UnityBuiltins.parseInt(array[0]), 1f));
 				for (int i = 0; i < 3; i++)
 				{
 					if (playerScript.perks[i] == 19 && (bool)allyScript)
 					{
-						StartCoroutine_Auto(allyScript.gainPickup(UnityBuiltins.parseInt(array[0]), DB.perks[19].rankBonuses[playerScript.perkRanks[i]]));
+						StartCoroutine(allyScript.gainPickup(UnityBuiltins.parseInt(array[0]), DB.perks[19].rankBonuses[playerScript.perkRanks[i]]));
 					}
 				}
 			}
@@ -5438,12 +5438,12 @@ public class MotherBrain : MonoBehaviour
 				{
 					return;
 				}
-				StartCoroutine_Auto(allyScript.gainPickup(UnityBuiltins.parseInt(array[0]), 1f));
+				StartCoroutine(allyScript.gainPickup(UnityBuiltins.parseInt(array[0]), 1f));
 				for (int i = 0; i < 3; i++)
 				{
 					if (allyScript.perks[i] == 19 && (bool)playerScript)
 					{
-						StartCoroutine_Auto(playerScript.gainPickup(UnityBuiltins.parseInt(array[0]), DB.perks[19].rankBonuses[playerScript.perkRanks[i]]));
+						StartCoroutine(playerScript.gainPickup(UnityBuiltins.parseInt(array[0]), DB.perks[19].rankBonuses[playerScript.perkRanks[i]]));
 					}
 				}
 			}
@@ -5456,12 +5456,12 @@ public class MotherBrain : MonoBehaviour
 			}
 			if (DB.whichPlayerAmI == 1)
 			{
-				StartCoroutine_Auto(allyScript.gainPickup(UnityBuiltins.parseInt(array[0]), 1f));
+				StartCoroutine(allyScript.gainPickup(UnityBuiltins.parseInt(array[0]), 1f));
 				for (int i = 0; i < 3; i++)
 				{
 					if (allyScript.perks[i] == 19 && (bool)playerScript)
 					{
-						StartCoroutine_Auto(playerScript.gainPickup(UnityBuiltins.parseInt(array[0]), DB.perks[19].rankBonuses[playerScript.perkRanks[i]]));
+						StartCoroutine(playerScript.gainPickup(UnityBuiltins.parseInt(array[0]), DB.perks[19].rankBonuses[playerScript.perkRanks[i]]));
 					}
 				}
 			}
@@ -5471,12 +5471,12 @@ public class MotherBrain : MonoBehaviour
 				{
 					return;
 				}
-				StartCoroutine_Auto(playerScript.gainPickup(UnityBuiltins.parseInt(array[0]), 1f));
+				StartCoroutine(playerScript.gainPickup(UnityBuiltins.parseInt(array[0]), 1f));
 				for (int i = 0; i < 3; i++)
 				{
 					if (playerScript.perks[i] == 19 && (bool)allyScript)
 					{
-						StartCoroutine_Auto(allyScript.gainPickup(UnityBuiltins.parseInt(array[0]), DB.perks[19].rankBonuses[playerScript.perkRanks[i]]));
+						StartCoroutine(allyScript.gainPickup(UnityBuiltins.parseInt(array[0]), DB.perks[19].rankBonuses[playerScript.perkRanks[i]]));
 					}
 				}
 			}
@@ -5485,11 +5485,11 @@ public class MotherBrain : MonoBehaviour
 
 	public virtual void muteSound()
 	{
-		for (int i = 0; i < Extensions.get_length((Array)emergeSounds); i++)
+		for (int i = 0; i < Extensions.get_length(emergeSounds); i++)
 		{
 			emergeSounds[i].volume = 0f;
 		}
-		for (int i = 0; i < Extensions.get_length((Array)sounds); i++)
+		for (int i = 0; i < Extensions.get_length(sounds); i++)
 		{
 			sounds[i].volume = 0f;
 		}
@@ -5615,13 +5615,13 @@ public class MotherBrain : MonoBehaviour
 		}
 		if ((bool)playerScript && playerScript.alive && !(Mathf.Abs(playerScript.myTransform.position.x - helicopterGroup.position.x) >= 1.35f) && !(Mathf.Abs(playerScript.myTransform.position.z - helicopterGroup.position.z) >= 0.8f) && !(helicopterTransform.localPosition.y >= 1f))
 		{
-			StartCoroutine_Auto(playerScript.grabHelicopter(string.Empty));
+			StartCoroutine(playerScript.grabHelicopter(string.Empty));
 		}
 	}
 
 	public virtual void handleVehicles()
 	{
-		for (int i = 0; i < Extensions.get_length((Array)vehicles); i++)
+		for (int i = 0; i < Extensions.get_length(vehicles); i++)
 		{
 			if (vehicles[i].inUse && !(vehicles[i].remainingGas <= 0f) && !vehicles[i].occupied && (bool)playerScript && playerScript.alive && !playerScript.inVehicle && !(Mathf.Abs(playerScript.myTransform.position.x - vehicles[i].myTransform.position.x) >= 1.5f) && !(Mathf.Abs(playerScript.myTransform.position.z - vehicles[i].myTransform.position.z) >= 0.8f))
 			{
@@ -5720,16 +5720,16 @@ public class MotherBrain : MonoBehaviour
 		{
 			if (DB.tutorial)
 			{
-				StartCoroutine_Auto(tutorialCompleteSequence());
+				StartCoroutine(tutorialCompleteSequence());
 			}
 			else
 			{
-				StartCoroutine_Auto(levelCompleteSequence());
+				StartCoroutine(levelCompleteSequence());
 			}
 		}
 		else if (DB.multiplayer && (bool)playerScript && (bool)allyScript && !playerScript.alive && !allyScript.alive)
 		{
-			StartCoroutine_Auto(levelCompleteSequence());
+			StartCoroutine(levelCompleteSequence());
 		}
 	}
 
@@ -5760,7 +5760,7 @@ public class MotherBrain : MonoBehaviour
 			float num3 = (localPosition3.y = y3);
 			Vector3 vector6 = (levelCompleteBG.localPosition = localPosition3);
 		}
-		for (int i = 0; i < Extensions.get_length((Array)stats); i++)
+		for (int i = 0; i < Extensions.get_length(stats); i++)
 		{
 			if (stats[i].slide)
 			{
@@ -5840,7 +5840,7 @@ public class MotherBrain : MonoBehaviour
 
 	public virtual void freezeZombies()
 	{
-		for (int i = 0; i < Extensions.get_length((Array)zombies); i++)
+		for (int i = 0; i < Extensions.get_length(zombies); i++)
 		{
 			if ((bool)zombies[i] && zombies[i].enabled)
 			{

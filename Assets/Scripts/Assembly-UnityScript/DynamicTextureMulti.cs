@@ -16,7 +16,7 @@ public class DynamicTextureMulti : MonoBehaviour
 
 	public virtual void Awake()
 	{
-		for (int i = 0; i < Extensions.get_length((Array)renderers); i++)
+		for (int i = 0; i < Extensions.get_length(renderers); i++)
 		{
 			if ((bool)renderers[i])
 			{

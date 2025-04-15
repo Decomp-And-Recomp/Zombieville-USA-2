@@ -1,7 +1,6 @@
 using System;
 using GooglePlayGames.BasicApi;
 using GooglePlayGames.Native.Cwrapper;
-using UnityEngine;
 
 namespace GooglePlayGames.Native
 {
@@ -49,7 +48,7 @@ namespace GooglePlayGames.Native
 			case CommonErrorStatus.ResponseStatus.ERROR_VERSION_UPDATE_REQUIRED:
 				return CommonStatusCodes.ServiceVersionUpdateRequired;
 			default:
-				Debug.LogWarning(string.Concat("Unknown ResponseStatus: ", status, ", defaulting to CommonStatusCodes.Error"));
+                    UnityEngine.Debug.LogWarning(string.Concat("Unknown ResponseStatus: ", status, ", defaulting to CommonStatusCodes.Error"));
 				return CommonStatusCodes.Error;
 			}
 		}

@@ -46,7 +46,7 @@ public class Database : MonoBehaviour
 						break;
 					}
 					IL_00a2:
-					if (_0024i_00241631 < Extensions.get_length((Array)_0024self__00241632.achievements))
+					if (_0024i_00241631 < Extensions.get_length(_0024self__00241632.achievements))
 					{
 						if (!(_0024self__00241632.achievements[_0024i_00241631].counter < (float)_0024self__00241632.achievements[_0024i_00241631].threshold))
 						{
@@ -244,7 +244,7 @@ public class Database : MonoBehaviour
 		megaString = megaString + "|" + text;
 		P31Prefs.setString("Data1H", val);
 		text = string.Empty;
-		for (int i = 0; i < Extensions.get_length((Array)PCs); i++)
+		for (int i = 0; i < Extensions.get_length(PCs); i++)
 		{
 			int num7 = 0;
 			int num8 = (int)PCs[i].weapons[0];
@@ -264,7 +264,7 @@ public class Database : MonoBehaviour
 		megaString = megaString + "|" + text;
 		P31Prefs.setString("Data2H", val);
 		text = string.Empty;
-		for (int i = 0; i < Extensions.get_length((Array)achievements); i++)
+		for (int i = 0; i < Extensions.get_length(achievements); i++)
 		{
 			int num7 = 0;
 			if (achievements[i].reported)
@@ -278,7 +278,7 @@ public class Database : MonoBehaviour
 		megaString = megaString + "|" + text;
 		P31Prefs.setString("Data3H", val);
 		text = string.Empty;
-		for (int i = 0; i < Extensions.get_length((Array)weapons); i++)
+		for (int i = 0; i < Extensions.get_length(weapons); i++)
 		{
 			int num7 = 0;
 			if (weapons[i].purchased)
@@ -292,7 +292,7 @@ public class Database : MonoBehaviour
 		megaString = megaString + "|" + text;
 		P31Prefs.setString("Data4H", val);
 		text = string.Empty;
-		for (int i = 0; i < Extensions.get_length((Array)perks); i++)
+		for (int i = 0; i < Extensions.get_length(perks); i++)
 		{
 			int num7 = 0;
 			if (perks[i].purchased)
@@ -364,7 +364,7 @@ public class Database : MonoBehaviour
 					soundEnabled = true;
 				}
 				difficulty = UnityBuiltins.parseInt(array[8]);
-				if (Extensions.get_length((Array)array) >= 10)
+				if (Extensions.get_length(array) >= 10)
 				{
 					if (array[9] == "0")
 					{
@@ -375,7 +375,7 @@ public class Database : MonoBehaviour
 						tutorial = true;
 					}
 				}
-				if (Extensions.get_length((Array)array) >= 11)
+				if (Extensions.get_length(array) >= 11)
 				{
 					if (array[10] == "0")
 					{
@@ -386,7 +386,7 @@ public class Database : MonoBehaviour
 						GCactive = true;
 					}
 				}
-				if (Extensions.get_length((Array)array) >= 12)
+				if (Extensions.get_length(array) >= 12)
 				{
 					if (array[11] == "0")
 					{
@@ -404,7 +404,7 @@ public class Database : MonoBehaviour
 			if (text == string2 || !security)
 			{
 				string[] array = @string.Split(","[0]);
-				for (int i = 0; i < Extensions.get_length((Array)array) / 7; i++)
+				for (int i = 0; i < Extensions.get_length(array) / 7; i++)
 				{
 					PCs[i].weapons[0] = (WeaponEnum)UnityBuiltins.parseInt(array[i * 7]);
 					PCs[i].weapons[1] = (WeaponEnum)UnityBuiltins.parseInt(array[1 + i * 7]);
@@ -424,7 +424,7 @@ public class Database : MonoBehaviour
 			if (text == string2 || !security)
 			{
 				string[] array = @string.Split(","[0]);
-				for (int i = 0; i < Extensions.get_length((Array)array) / 2; i++)
+				for (int i = 0; i < Extensions.get_length(array) / 2; i++)
 				{
 					achievements[i].counter = UnityBuiltins.parseFloat(array[i * 2]);
 					if (UnityBuiltins.parseInt(array[1 + i * 2]) == 1)
@@ -443,7 +443,7 @@ public class Database : MonoBehaviour
 			if (text == string2 || !security)
 			{
 				string[] array = @string.Split(","[0]);
-				for (int i = 0; i < Extensions.get_length((Array)array) / 2; i++)
+				for (int i = 0; i < Extensions.get_length(array) / 2; i++)
 				{
 					int rank = weapons[i].rank;
 					if (UnityBuiltins.parseInt(array[i * 2]) > rank)
@@ -469,7 +469,7 @@ public class Database : MonoBehaviour
 			if (text == string2 || !security)
 			{
 				string[] array = @string.Split(","[0]);
-				for (int i = 0; i < Extensions.get_length((Array)array) / 2; i++)
+				for (int i = 0; i < Extensions.get_length(array) / 2; i++)
 				{
 					int rank2 = (int)perks[1].rank;
 					if (rank2 <= UnityBuiltins.parseInt(array[i * 2]))
@@ -506,11 +506,11 @@ public class Database : MonoBehaviour
 
 	public virtual void applyAllWeaponRanks()
 	{
-		for (int i = 0; i < Extensions.get_length((Array)weapons); i++)
+		for (int i = 0; i < Extensions.get_length(weapons); i++)
 		{
 			for (int j = 0; j < weapons[i].rank; j++)
 			{
-				for (int k = 0; k < Extensions.get_length((Array)weapons[i].rankInfo[j].upgrades); k++)
+				for (int k = 0; k < Extensions.get_length(weapons[i].rankInfo[j].upgrades); k++)
 				{
 					if (weapons[i].rankInfo[j].upgrades[k].upgradeType == UpgradeTypeEnum.Damage)
 					{
@@ -645,7 +645,7 @@ public class Database : MonoBehaviour
 	public virtual void applySingleWeaponRank(int i, int i2)
 	{
 		i2--;
-		for (int j = 0; j < Extensions.get_length((Array)weapons[i].rankInfo[i2].upgrades); j++)
+		for (int j = 0; j < Extensions.get_length(weapons[i].rankInfo[i2].upgrades); j++)
 		{
 			if (weapons[i].rankInfo[i2].upgrades[j].upgradeType == UpgradeTypeEnum.Damage)
 			{
@@ -820,7 +820,7 @@ public class Database : MonoBehaviour
 	public virtual void reportAchievementFinished(string ID)
 	{
 		Debug.Log("Achievement " + ID + " successfully reported to GC servers");
-		for (int i = 0; i < Extensions.get_length((Array)achievements); i++)
+		for (int i = 0; i < Extensions.get_length(achievements); i++)
 		{
 			if (achievements[i].ID == ID)
 			{
@@ -892,7 +892,7 @@ public class Database : MonoBehaviour
 		{
 			soundEnabled = true;
 		}
-		if (Extensions.get_length((Array)array) >= 10)
+		if (Extensions.get_length(array) >= 10)
 		{
 			if (array[9] == "0")
 			{
@@ -903,7 +903,7 @@ public class Database : MonoBehaviour
 				tutorial = true;
 			}
 		}
-		if (Extensions.get_length((Array)array) >= 11)
+		if (Extensions.get_length(array) >= 11)
 		{
 			if (array[10] == "0")
 			{
@@ -965,7 +965,7 @@ public class Database : MonoBehaviour
 					soundEnabled = true;
 				}
 				difficulty = UnityBuiltins.parseInt(array[8]);
-				if (Extensions.get_length((Array)array) >= 10)
+				if (Extensions.get_length(array) >= 10)
 				{
 					if (array[9] == "0")
 					{
@@ -976,7 +976,7 @@ public class Database : MonoBehaviour
 						tutorial = true;
 					}
 				}
-				if (Extensions.get_length((Array)array) >= 11)
+				if (Extensions.get_length(array) >= 11)
 				{
 					if (array[10] == "0")
 					{
@@ -987,7 +987,7 @@ public class Database : MonoBehaviour
 						GCactive = true;
 					}
 				}
-				if (Extensions.get_length((Array)array) >= 12)
+				if (Extensions.get_length(array) >= 12)
 				{
 					if (array[11] == "0")
 					{
@@ -1005,7 +1005,7 @@ public class Database : MonoBehaviour
 			if (text == string2 || !security)
 			{
 				string[] array = @string.Split(","[0]);
-				for (int i = 0; i < Extensions.get_length((Array)array) / 7; i++)
+				for (int i = 0; i < Extensions.get_length(array) / 7; i++)
 				{
 					PCs[i].weapons[0] = (WeaponEnum)UnityBuiltins.parseInt(array[i * 7]);
 					PCs[i].weapons[1] = (WeaponEnum)UnityBuiltins.parseInt(array[1 + i * 7]);
@@ -1025,7 +1025,7 @@ public class Database : MonoBehaviour
 			if (text == string2)
 			{
 				string[] array = @string.Split(","[0]);
-				for (int i = 0; i < Extensions.get_length((Array)array) / 2; i++)
+				for (int i = 0; i < Extensions.get_length(array) / 2; i++)
 				{
 					achievements[i].counter = UnityBuiltins.parseFloat(array[i * 2]);
 					if (UnityBuiltins.parseInt(array[1 + i * 2]) == 1)
@@ -1044,7 +1044,7 @@ public class Database : MonoBehaviour
 			if (text == string2 || !security)
 			{
 				string[] array = @string.Split(","[0]);
-				for (int i = 0; i < Extensions.get_length((Array)array) / 2; i++)
+				for (int i = 0; i < Extensions.get_length(array) / 2; i++)
 				{
 					int rank = weapons[i].rank;
 					weapons[i].rank = UnityBuiltins.parseInt(array[i * 2]);
@@ -1067,7 +1067,7 @@ public class Database : MonoBehaviour
 			if (text == string2 || !security)
 			{
 				string[] array = @string.Split(","[0]);
-				for (int i = 0; i < Extensions.get_length((Array)array) / 2; i++)
+				for (int i = 0; i < Extensions.get_length(array) / 2; i++)
 				{
 					if ((int)perks[i].rank < UnityBuiltins.parseInt(array[i * 2]))
 					{
@@ -1119,7 +1119,7 @@ public class Database : MonoBehaviour
 			soundEnabled = true;
 		}
 		difficulty = UnityBuiltins.parseInt(array2[8]);
-		if (Extensions.get_length((Array)array2) >= 10)
+		if (Extensions.get_length(array2) >= 10)
 		{
 			if (array2[9] == "0")
 			{
@@ -1130,7 +1130,7 @@ public class Database : MonoBehaviour
 				tutorial = true;
 			}
 		}
-		if (Extensions.get_length((Array)array2) >= 11)
+		if (Extensions.get_length(array2) >= 11)
 		{
 			if (array2[10] == "0")
 			{
@@ -1141,7 +1141,7 @@ public class Database : MonoBehaviour
 				GCactive = true;
 			}
 		}
-		if (Extensions.get_length((Array)array2) >= 12)
+		if (Extensions.get_length(array2) >= 12)
 		{
 			if (array2[11] == "0")
 			{
@@ -1154,7 +1154,7 @@ public class Database : MonoBehaviour
 		}
 		text = array[2];
 		array2 = text.Split(","[0]);
-		for (int i = 0; i < Extensions.get_length((Array)array2) / 7; i++)
+		for (int i = 0; i < Extensions.get_length(array2) / 7; i++)
 		{
 			PCs[i].weapons[0] = (WeaponEnum)UnityBuiltins.parseInt(array2[i * 7]);
 			PCs[i].weapons[1] = (WeaponEnum)UnityBuiltins.parseInt(array2[1 + i * 7]);
@@ -1169,7 +1169,7 @@ public class Database : MonoBehaviour
 		}
 		text = array[3];
 		array2 = text.Split(","[0]);
-		for (int i = 0; i < Extensions.get_length((Array)array2) / 2; i++)
+		for (int i = 0; i < Extensions.get_length(array2) / 2; i++)
 		{
 			achievements[i].counter = UnityBuiltins.parseFloat(array2[i * 2]);
 			if (UnityBuiltins.parseInt(array2[1 + i * 2]) == 1)
@@ -1183,7 +1183,7 @@ public class Database : MonoBehaviour
 		}
 		text = array[4];
 		array2 = text.Split(","[0]);
-		for (int i = 0; i < Extensions.get_length((Array)array2) / 2; i++)
+		for (int i = 0; i < Extensions.get_length(array2) / 2; i++)
 		{
 			int rank = weapons[i].rank;
 			weapons[i].rank = UnityBuiltins.parseInt(array2[i * 2]);
@@ -1201,7 +1201,7 @@ public class Database : MonoBehaviour
 		}
 		text = array[5];
 		array2 = text.Split(","[0]);
-		for (int i = 0; i < Extensions.get_length((Array)array2) / 2; i++)
+		for (int i = 0; i < Extensions.get_length(array2) / 2; i++)
 		{
 			if ((int)perks[i].rank < UnityBuiltins.parseInt(array2[i * 2]))
 			{

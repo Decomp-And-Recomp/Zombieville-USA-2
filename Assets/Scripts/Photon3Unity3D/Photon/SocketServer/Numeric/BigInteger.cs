@@ -416,6 +416,11 @@ namespace Photon.SocketServer.Numeric
 			return bi1.Equals(bi2);
 		}
 
+		public static bool operator !=(BigInteger bi1, BigInteger bi2)
+		{
+			return !bi1.Equals(bi2);
+		}
+
 		public override bool Equals(object o)
 		{
 			BigInteger bigInteger = (BigInteger)o;
@@ -497,6 +502,11 @@ namespace Photon.SocketServer.Numeric
 		public static bool operator >=(BigInteger bi1, BigInteger bi2)
 		{
 			return bi1 == bi2 || bi1 > bi2;
+		}
+
+		public static bool operator <=(BigInteger bi1, BigInteger bi2)
+		{
+			return bi1 == bi2 || bi1 < bi2;
 		}
 
 		private static void multiByteDivide(BigInteger bi1, BigInteger bi2, BigInteger outQuotient, BigInteger outRemainder)

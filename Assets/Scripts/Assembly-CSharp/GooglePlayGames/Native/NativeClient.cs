@@ -8,7 +8,6 @@ using GooglePlayGames.BasicApi.SavedGame;
 using GooglePlayGames.Native.Cwrapper;
 using GooglePlayGames.Native.PInvoke;
 using GooglePlayGames.OurUtils;
-using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
 namespace GooglePlayGames.Native
@@ -177,7 +176,7 @@ namespace GooglePlayGames.Native
 						{
 							gameServicesBuilder.RequireGooglePlus();
 						}
-						Debug.Log("Building GPG services, implicitly attempts silent auth");
+                        UnityEngine.Debug.Log("Building GPG services, implicitly attempts silent auth");
 						mAuthState = AuthState.SilentPending;
 						mServices = gameServicesBuilder.Build(configRef);
 						mEventsClient = new NativeEventClient(new GooglePlayGames.Native.PInvoke.EventManager(mServices));
@@ -226,7 +225,7 @@ namespace GooglePlayGames.Native
 		{
 			if (!IsAuthenticated())
 			{
-				Debug.Log("Cannot get API client - not authenticated");
+				UnityEngine.Debug.Log("Cannot get API client - not authenticated");
 				return null;
 			}
 			mTokenClient.SetRationale(rationale);
@@ -237,7 +236,7 @@ namespace GooglePlayGames.Native
 		{
 			if (!IsAuthenticated())
 			{
-				Debug.Log("Cannot get API client - not authenticated");
+				UnityEngine.Debug.Log("Cannot get API client - not authenticated");
 				if (callback != null)
 				{
 					PlayGamesHelperObject.RunOnGameThread(delegate
@@ -262,14 +261,14 @@ namespace GooglePlayGames.Native
 		{
 			if (!IsAuthenticated())
 			{
-				Debug.Log("Cannot get API client - not authenticated");
+				UnityEngine.Debug.Log("Cannot get API client - not authenticated");
 				return null;
 			}
 			if (!GameInfo.WebClientIdInitialized())
 			{
 				if (noWebClientIdWarningCount++ % webclientWarningFreq == 0)
 				{
-					Debug.LogError("Web client ID has not been set, cannot request access token.");
+					UnityEngine.Debug.LogError("Web client ID has not been set, cannot request access token.");
 					noWebClientIdWarningCount = noWebClientIdWarningCount / webclientWarningFreq + 1;
 				}
 				return null;
@@ -283,7 +282,7 @@ namespace GooglePlayGames.Native
 		{
 			if (!IsAuthenticated())
 			{
-				Debug.Log("Cannot get API client - not authenticated");
+				UnityEngine.Debug.Log("Cannot get API client - not authenticated");
 				PlayGamesHelperObject.RunOnGameThread(delegate
 				{
 					idTokenCallback(null);
@@ -293,7 +292,7 @@ namespace GooglePlayGames.Native
 			{
 				if (noWebClientIdWarningCount++ % webclientWarningFreq == 0)
 				{
-					Debug.LogError("Web client ID has not been set, cannot request id token.");
+					UnityEngine.Debug.LogError("Web client ID has not been set, cannot request id token.");
 					noWebClientIdWarningCount = noWebClientIdWarningCount / webclientWarningFreq + 1;
 				}
 				PlayGamesHelperObject.RunOnGameThread(delegate
@@ -514,17 +513,17 @@ namespace GooglePlayGames.Native
 						mAuthState = AuthState.Unauthenticated;
 						Action<bool> callback = mSilentAuthCallbacks;
 						mSilentAuthCallbacks = null;
-						Debug.Log("Invoking callbacks, AuthState changed from silentPending to Unauthenticated.");
+						UnityEngine.Debug.Log("Invoking callbacks, AuthState changed from silentPending to Unauthenticated.");
 						InvokeCallbackOnGameThread(callback, false);
 						if (mPendingAuthCallbacks != null)
 						{
-							Debug.Log("there are pending auth callbacks - starting AuthUI");
+							UnityEngine.Debug.Log("there are pending auth callbacks - starting AuthUI");
 							GameServices().StartAuthorizationUI();
 						}
 					}
 					else
 					{
-						Debug.Log(string.Concat("AuthState == ", mAuthState, " calling auth callbacks with failure"));
+						UnityEngine.Debug.Log(string.Concat("AuthState == ", mAuthState, " calling auth callbacks with failure"));
 						UnpauseUnityPlayer();
 						Action<bool> callback2 = mPendingAuthCallbacks;
 						mPendingAuthCallbacks = null;

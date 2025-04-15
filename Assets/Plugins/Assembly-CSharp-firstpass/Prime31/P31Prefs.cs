@@ -27,16 +27,6 @@ namespace Prime31
 			return PlayerPrefs.HasKey(key);
 		}
 
-		public static List<object> allKeys()
-		{
-			return new List<object>();
-		}
-
-		public static void removeObjectForKey(string key)
-		{
-			PlayerPrefs.DeleteKey(key);
-		}
-
 		public static void removeAll()
 		{
 			PlayerPrefs.DeleteAll();
@@ -70,28 +60,6 @@ namespace Prime31
 		public static string getString(string key)
 		{
 			return PlayerPrefs.GetString(key);
-		}
-
-		public static void setBool(string key, bool val)
-		{
-			PlayerPrefs.SetInt(key, val ? 1 : 0);
-		}
-
-		public static bool getBool(string key)
-		{
-			return PlayerPrefs.GetInt(key, 0) == 1;
-		}
-
-		public static void setDictionary(string key, Dictionary<string, object> val)
-		{
-			string value = Json.encode(val);
-			PlayerPrefs.SetString(key, value);
-		}
-
-		public static IDictionary getDictionary(string key)
-		{
-			string @string = PlayerPrefs.GetString(key);
-			return @string.dictionaryFromJson();
 		}
 	}
 }

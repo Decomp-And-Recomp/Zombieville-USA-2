@@ -321,7 +321,7 @@ public class ZombieScript : MonoBehaviour
 				default:
 					_0024self__00241981.motherBrain.emergeSounds[_0024self__00241981.motherBrain.emergeSound].Play();
 					_0024self__00241981.motherBrain.emergeSound = _0024self__00241981.motherBrain.emergeSound + 1;
-					if (_0024self__00241981.motherBrain.emergeSound == Extensions.get_length((Array)_0024self__00241981.motherBrain.emergeSounds))
+					if (_0024self__00241981.motherBrain.emergeSound == Extensions.get_length(_0024self__00241981.motherBrain.emergeSounds))
 					{
 						_0024self__00241981.motherBrain.emergeSound = 0;
 					}
@@ -956,7 +956,7 @@ public class ZombieScript : MonoBehaviour
 				spitDelay -= Time.deltaTime;
 				if (!(spitDelay > 0f))
 				{
-					StartCoroutine_Auto(spit());
+					StartCoroutine(spit());
 				}
 			}
 			if (!spitting && !(Vector3.Distance(myTarget.position, myTransform.position) <= meleeRange))
@@ -1080,7 +1080,7 @@ public class ZombieScript : MonoBehaviour
 			}
 			if (!charredRenderer[0].enabled)
 			{
-				num = UnityEngine.Random.Range(0, Extensions.get_length((Array)pounceSounds));
+				num = UnityEngine.Random.Range(0, Extensions.get_length(pounceSounds));
 				pounceSounds[num].pitch = UnityEngine.Random.Range(0.85f, 1.15f);
 				pounceSounds[num].Play();
 				myRenderer.enabled = false;
@@ -1108,7 +1108,7 @@ public class ZombieScript : MonoBehaviour
 		{
 			if (!stunnedRenderer.enabled)
 			{
-				num = UnityEngine.Random.Range(0, Extensions.get_length((Array)pounceSounds));
+				num = UnityEngine.Random.Range(0, Extensions.get_length(pounceSounds));
 				pounceSounds[num].pitch = UnityEngine.Random.Range(0.85f, 1.15f);
 				pounceSounds[num].Play();
 				myRenderer.enabled = false;
@@ -1533,7 +1533,7 @@ public class ZombieScript : MonoBehaviour
 		{
 			damageType = 5;
 		}
-		int num9 = deathsByDamageType[damageType].contents[UnityEngine.Random.Range(0, Extensions.get_length((Array)deathsByDamageType[damageType].contents))];
+		int num9 = deathsByDamageType[damageType].contents[UnityEngine.Random.Range(0, Extensions.get_length(deathsByDamageType[damageType].contents))];
 		Vector3 position = myTransform.position;
 		position.x += myDeaths[num9].explosionOffset.x * myTransform.localScale.x;
 		position.y += myDeaths[num9].explosionOffset.y;
@@ -1604,7 +1604,7 @@ public class ZombieScript : MonoBehaviour
 		myDeaths[num9].deathSound.Play();
 		if ((bool)myDeaths[num9].collapseSound)
 		{
-			StartCoroutine_Auto(delayedSound(myDeaths[num9].collapseSound, myDeaths[num9].collapseDelay));
+			StartCoroutine(delayedSound(myDeaths[num9].collapseSound, myDeaths[num9].collapseDelay));
 		}
 		myRenderer.enabled = false;
 		if (zombieType != EnemyType.Container)
@@ -1618,7 +1618,7 @@ public class ZombieScript : MonoBehaviour
 		{
 			explode();
 		}
-		StartCoroutine_Auto(flashingDeath());
+		StartCoroutine(flashingDeath());
 	}
 
 	public virtual void slidingAnimation()
@@ -1782,7 +1782,7 @@ public class ZombieScript : MonoBehaviour
 				blueAnim = false;
 			}
 		}
-		if (Extensions.get_length((Array)charredRenderer) != 0 && charredRenderer[0].enabled && charredRenderer[0].material.color != myRenderer.material.color)
+		if (Extensions.get_length(charredRenderer) != 0 && charredRenderer[0].enabled && charredRenderer[0].material.color != myRenderer.material.color)
 		{
 			charredRenderer[0].material.color = myRenderer.material.color;
 		}
@@ -1798,7 +1798,7 @@ public class ZombieScript : MonoBehaviour
 		{
 			return;
 		}
-		for (int i = 0; i < Extensions.get_length((Array)myDeaths); i++)
+		for (int i = 0; i < Extensions.get_length(myDeaths); i++)
 		{
 			if (!myDeaths[i].deathRenderer.enabled)
 			{
@@ -1932,14 +1932,14 @@ public class ZombieScript : MonoBehaviour
 		{
 			return;
 		}
-		for (int i = 0; i < Extensions.get_length((Array)motherBrain.messageSlots); i++)
+		for (int i = 0; i < Extensions.get_length(motherBrain.messageSlots); i++)
 		{
 			if (motherBrain.messageSlots[i].whichObject.text == string.Empty)
 			{
 				motherBrain.messageSlots[i].whichObject.text = whichObject;
 				motherBrain.messageSlots[i].whichFunction.text = whichFunction;
 				motherBrain.messageSlots[i].message.text = message;
-				i = Extensions.get_length((Array)motherBrain.messageSlots);
+				i = Extensions.get_length(motherBrain.messageSlots);
 			}
 		}
 	}
@@ -1986,7 +1986,7 @@ public class ZombieScript : MonoBehaviour
 			health = maxHealth;
 			AIState = 0;
 			gameObject.layer = 12;
-			for (int i = 0; i < Extensions.get_length((Array)myDeaths); i++)
+			for (int i = 0; i < Extensions.get_length(myDeaths); i++)
 			{
 				myDeaths[i].deathRenderer.enabled = false;
 				if (myDeaths[i].deathBackupRenderer != null)
@@ -2027,7 +2027,7 @@ public class ZombieScript : MonoBehaviour
 		health = maxHealth;
 		AIState = 0;
 		gameObject.layer = 12;
-		for (int i = 0; i < Extensions.get_length((Array)myDeaths); i++)
+		for (int i = 0; i < Extensions.get_length(myDeaths); i++)
 		{
 			myDeaths[i].deathRenderer.enabled = false;
 			if (myDeaths[i].deathBackupRenderer != null)
@@ -2097,7 +2097,7 @@ public class ZombieScript : MonoBehaviour
 
 	public virtual void handleEffects()
 	{
-		if (Extensions.get_length((Array)hitReset) != 0)
+		if (Extensions.get_length(hitReset) != 0)
 		{
 			if (!(hitReset[0] <= 0f))
 			{
@@ -2127,7 +2127,7 @@ public class ZombieScript : MonoBehaviour
 			return;
 		}
 		int num5 = 0;
-		for (num5 = 0; num5 < Extensions.get_length((Array)myDeaths); num5++)
+		for (num5 = 0; num5 < Extensions.get_length(myDeaths); num5++)
 		{
 			if (myDeaths[num5] != null && myDeaths[num5].deathRenderer.enabled && (bool)myDeaths[num5].deathOpacity)
 			{
@@ -2158,14 +2158,14 @@ public class ZombieScript : MonoBehaviour
 		int num = 0;
 		if (runState.weight == 1f)
 		{
-			num = UnityEngine.Random.Range(0, Extensions.get_length((Array)pounceSounds));
+			num = UnityEngine.Random.Range(0, Extensions.get_length(pounceSounds));
 			pounceSounds[num].pitch = UnityEngine.Random.Range(0.85f, 1.15f);
 			pounceSounds[num].Play();
 		}
 		recentAttack = 0.4f;
 		myAnimation.CrossFade("attack", 0.1f);
 		myTargetScript.takeDamage(power, 0.2f);
-		num = UnityEngine.Random.Range(0, Extensions.get_length((Array)meleeSounds));
+		num = UnityEngine.Random.Range(0, Extensions.get_length(meleeSounds));
 		meleeSounds[num].pitch = UnityEngine.Random.Range(0.85f, 1.15f);
 		meleeSounds[num].Play();
 		bloodSplat();
@@ -2190,13 +2190,13 @@ public class ZombieScript : MonoBehaviour
 		int num = 0;
 		if (runState.weight == 1f)
 		{
-			num = UnityEngine.Random.Range(0, Extensions.get_length((Array)pounceSounds));
+			num = UnityEngine.Random.Range(0, Extensions.get_length(pounceSounds));
 			pounceSounds[num].pitch = UnityEngine.Random.Range(0.85f, 1.15f);
 			pounceSounds[num].Play();
 		}
 		myAnimation.CrossFade("attack", 0.1f);
 		myTargetScript.takeDamage(power, 0.2f);
-		num = UnityEngine.Random.Range(0, Extensions.get_length((Array)meleeSounds));
+		num = UnityEngine.Random.Range(0, Extensions.get_length(meleeSounds));
 		meleeSounds[num].pitch = UnityEngine.Random.Range(0.85f, 1.15f);
 		meleeSounds[num].Play();
 		bloodSplat();
@@ -2256,38 +2256,38 @@ public class ZombieScript : MonoBehaviour
 		{
 			if (!((float)num >= moneyChance[2]))
 			{
-				StartCoroutine_Auto(motherBrain.spawnPickup(5, myTransform.position));
+				StartCoroutine(motherBrain.spawnPickup(5, myTransform.position));
 			}
 			else if (!((float)num >= moneyChance[1]))
 			{
-				StartCoroutine_Auto(motherBrain.spawnPickup(4, myTransform.position));
+				StartCoroutine(motherBrain.spawnPickup(4, myTransform.position));
 			}
 			else if (!((float)num >= moneyChance[0]))
 			{
-				StartCoroutine_Auto(motherBrain.spawnPickup(3, myTransform.position));
+				StartCoroutine(motherBrain.spawnPickup(3, myTransform.position));
 			}
 		}
 		else if (!((float)num >= ammoChance[2]))
 		{
-			StartCoroutine_Auto(motherBrain.spawnPickup(2, myTransform.position));
+			StartCoroutine(motherBrain.spawnPickup(2, myTransform.position));
 		}
 		else if (!((float)num >= ammoChance[1]))
 		{
-			StartCoroutine_Auto(motherBrain.spawnPickup(1, myTransform.position));
+			StartCoroutine(motherBrain.spawnPickup(1, myTransform.position));
 		}
 		else if (!((float)num >= ammoChance[0]))
 		{
-			StartCoroutine_Auto(motherBrain.spawnPickup(0, myTransform.position));
+			StartCoroutine(motherBrain.spawnPickup(0, myTransform.position));
 		}
 	}
 
 	public virtual void muteSounds()
 	{
-		for (int i = 0; i < Extensions.get_length((Array)meleeSounds); i++)
+		for (int i = 0; i < Extensions.get_length(meleeSounds); i++)
 		{
 			meleeSounds[i].volume = 0f;
 		}
-		for (int i = 0; i < Extensions.get_length((Array)pounceSounds); i++)
+		for (int i = 0; i < Extensions.get_length(pounceSounds); i++)
 		{
 			pounceSounds[i].volume = 0f;
 		}
@@ -2295,7 +2295,7 @@ public class ZombieScript : MonoBehaviour
 		{
 			escapeSound.volume = 0f;
 		}
-		for (int i = 0; i < Extensions.get_length((Array)myDeaths); i++)
+		for (int i = 0; i < Extensions.get_length(myDeaths); i++)
 		{
 			if ((bool)myDeaths[i].deathSound)
 			{
