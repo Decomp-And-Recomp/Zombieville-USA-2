@@ -2110,7 +2110,7 @@ public class MotherBrain : MonoBehaviour
 				initializedZombies = true;
 			}
 			listen();
-			debugTools();
+			//debugTools();
 			if (DB.whichPlayerAmI == 1 && !(despawnCheckTimer > 0f))
 			{
 				despawnCheck();
@@ -2190,7 +2190,7 @@ public class MotherBrain : MonoBehaviour
 			}
 			if (freezeGame)
 			{
-				if (Input.touchCount > 0 || Input.GetButton("Fire1") || Input.GetButton("Fire2") || Input.GetButton("Fire3"))
+				if (Input.touchCount > 0 || Input.GetButton("Fire1") || Input.GetButton("Fire2") || Input.GetButton("Fire3") || Input.GetMouseButton(0)) // i added last one
 				{
 					Time.timeScale = 4f;
 				}

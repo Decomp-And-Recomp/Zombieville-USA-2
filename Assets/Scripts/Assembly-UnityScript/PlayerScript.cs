@@ -1086,10 +1086,19 @@ public class PlayerScript : MonoBehaviour
         {
             pauseScreenReleased = true;
         }
+#if UNITY_STANDALONE
+        if (Input.GetMouseButtonDown(0) && pauseScreenReleased && !motherBrain.fade)
+#else
         else if (Input.touchCount != 0 && pauseScreenReleased && !motherBrain.fade)
+#endif
         {
+#if UNITY_STANDALONE
+            tempRay = motherBrain.cameraLens.ScreenPointToRay(Input.mousePosition);
+#else
             touch = Input.GetTouch(0);
             tempRay = motherBrain.cameraLens.ScreenPointToRay(touch.position);
+#endif
+            Debug.Log("Test");
             if (Physics.Raycast(tempRay, out tempHit, 100f, motherBrain.pauseScreenMask))
             {
                 tempTransform = tempHit.transform;
@@ -1788,49 +1797,39 @@ public class PlayerScript : MonoBehaviour
         // Mouse button fire
         if (Input.GetMouseButton(0) && DB.weapons[weapons[equippedSlot]].automatic)
         {
-            motherBrain.fireButtonsTouched = true;
+            if (DB.tutorial && motherBrain.currentBubble == 2 && !motherBrain.fireButtonsTouched)
+            {
+                motherBrain.fireButtonsTouched = true;
+                motherBrain.tutorialTimer = 0f;
+            }
+
             attack(true);
         }
         else if (Input.GetMouseButtonDown(0))
         {
-            motherBrain.fireButtonsTouched = true;
+            if (DB.tutorial && motherBrain.currentBubble == 2 && !motherBrain.fireButtonsTouched)
+            {
+                motherBrain.fireButtonsTouched = true;
+                motherBrain.tutorialTimer = 0f;
+            }
+
             attack(true);
         }
 
-        // PC controls for weapon switching
         float scroll = Input.GetAxis("Mouse ScrollWheel");
 
-        // Handle mouse scroll input for weapon switching
-        if (scroll != 0)
+        if (scroll == 0) return;
+        
+        if (scroll <= -0.1f)
         {
-            if (scroll <= -0.1f)
-            {
-                equippedSlot--;
-                if (equippedSlot < 0) equippedSlot = 2;
-                equip(equippedSlot, false);
-            }
-            else if (scroll >= 0.1f)
-            {
-                equippedSlot++;
-                if (equippedSlot > 2) equippedSlot = 0;
-                equip(equippedSlot, false);
-            }
-        }
-
-        // Handle number keys for weapon switching (1, 2, 3)
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            equippedSlot = 0;
+            equippedSlot--;
+            if (equippedSlot < 0) equippedSlot = 2;
             equip(equippedSlot, false);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (scroll >= 0.1f)
         {
-            equippedSlot = 1;
-            equip(equippedSlot, false);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            equippedSlot = 2;
+            equippedSlot++;
+            if (equippedSlot > 2) equippedSlot = 0;
             equip(equippedSlot, false);
         }
     }

@@ -42,7 +42,20 @@ public class TouchScreenKeyboard : MonoBehaviour
     public bool active;
     public bool wasCanceled;
 
-    static GUIStyle temp;
+    static GUIStyle style;
+
+    float backspaceTime;
+
+    [RuntimeInitializeOnLoadMethod]
+    static void OnGameStart()
+    {
+        style = new GUIStyle()
+        {
+            alignment = TextAnchor.MiddleCenter,
+            normal = { textColor = Color.white },
+            fontSize = 46
+        };
+    }
 
     public static TouchScreenKeyboard Open(string text = "", TouchScreenKeyboardType type = TouchScreenKeyboardType.Default, bool autocorrection = true, bool multiline = true, bool secure = false, bool allert = false, string placeholderText = "")
     {
@@ -81,6 +94,27 @@ public class TouchScreenKeyboard : MonoBehaviour
             return;
         }
 
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            text = text.Substring(0, text.Length - 1);
+
+            backspaceTime = 0.5f;
+
+            return;
+        }
+
+        if (Input.GetKey(KeyCode.Backspace) && !string.IsNullOrEmpty(text))
+        {
+            backspaceTime -= Time.unscaledDeltaTime;
+
+            if (backspaceTime > 0) return;
+
+            backspaceTime = 0.075f;
+            text = text.Substring(0, text.Length - 1);
+
+            return;
+        }
+
         text += Input.inputString;
     }
 
@@ -90,12 +124,7 @@ public class TouchScreenKeyboard : MonoBehaviour
 
         GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "");
 
-        temp = new GUIStyle()
-        {
-            alignment = TextAnchor.MiddleCenter,
-            normal = { textColor = Color.white },
-            fontSize = 46
-        };
+        // fucking AI code by chop, i literally asked to just center it.
 
         // Adjust this line to make sure it is displayed correctly.
         // Position it centered and adjust width/height if needed.
@@ -104,8 +133,16 @@ public class TouchScreenKeyboard : MonoBehaviour
         float labelX = (Screen.width - labelWidth) / 2f; // Center the label horizontally
         float labelY = Screen.height * 0.4f; // Adjust vertical position to your needs
 
-        // Now apply the corrected Rect
-        GUI.Label(new Rect(labelX, labelY, labelWidth, labelHeight), text, temp);
+        if (string.IsNullOrEmpty(text))
+        {
+            style.normal.textColor = Color.grey;
+            GUI.Label(new Rect(labelX, labelY, labelWidth, labelHeight), placeholderText, style);
+        }
+        else
+        {
+            style.normal.textColor = Color.white;
+            GUI.Label(new Rect(labelX, labelY, labelWidth, labelHeight), text, style);
+        }
     }
 }
 #endif

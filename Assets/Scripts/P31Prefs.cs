@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Prime31
 {
+	// MOVED IN SCRIPTS FROM PLUGINS CUZ IT WAS MESSING WITH PLAYERPREFS JSON
 	public class P31Prefs
 	{
 		private static bool _iCloudDocumentStoreAvailable;
