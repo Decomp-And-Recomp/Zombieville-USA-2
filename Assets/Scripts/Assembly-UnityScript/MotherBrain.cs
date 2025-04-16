@@ -2018,6 +2018,13 @@ public class MotherBrain : MonoBehaviour
 		StartCoroutine(triggerZombieLoad());
 	}
 
+#if UNITY_STANDALONE
+	public void Start()
+    {
+        bottomLeftCorner.localScale = new Vector3(0f, 0f, 0f);
+        bottomRightCorner.localScale = new Vector3(0f, 0f, 0f);
+    }
+#endif
 	public virtual IEnumerator triggerZombieLoad()
 	{
 		return new _0024triggerZombieLoad_00241657(this).GetEnumerator();
@@ -2058,6 +2065,7 @@ public class MotherBrain : MonoBehaviour
 
 	public virtual void handleJoysticks()
 	{
+#if !UNITY_STANDALONE
 		if (Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f || Input.GetButton("Fire1") || Input.GetButton("Fire2") || Input.GetButton("Fire3"))
 		{
 			if (bottomLeftCorner.localScale.x != 0f)
@@ -2071,6 +2079,7 @@ public class MotherBrain : MonoBehaviour
 			bottomLeftCorner.localScale = new Vector3(1f, 1f, 1f);
 			bottomRightCorner.localScale = new Vector3(1f, 1f, 1f);
 		}
+#endif
 	}
 
 	public virtual void Update()
