@@ -2,30 +2,26 @@
 
 public class MouseLock : MonoBehaviour
 {
-    void Awake()
+    public static bool locked
+    { 
+        get
+        {
+            return Cursor.lockState == CursorLockMode.Locked;
+        }
+        set
+        {
+            Cursor.lockState = value ? CursorLockMode.Locked : CursorLockMode.None;
+        }
+    }
+
+    [RuntimeInitializeOnLoadMethod]
+    static void OnGameStart()
     {
-        // Prevent this object from being destroyed on scene load
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(new GameObject("Mouse Lock", typeof(MouseLock)));
     }
 
     void Update()
     {
-        // Check if F1 key is pressed
-        if (Input.GetKeyDown(KeyCode.F1))
-        {
-            // Toggle cursor lock state
-            if (Cursor.lockState == CursorLockMode.None)
-            {
-                // Lock the cursor to the center of the screen
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false; // Make the cursor invisible
-            }
-            else
-            {
-                // Unlock the cursor and make it visible
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-            }
-        }
+        if (Input.GetKeyDown(KeyCode.F1)) locked = !locked;
     }
 }
