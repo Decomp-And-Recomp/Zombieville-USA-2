@@ -48,7 +48,7 @@ Properties {
 				fixed4 col = tex2D(_MainTex, i.uv);
 				
 				fixed4 col2 = col * (_Color * 4);
-				col2.a = _Color.a;
+				col2.a = col.a * _Color.a;
 
 				return col2;
 			}
