@@ -2140,6 +2140,9 @@ public class MotherBrain_Menu : MonoBehaviour
 		{
 			flag = true;
 		}
+#if UNITY_STANDALONE
+		else if (Input.GetMouseButton(0)) flag = true; // scroll rect fix
+#endif
 		if (Input.GetMouseButtonUp(0) || (Input.touchCount == 0 && fingerDown && !flag) || (Input.GetButtonUp("Fire1") && !flag) || (Input.GetButtonUp("Fire2") && !flag) || (Input.GetButtonUp("Fire3") && !flag))
 		{
 			if (!draggingMode && (bool)whichButton && whichButton.name == "MainConsoleShade1")
