@@ -4,7 +4,7 @@ public class LeaderboardPoster : MonoBehaviour
 {
 	public TextMesh[] leaderBoardPosters;
 
-	private void Update()
+	/*private void Update()
 	{
 		if (leaderBoardPosters[0].text != string.Empty)
 		{
@@ -46,5 +46,5 @@ public class LeaderboardPoster : MonoBehaviour
 			});
 			leaderBoardPosters[4].text = string.Empty;
 		}
-	}
+	}*/
 }
