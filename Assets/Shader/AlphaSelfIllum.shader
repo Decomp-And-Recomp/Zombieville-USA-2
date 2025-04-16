@@ -12,7 +12,6 @@ Properties {
 		{
 			Blend SrcAlpha OneMinusSrcAlpha
 			ZWrite Off
-			Lighting Off
 			
 			CGPROGRAM
 			#pragma vertex vert
