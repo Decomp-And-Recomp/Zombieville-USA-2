@@ -114,7 +114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &8
 GameObject:
   m_ObjectHideFlags: 0
@@ -3236,7 +3236,7 @@ Transform:
   - {fileID: 168}
   m_Father: {fileID: 238}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: -0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &207
 Transform:
   m_ObjectHideFlags: 0
@@ -3250,7 +3250,7 @@ Transform:
   - {fileID: 182}
   m_Father: {fileID: 238}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &208
 Transform:
   m_ObjectHideFlags: 0
@@ -3264,7 +3264,7 @@ Transform:
   - {fileID: 174}
   m_Father: {fileID: 238}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: -0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &209
 Transform:
   m_ObjectHideFlags: 0
@@ -3278,7 +3278,7 @@ Transform:
   - {fileID: 171}
   m_Father: {fileID: 238}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: -0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &210
 Transform:
   m_ObjectHideFlags: 0
@@ -3319,7 +3319,7 @@ Transform:
   - {fileID: 188}
   m_Father: {fileID: 238}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &213
 Transform:
   m_ObjectHideFlags: 0
@@ -3400,7 +3400,7 @@ Transform:
   - {fileID: 173}
   m_Father: {fileID: 238}
   m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: -0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &219
 Transform:
   m_ObjectHideFlags: 0
@@ -3414,7 +3414,7 @@ Transform:
   - {fileID: 186}
   m_Father: {fileID: 238}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: -0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &220
 Transform:
   m_ObjectHideFlags: 0
@@ -3559,7 +3559,7 @@ Transform:
   - {fileID: 187}
   m_Father: {fileID: 238}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: -0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &231
 Transform:
   m_ObjectHideFlags: 0
@@ -3573,7 +3573,7 @@ Transform:
   - {fileID: 183}
   m_Father: {fileID: 238}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: -0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &232
 Transform:
   m_ObjectHideFlags: 0
