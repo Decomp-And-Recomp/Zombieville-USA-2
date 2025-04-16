@@ -1,4 +1,4 @@
-﻿#if UNITY_STANDALONE || UINITY_EDITOR
+﻿#if UNITY_STANDALONE || UNITY_EDITOR
 using UnityEngine;
 
 public class TouchScreenKeyboard : MonoBehaviour
@@ -46,7 +46,7 @@ public class TouchScreenKeyboard : MonoBehaviour
 
     public static TouchScreenKeyboard Open(string text = "", TouchScreenKeyboardType type = TouchScreenKeyboardType.Default, bool autocorrection = true, bool multiline = true, bool secure = false, bool allert = false, string placeholderText = "")
     {
-        // cant manualy add typeof(TouchScreenKeyboard) in `new` field because i would need to use GetComponent
+        // cant manually add typeof(TouchScreenKeyboard) in `new` field because i would need to use GetComponent
         if (instance == null)
             instance = new GameObject("TouchScreenKeyboard (Emulator)").AddComponent<TouchScreenKeyboard>();
 
@@ -93,12 +93,19 @@ public class TouchScreenKeyboard : MonoBehaviour
         temp = new GUIStyle()
         {
             alignment = TextAnchor.MiddleCenter,
-            normal = {textColor = Color.white},
+            normal = { textColor = Color.white },
             fontSize = 46
         };
 
+        // Adjust this line to make sure it is displayed correctly.
+        // Position it centered and adjust width/height if needed.
+        float labelWidth = Screen.width * 0.8f; // Adjust width of label
+        float labelHeight = 50f; // Adjust height of label
+        float labelX = (Screen.width - labelWidth) / 2f; // Center the label horizontally
+        float labelY = Screen.height * 0.4f; // Adjust vertical position to your needs
 
-        GUI.Label(new Rect(0, 0, Screen.height, Screen.width), text, temp);
+        // Now apply the corrected Rect
+        GUI.Label(new Rect(labelX, labelY, labelWidth, labelHeight), text, temp);
     }
 }
 #endif
