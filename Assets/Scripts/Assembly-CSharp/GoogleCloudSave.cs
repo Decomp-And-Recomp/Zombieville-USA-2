@@ -66,18 +66,15 @@ public class GoogleCloudSave : MonoBehaviour
 		}
 		previousFrameTouchCount = TouchCount;
 		TouchCount = 0;
-		if (Application.platform == RuntimePlatform.OSXEditor)
+#if UNITY_STANDALONE
+		if (Input.GetMouseButton(0))
 		{
-			if (Input.GetMouseButton(0))
-			{
-				TouchCount = 1;
-			}
-			TouchPosition = Input.mousePosition;
+			TouchCount = 1;
 		}
-		else
-		{
-			TouchCount = Input.touchCount;
-		}
+		TouchPosition = Input.mousePosition;
+#else
+		TouchCount = Input.touchCount;
+#endif
 		bool flag2 = false;
 		if (flag && TouchCount == 0)
 		{
@@ -85,15 +82,11 @@ public class GoogleCloudSave : MonoBehaviour
 		}
 		if (TouchCount > 0)
 		{
-			if (Application.platform != 0)
-			{
+#if !UNITY_STANDALONE
 				TouchPosition = Input.GetTouch(0).position;
-			}
-			if (previousFrameTouchCount != 0)
-			{
-			}
-		}
-		else
+#endif
+        }
+        else
 		{
 			if (TouchCount != 0 || !flag2)
 			{

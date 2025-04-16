@@ -2078,7 +2078,7 @@ public class MotherBrain_Menu : MonoBehaviour
 				Vector3 vector7 = (cursor.localScale = localScale3);
 			}
 		}
-		if (Input.GetMouseButtonDown(0) || (Application.platform != 0 && Input.touchCount > 0 && !fingerDown) || Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2") || Input.GetButtonDown("Fire3"))
+		if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && !fingerDown) || Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2") || Input.GetButtonDown("Fire3"))
 		{
 			if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2") || Input.GetButtonDown("Fire3"))
 			{
@@ -2105,11 +2105,14 @@ public class MotherBrain_Menu : MonoBehaviour
 				blinkyRenderer = null;
 			}
 			blinkyActive = false;
-			if (Application.platform == RuntimePlatform.OSXEditor && Input.GetMouseButtonDown(0))
+#if UNITY_STANDALONE
+			if (Input.GetMouseButtonDown(0))
 			{
 				contactPosition = Input.mousePosition;
 			}
-			else if (Input.touchCount > 0)
+			else
+#endif
+			if (Input.touchCount > 0)
 			{
 				contactPosition = Input.GetTouch(0).position;
 			}
@@ -2137,7 +2140,7 @@ public class MotherBrain_Menu : MonoBehaviour
 		{
 			flag = true;
 		}
-		if (Input.GetMouseButtonUp(0) || (Application.platform != 0 && Input.touchCount == 0 && fingerDown && !flag) || (Input.GetButtonUp("Fire1") && !flag) || (Input.GetButtonUp("Fire2") && !flag) || (Input.GetButtonUp("Fire3") && !flag))
+		if (Input.GetMouseButtonUp(0) || (Input.touchCount == 0 && fingerDown && !flag) || (Input.GetButtonUp("Fire1") && !flag) || (Input.GetButtonUp("Fire2") && !flag) || (Input.GetButtonUp("Fire3") && !flag))
 		{
 			if (!draggingMode && (bool)whichButton && whichButton.name == "MainConsoleShade1")
 			{
@@ -2155,11 +2158,14 @@ public class MotherBrain_Menu : MonoBehaviour
 		}
 		if (fingerDown)
 		{
-			if (Application.platform == RuntimePlatform.OSXEditor && Input.GetMouseButton(0))
+#if UNITY_STANDALONE
+			if (Input.GetMouseButton(0))
 			{
 				travelDistance = Input.mousePosition - (Vector3)contactPosition;
 			}
-			else if (Input.touchCount > 0)
+			else
+#endif
+			if (Input.touchCount > 0)
 			{
 				travelDistance = Input.GetTouch(0).position - contactPosition;
 			}

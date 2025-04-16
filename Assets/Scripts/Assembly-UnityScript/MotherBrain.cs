@@ -2199,7 +2199,7 @@ public class MotherBrain : MonoBehaviour
 					Time.timeScale = 1f;
 				}
 			}
-			if (((waitingToExit && Input.touchCount > 0) || (waitingToExit && Application.platform == RuntimePlatform.OSXEditor && Input.GetMouseButtonDown(0)) || (waitingToExit && Input.GetButtonDown("Fire1")) || (waitingToExit && Input.GetButtonDown("Fire2")) || (waitingToExit && Input.GetButtonDown("Fire3"))) && !fade)
+			if (((waitingToExit && Input.touchCount > 0) || (waitingToExit && Input.GetMouseButtonDown(0)) || (waitingToExit && Input.GetButtonDown("Fire1")) || (waitingToExit && Input.GetButtonDown("Fire2")) || (waitingToExit && Input.GetButtonDown("Fire3"))) && !fade)
 			{
 				fade = true;
 				StartCoroutine(goBackToMainMenu());
