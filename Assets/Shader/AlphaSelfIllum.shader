@@ -46,8 +46,11 @@ Properties {
 			fixed4 frag (v2f i) : SV_Target
 			{
 				fixed4 col = tex2D(_MainTex, i.uv);
-				col *= _Color * 3;
-				return col;
+				
+				fixed4 col2 = col * (_Color * 4);
+				col2.a = col.a;
+
+				return col2;
 			}
 			ENDCG
 
