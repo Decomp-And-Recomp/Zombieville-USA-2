@@ -174,7 +174,9 @@ public class Database : MonoBehaviour
 
 	public virtual void Awake()
 	{
+#if !UNITY_STANDALONE
 		Application.targetFrameRate = 60;
+#endif
 		UnityEngine.Object.DontDestroyOnLoad(gameObject);
 		forceLocalLoad();
 		if (iCloud)
