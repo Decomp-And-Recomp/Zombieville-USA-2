@@ -135,6 +135,9 @@ public class PlayerPrefs : MonoBehaviour
         ints.Clear();
         floats.Clear();
 
+#if UNITY_EDITOR
+        if (PlayerPrefsEditor.lockFile) return;
+#endif
         if (File.Exists(savePath)) File.Delete(savePath);
     }
 }
