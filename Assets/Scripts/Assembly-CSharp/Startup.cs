@@ -6,7 +6,7 @@ public class Startup : MonoBehaviour
 {
 	private void Start()
 	{
-		PlayGamesClientConfiguration configuration = new PlayGamesClientConfiguration.Builder().EnableSavedGames().Build();
+		/*PlayGamesClientConfiguration configuration = new PlayGamesClientConfiguration.Builder().EnableSavedGames().Build();
 		PlayGamesPlatform.InitializeInstance(configuration);
 		PlayGamesPlatform.DebugLogEnabled = true;
 		PlayGamesPlatform.Activate();
@@ -20,7 +20,7 @@ public class Startup : MonoBehaviour
 			{
 				Debug.Log("Authentication failed");
 			}
-		});
+		});*/
 		Application.LoadLevel("title");
 	}
 }
