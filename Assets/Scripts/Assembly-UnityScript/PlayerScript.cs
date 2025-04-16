@@ -1782,6 +1782,41 @@ public class PlayerScript : MonoBehaviour
 		{
 			motherBrain.hits++;
 		}
+#if UNITY_STANDALONE || UNITY_EDITOR
+		if (inVehicle) return;
+
+		if (Input.GetMouseButton(0) && DB.weapons[weapons[equippedSlot]].automatic)
+		{
+            motherBrain.fireButtonsTouched = true;
+
+			attack(true);
+        }
+		else if (Input.GetMouseButtonDown(0))
+        {
+            motherBrain.fireButtonsTouched = true;
+
+            attack(true);
+        }
+		//PC controls
+		float scroll = Input.GetAxis("Mouse ScrollWheel");
+
+		if (scroll == 0) return;
+
+        if (scroll <= -0.1f)
+		{
+			equippedSlot--;
+
+			if (equippedSlot < 0) equippedSlot = 2;
+			equip(equippedSlot, false);
+		}
+		else if (scroll >= 0.1f)
+        {
+            equippedSlot++;
+
+            if (equippedSlot > 2) equippedSlot = 0;
+            equip(equippedSlot, false);
+        }
+#endif
 	}
 
 	public virtual void syncHeal(string incomingData)
