@@ -1832,8 +1832,8 @@ public class PlayerScript : MonoBehaviour
             if (equippedSlot > 2) equippedSlot = 0;
             equip(equippedSlot, false);
         }
-    }
 #endif
+    }
 
 
     public virtual void syncHeal(string incomingData)
