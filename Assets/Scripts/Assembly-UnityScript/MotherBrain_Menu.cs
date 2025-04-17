@@ -1927,7 +1927,8 @@ public class MotherBrain_Menu : MonoBehaviour
 
 	public virtual void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Escape))
+        // added check cuz it was causing bug
+        if (Input.GetKeyDown(KeyCode.Escape) && !fade)
 		{
 			StartCoroutine(disconnect());
 		}
