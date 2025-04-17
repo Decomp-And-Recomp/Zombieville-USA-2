@@ -1098,7 +1098,6 @@ public class PlayerScript : MonoBehaviour
             touch = Input.GetTouch(0);
             tempRay = motherBrain.cameraLens.ScreenPointToRay(touch.position);
 #endif
-            Debug.Log("Test");
             if (Physics.Raycast(tempRay, out tempHit, 100f, motherBrain.pauseScreenMask))
             {
                 tempTransform = tempHit.transform;

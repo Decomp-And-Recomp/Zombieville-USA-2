@@ -4,7 +4,7 @@ public class AchievementReporter : MonoBehaviour
 {
 	public TextMesh GPGachievement;
 
-	private void Update()
+	/*private void Update()
 	{
 		if (GPGachievement.text != string.Empty)
 		{
@@ -13,5 +13,5 @@ public class AchievementReporter : MonoBehaviour
 			});
 			GPGachievement.text = string.Empty;
 		}
-	}
+	}*/
 }
