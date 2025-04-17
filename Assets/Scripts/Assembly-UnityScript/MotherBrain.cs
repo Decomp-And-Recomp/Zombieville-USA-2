@@ -2100,11 +2100,11 @@ public class MotherBrain : MonoBehaviour
 			}
 		}
 		handleJoysticks();
-		if (Input.GetKeyDown("r"))
+		/*if (Input.GetKeyDown("r"))
 		{
 			showBubble(currentBubble);
 			currentBubble++;
-		}
+		}*/
 		if (!(singlePlayerStartupDelay > 0f))
 		{
 			if (zombiesLoaded && destructiblesLoaded && !initializedZombies)
